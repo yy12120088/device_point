@@ -17,7 +17,8 @@ public class SetPropHandle extends SimpleChannelInboundHandler<ServerLBSInfo.Set
     DeviceRegSession deviceRegSession = SpringUtils.getBean(DeviceRegSession.class);
 
     /**
-     * 获取服务器地址
+     * 设置属性返回
+     * Set Property Return
      * @param ctx
      * @param msg
      * @throws Exception

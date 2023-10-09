@@ -1,6 +1,6 @@
 package com.qinglan.example.device_point;
 
-import com.qinglan.example.device_point.server.ChatServer;
+import com.qinglan.example.device_point.server.QlIotServer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,6 @@ public class DevicePointApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        ChatServer chatServer = new ChatServer();
-        chatServer.startQLServer(1060);
+        new QlIotServer().startQLServer(1060);
     }
 }

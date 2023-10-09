@@ -21,7 +21,7 @@ public class DeviceRegSession {
     public DeviceRegSession() {
         // TODO document why this constructor is empty
     }
-
+    //缓存通道
     private static Map<String, Channel> regSession = new ConcurrentHashMap<>();
 
     private static Map<ChannelId, String> channelInfo = new ConcurrentHashMap<>();

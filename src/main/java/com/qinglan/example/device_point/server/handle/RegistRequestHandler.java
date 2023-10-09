@@ -35,19 +35,13 @@ public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo
         uids.add("F59D3E873F50");
     }
 
-    /*public RegistRequestHandler(){}
-
-    @PostConstruct
-    public void init() {
-        regRequestHandler = this;
-        deviceRegSession = this.deviceRegSession;
-    }*/
-
-/*    @Autowired
-    private DeviceRegSession deviceRegSession;*/
-
-
-
+    /**
+     * 注册服务
+     * Registration Service
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, DeviceInfo.RegisterReq msg) throws Exception {
         //存在则注册成功 可以改数据库查询
@@ -90,6 +84,8 @@ public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo
         super.channelActive(ctx);
     }
 
-
-
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+    }
 }

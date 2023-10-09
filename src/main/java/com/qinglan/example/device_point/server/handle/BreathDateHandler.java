@@ -16,8 +16,8 @@ import java.util.Arrays;
 public class BreathDateHandler extends SimpleChannelInboundHandler<ServerLBSInfo.ObjectData> {
 
     /**
+     * 呼吸心率
      * Respiratory heart rate
-     *
      * @param ctx
      * @param msg
      */

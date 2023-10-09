@@ -19,7 +19,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class ChatServer {
+public class QlIotServer {
     public void startQLServer(int inetPort){
         NioEventLoopGroup boss = new NioEventLoopGroup();
         NioEventLoopGroup worker = new NioEventLoopGroup();
@@ -70,7 +70,7 @@ public class ChatServer {
                 }
             });
             Channel channel = serverBootstrap.bind(inetPort).sync().channel();
-            log.info("----------------start----qlServer------------");
+            log.info("----------------start----qlServer----port:{}--------", inetPort);
             channel.closeFuture().sync();
         } catch (InterruptedException e) {
             log.error("server error", e);

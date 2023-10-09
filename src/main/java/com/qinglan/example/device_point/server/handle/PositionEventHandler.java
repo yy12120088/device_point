@@ -11,7 +11,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PositionEventHandler extends SimpleChannelInboundHandler<ServerLBSInfo.PositionStatusEvent> {
 
-
+    /**
+     * 轨迹事件
+     * Trajectory event
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ServerLBSInfo.PositionStatusEvent msg) throws Exception {
         try {

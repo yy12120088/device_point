@@ -16,6 +16,7 @@ public class GetServerHandler extends SimpleChannelInboundHandler<ServerLBSInfo.
 
     /**
      * 获取服务器地址
+     * Get server address
      * @param ctx
      * @param msg
      * @throws Exception

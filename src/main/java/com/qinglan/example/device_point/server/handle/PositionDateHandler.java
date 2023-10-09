@@ -17,8 +17,8 @@ public class PositionDateHandler extends SimpleChannelInboundHandler<ServerLBSIn
 
 
     /**
+     * 轨迹
      * position
-     *
      * @param ctx
      * @param msg
      * @throws Exception

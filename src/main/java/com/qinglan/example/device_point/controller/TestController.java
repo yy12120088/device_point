@@ -22,6 +22,12 @@ public class TestController {
     @Resource
     DeviceRegSession deviceRegSession;
 
+    /**
+     * 订阅设备数据
+     * @param uid
+     * @return  Subscription device data
+     * @throws InterruptedException
+     */
     @GetMapping("/test")
     public String test(@RequestParam("uid") String uid) throws InterruptedException {
         Channel channel = deviceRegSession.isReg(uid);
@@ -43,6 +49,12 @@ public class TestController {
         return s;
     }
 
+    /**
+     * 获取设备属性
+     * @param uid
+     * @return Device prop
+     * @throws InterruptedException
+     */
     @GetMapping("/prop")
     public String getProp(@RequestParam("uid") String uid) throws InterruptedException {
         Channel channel = deviceRegSession.isReg(uid);

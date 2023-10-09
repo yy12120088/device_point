@@ -20,8 +20,8 @@ public class ProItemsHandler extends SimpleChannelInboundHandler<ServerLBSInfo.P
     DeviceRegSession deviceRegSession = SpringUtils.getBean(DeviceRegSession.class);
 
     /**
-     * Respiratory heart rate
-     *
+     * 设备属性
+     * Device Properties
      * @param ctx
      * @param msg
      * @throws Exception
