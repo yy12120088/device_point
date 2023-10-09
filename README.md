@@ -1,1 +1,1 @@
-# a simple demo with qinglan
+# a simple demo
