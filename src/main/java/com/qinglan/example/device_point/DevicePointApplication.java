@@ -14,6 +14,8 @@ public class DevicePointApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        new QlIotServer().startQLServer(1060);
+        new Thread(() -> {
+            new QlIotServer(). startQLServer(1060);
+        }).start();
     }
 }

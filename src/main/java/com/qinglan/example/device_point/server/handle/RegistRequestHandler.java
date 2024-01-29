@@ -32,7 +32,7 @@ public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo
         uids.add("F59D3E873F57");
         uids.add("F59D3E873F58");
         uids.add("F59D3E873F59");
-        uids.add("F59D3E873F50");
+        uids.add("CBAA7C29E9A4A0D");
     }
 
     /**

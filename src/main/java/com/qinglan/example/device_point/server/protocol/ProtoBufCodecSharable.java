@@ -94,6 +94,7 @@ public class ProtoBufCodecSharable extends MessageToMessageCodec<ByteBuf, ByteBu
         }
         else {
             log.error("-------------------------Unknown data---------messageType---{}---------------", messageType);
+            return;
         }
 
         try {

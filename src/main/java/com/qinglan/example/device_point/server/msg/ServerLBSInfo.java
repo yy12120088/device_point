@@ -14,243 +14,8 @@ public final class ServerLBSInfo {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  /**
-   * Protobuf enum {@code ql_radar.FallStatus}
-   */
-  public enum FallStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NORMAL = 0;</code>
-     */
-    NORMAL(0),
-    /**
-     * <code>SUSPECTED = 1;</code>
-     */
-    SUSPECTED(1),
-    /**
-     * <code>FALLDOWN = 2;</code>
-     */
-    FALLDOWN(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NORMAL = 0;</code>
-     */
-    public static final int NORMAL_VALUE = 0;
-    /**
-     * <code>SUSPECTED = 1;</code>
-     */
-    public static final int SUSPECTED_VALUE = 1;
-    /**
-     * <code>FALLDOWN = 2;</code>
-     */
-    public static final int FALLDOWN_VALUE = 2;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @Deprecated
-    public static FallStatus valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static FallStatus forNumber(int value) {
-      switch (value) {
-        case 0: return NORMAL;
-        case 1: return SUSPECTED;
-        case 2: return FALLDOWN;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<FallStatus>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        FallStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<FallStatus>() {
-            public FallStatus findValueByNumber(int number) {
-              return FallStatus.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ServerLBSInfo.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final FallStatus[] VALUES = values();
-
-    public static FallStatus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private FallStatus(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ql_radar.FallStatus)
-  }
-
-  /**
-   * <pre>
-   * </pre>
-   *
-   * Protobuf enum {@code ql_radar.PositionStatus}
-   */
-  public enum PositionStatus
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NoEvent = 0;</code>
-     */
-    NoEvent(0),
-    /**
-     * <code>IntoRoom = 1;</code>
-     */
-    IntoRoom(1),
-    /**
-     * <code>LeaveRoom = 2;</code>
-     */
-    LeaveRoom(2),
-    /**
-     * <code>InArea = 3;</code>
-     */
-    InArea(3),
-    /**
-     * <code>OutArea = 4;</code>
-     */
-    OutArea(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NoEvent = 0;</code>
-     */
-    public static final int NoEvent_VALUE = 0;
-    /**
-     * <code>IntoRoom = 1;</code>
-     */
-    public static final int IntoRoom_VALUE = 1;
-    /**
-     * <code>LeaveRoom = 2;</code>
-     */
-    public static final int LeaveRoom_VALUE = 2;
-    /**
-     * <code>InArea = 3;</code>
-     */
-    public static final int InArea_VALUE = 3;
-    /**
-     * <code>OutArea = 4;</code>
-     */
-    public static final int OutArea_VALUE = 4;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @Deprecated
-    public static PositionStatus valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static PositionStatus forNumber(int value) {
-      switch (value) {
-        case 0: return NoEvent;
-        case 1: return IntoRoom;
-        case 2: return LeaveRoom;
-        case 3: return InArea;
-        case 4: return OutArea;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PositionStatus>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PositionStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PositionStatus>() {
-            public PositionStatus findValueByNumber(int number) {
-              return PositionStatus.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ServerLBSInfo.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final PositionStatus[] VALUES = values();
-
-    public static PositionStatus valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private PositionStatus(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ql_radar.PositionStatus)
-  }
-
   public interface CommonMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.CommonMessage)
+      // @@protoc_insertion_point(interface_extends:CommonMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -259,11 +24,11 @@ public final class ServerLBSInfo {
     int getSeq();
   }
   /**
-   * Protobuf type {@code ql_radar.CommonMessage}
+   * Protobuf type {@code CommonMessage}
    */
   public  static final class CommonMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.CommonMessage)
+      // @@protoc_insertion_point(message_implements:CommonMessage)
       CommonMessageOrBuilder {
     // Use CommonMessage.newBuilder() to construct.
     private CommonMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -273,7 +38,7 @@ public final class ServerLBSInfo {
       seq_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -316,14 +81,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_CommonMessage_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonMessage_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_CommonMessage_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CommonMessage.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -366,15 +131,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CommonMessage)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage)) {
         return super.equals(obj);
       }
-      CommonMessage other = (CommonMessage) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -382,7 +147,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -396,58 +161,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CommonMessage parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CommonMessage parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CommonMessage parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CommonMessage parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CommonMessage parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -459,7 +224,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CommonMessage prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -467,38 +232,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.CommonMessage}
+     * Protobuf type {@code CommonMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.CommonMessage)
-        CommonMessageOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CommonMessage)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonMessage_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonMessage_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonMessage_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CommonMessage.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.CommonMessage.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -516,23 +281,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonMessage_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonMessage_descriptor;
       }
 
-      public CommonMessage getDefaultInstanceForType() {
-        return CommonMessage.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.getDefaultInstance();
       }
 
-      public CommonMessage build() {
-        CommonMessage result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public CommonMessage buildPartial() {
-        CommonMessage result = new CommonMessage(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage(this);
         result.seq_ = seq_;
         onBuilt();
         return result;
@@ -565,16 +330,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CommonMessage) {
-          return mergeFrom((CommonMessage)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CommonMessage other) {
-        if (other == CommonMessage.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -590,11 +355,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        CommonMessage parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (CommonMessage) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -640,16 +405,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.CommonMessage)
+      // @@protoc_insertion_point(builder_scope:CommonMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.CommonMessage)
-    private static final CommonMessage DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CommonMessage)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CommonMessage();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage();
     }
 
-    public static CommonMessage getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -667,19 +432,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CommonMessage> getParserForType() {
       return PARSER;
     }
 
-    public CommonMessage getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface CommonResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.CommonResponse)
+      // @@protoc_insertion_point(interface_extends:CommonResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -695,7 +460,7 @@ public final class ServerLBSInfo {
     /**
      * <code>optional string errmsg = 3;</code>
      */
-    String getErrmsg();
+    java.lang.String getErrmsg();
     /**
      * <code>optional string errmsg = 3;</code>
      */
@@ -703,11 +468,11 @@ public final class ServerLBSInfo {
         getErrmsgBytes();
   }
   /**
-   * Protobuf type {@code ql_radar.CommonResponse}
+   * Protobuf type {@code CommonResponse}
    */
   public  static final class CommonResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.CommonResponse)
+      // @@protoc_insertion_point(message_implements:CommonResponse)
       CommonResponseOrBuilder {
     // Use CommonResponse.newBuilder() to construct.
     private CommonResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -719,7 +484,7 @@ public final class ServerLBSInfo {
       errmsg_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -755,7 +520,7 @@ public final class ServerLBSInfo {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               errmsg_ = s;
               break;
@@ -773,14 +538,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_CommonResponse_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_CommonResponse_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CommonResponse.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -802,18 +567,18 @@ public final class ServerLBSInfo {
     }
 
     public static final int ERRMSG_FIELD_NUMBER = 3;
-    private volatile Object errmsg_;
+    private volatile java.lang.Object errmsg_;
     /**
      * <code>optional string errmsg = 3;</code>
      */
-    public String getErrmsg() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         errmsg_ = s;
         return s;
       }
@@ -823,11 +588,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getErrmsgBytes() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         errmsg_ = b;
         return b;
       } else {
@@ -879,15 +644,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CommonResponse)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse)) {
         return super.equals(obj);
       }
-      CommonResponse other = (CommonResponse) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -899,7 +664,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -917,58 +682,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CommonResponse parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CommonResponse parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CommonResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CommonResponse parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CommonResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -980,7 +745,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CommonResponse prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -988,38 +753,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.CommonResponse}
+     * Protobuf type {@code CommonResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.CommonResponse)
-        CommonResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CommonResponse)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonResponse_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonResponse_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonResponse_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CommonResponse.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.CommonResponse.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1041,23 +806,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_CommonResponse_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_CommonResponse_descriptor;
       }
 
-      public CommonResponse getDefaultInstanceForType() {
-        return CommonResponse.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.getDefaultInstance();
       }
 
-      public CommonResponse build() {
-        CommonResponse result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public CommonResponse buildPartial() {
-        CommonResponse result = new CommonResponse(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse(this);
         result.seq_ = seq_;
         result.result_ = result_;
         result.errmsg_ = errmsg_;
@@ -1092,16 +857,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CommonResponse) {
-          return mergeFrom((CommonResponse)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CommonResponse other) {
-        if (other == CommonResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -1124,11 +889,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        CommonResponse parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (CommonResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1190,20 +955,20 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object errmsg_ = "";
+      private java.lang.Object errmsg_ = "";
       /**
        * <code>optional string errmsg = 3;</code>
        */
-      public String getErrmsg() {
-        Object ref = errmsg_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           errmsg_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1211,11 +976,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getErrmsgBytes() {
-        Object ref = errmsg_;
+        java.lang.Object ref = errmsg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           errmsg_ = b;
           return b;
         } else {
@@ -1226,7 +991,7 @@ public final class ServerLBSInfo {
        * <code>optional string errmsg = 3;</code>
        */
       public Builder setErrmsg(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1269,16 +1034,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.CommonResponse)
+      // @@protoc_insertion_point(builder_scope:CommonResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.CommonResponse)
-    private static final CommonResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CommonResponse)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CommonResponse();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse();
     }
 
-    public static CommonResponse getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1296,648 +1061,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CommonResponse> getParserForType() {
       return PARSER;
     }
 
-    public CommonResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface SetPropResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.SetPropResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional uint32 seq = 1;</code>
-     */
-    int getSeq();
-
-    /**
-     * <code>optional int32 result = 2;</code>
-     */
-    int getResult();
-
-    /**
-     * <code>optional string errmsg = 3;</code>
-     */
-    String getErrmsg();
-    /**
-     * <code>optional string errmsg = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getErrmsgBytes();
-  }
-  /**
-   * Protobuf type {@code ql_radar.SetPropResponse}
-   */
-  public  static final class SetPropResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.SetPropResponse)
-      SetPropResponseOrBuilder {
-    // Use SetPropResponse.newBuilder() to construct.
-    private SetPropResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SetPropResponse() {
-      seq_ = 0;
-      result_ = 0;
-      errmsg_ = "";
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private SetPropResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-
-              seq_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              result_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              String s = input.readStringRequireUtf8();
-
-              errmsg_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_SetPropResponse_descriptor;
-    }
-
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_SetPropResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              SetPropResponse.class, Builder.class);
-    }
-
-    public static final int SEQ_FIELD_NUMBER = 1;
-    private int seq_;
-    /**
-     * <code>optional uint32 seq = 1;</code>
-     */
-    public int getSeq() {
-      return seq_;
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 2;
-    private int result_;
-    /**
-     * <code>optional int32 result = 2;</code>
-     */
-    public int getResult() {
-      return result_;
-    }
-
-    public static final int ERRMSG_FIELD_NUMBER = 3;
-    private volatile Object errmsg_;
-    /**
-     * <code>optional string errmsg = 3;</code>
-     */
-    public String getErrmsg() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        errmsg_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string errmsg = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getErrmsgBytes() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        errmsg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (seq_ != 0) {
-        output.writeUInt32(1, seq_);
-      }
-      if (result_ != 0) {
-        output.writeInt32(2, result_);
-      }
-      if (!getErrmsgBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errmsg_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (seq_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, seq_);
-      }
-      if (result_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, result_);
-      }
-      if (!getErrmsgBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errmsg_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof SetPropResponse)) {
-        return super.equals(obj);
-      }
-      SetPropResponse other = (SetPropResponse) obj;
-
-      boolean result = true;
-      result = result && (getSeq()
-          == other.getSeq());
-      result = result && (getResult()
-          == other.getResult());
-      result = result && getErrmsg()
-          .equals(other.getErrmsg());
-      return result;
-    }
-
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + SEQ_FIELD_NUMBER;
-      hash = (53 * hash) + getSeq();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + getResult();
-      hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
-      hash = (53 * hash) + getErrmsg().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static SetPropResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SetPropResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SetPropResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static SetPropResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static SetPropResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SetPropResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SetPropResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static SetPropResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static SetPropResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static SetPropResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(SetPropResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code ql_radar.SetPropResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.SetPropResponse)
-        SetPropResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_SetPropResponse_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_SetPropResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                SetPropResponse.class, Builder.class);
-      }
-
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.SetPropResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        seq_ = 0;
-
-        result_ = 0;
-
-        errmsg_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_SetPropResponse_descriptor;
-      }
-
-      public SetPropResponse getDefaultInstanceForType() {
-        return SetPropResponse.getDefaultInstance();
-      }
-
-      public SetPropResponse build() {
-        SetPropResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public SetPropResponse buildPartial() {
-        SetPropResponse result = new SetPropResponse(this);
-        result.seq_ = seq_;
-        result.result_ = result_;
-        result.errmsg_ = errmsg_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SetPropResponse) {
-          return mergeFrom((SetPropResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(SetPropResponse other) {
-        if (other == SetPropResponse.getDefaultInstance()) return this;
-        if (other.getSeq() != 0) {
-          setSeq(other.getSeq());
-        }
-        if (other.getResult() != 0) {
-          setResult(other.getResult());
-        }
-        if (!other.getErrmsg().isEmpty()) {
-          errmsg_ = other.errmsg_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        SetPropResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SetPropResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int seq_ ;
-      /**
-       * <code>optional uint32 seq = 1;</code>
-       */
-      public int getSeq() {
-        return seq_;
-      }
-      /**
-       * <code>optional uint32 seq = 1;</code>
-       */
-      public Builder setSeq(int value) {
-
-        seq_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 seq = 1;</code>
-       */
-      public Builder clearSeq() {
-
-        seq_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int result_ ;
-      /**
-       * <code>optional int32 result = 2;</code>
-       */
-      public int getResult() {
-        return result_;
-      }
-      /**
-       * <code>optional int32 result = 2;</code>
-       */
-      public Builder setResult(int value) {
-
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 result = 2;</code>
-       */
-      public Builder clearResult() {
-
-        result_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private Object errmsg_ = "";
-      /**
-       * <code>optional string errmsg = 3;</code>
-       */
-      public String getErrmsg() {
-        Object ref = errmsg_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          errmsg_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string errmsg = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getErrmsgBytes() {
-        Object ref = errmsg_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          errmsg_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string errmsg = 3;</code>
-       */
-      public Builder setErrmsg(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-
-        errmsg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string errmsg = 3;</code>
-       */
-      public Builder clearErrmsg() {
-
-        errmsg_ = getDefaultInstance().getErrmsg();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string errmsg = 3;</code>
-       */
-      public Builder setErrmsgBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-
-        errmsg_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:ql_radar.SetPropResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:ql_radar.SetPropResponse)
-    private static final SetPropResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new SetPropResponse();
-    }
-
-    public static SetPropResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SetPropResponse>
-        PARSER = new com.google.protobuf.AbstractParser<SetPropResponse>() {
-      public SetPropResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SetPropResponse(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SetPropResponse> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<SetPropResponse> getParserForType() {
-      return PARSER;
-    }
-
-    public SetPropResponse getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.CommonResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface SetModeReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.SetModeReq)
+      // @@protoc_insertion_point(interface_extends:SetModeReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1951,11 +1087,11 @@ public final class ServerLBSInfo {
     int getSeconds();
   }
   /**
-   * Protobuf type {@code ql_radar.SetModeReq}
+   * Protobuf type {@code SetModeReq}
    */
   public  static final class SetModeReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.SetModeReq)
+      // @@protoc_insertion_point(message_implements:SetModeReq)
       SetModeReqOrBuilder {
     // Use SetModeReq.newBuilder() to construct.
     private SetModeReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -1966,7 +1102,7 @@ public final class ServerLBSInfo {
       seconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -2014,14 +1150,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_SetModeReq_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetModeReq_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_SetModeReq_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetModeReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SetModeReq.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -2080,15 +1216,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SetModeReq)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq)) {
         return super.equals(obj);
       }
-      SetModeReq other = (SetModeReq) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -2098,7 +1234,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2114,58 +1250,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SetModeReq parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SetModeReq parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SetModeReq parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SetModeReq parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SetModeReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2177,7 +1313,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SetModeReq prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -2185,38 +1321,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.SetModeReq}
+     * Protobuf type {@code SetModeReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.SetModeReq)
-        SetModeReqOrBuilder {
+        // @@protoc_insertion_point(builder_implements:SetModeReq)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_SetModeReq_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetModeReq_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_SetModeReq_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetModeReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SetModeReq.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.SetModeReq.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2236,23 +1372,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_SetModeReq_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetModeReq_descriptor;
       }
 
-      public SetModeReq getDefaultInstanceForType() {
-        return SetModeReq.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.getDefaultInstance();
       }
 
-      public SetModeReq build() {
-        SetModeReq result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public SetModeReq buildPartial() {
-        SetModeReq result = new SetModeReq(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq(this);
         result.seq_ = seq_;
         result.seconds_ = seconds_;
         onBuilt();
@@ -2286,16 +1422,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SetModeReq) {
-          return mergeFrom((SetModeReq)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SetModeReq other) {
-        if (other == SetModeReq.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -2314,11 +1450,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SetModeReq parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SetModeReq) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2390,16 +1526,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.SetModeReq)
+      // @@protoc_insertion_point(builder_scope:SetModeReq)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.SetModeReq)
-    private static final SetModeReq DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:SetModeReq)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SetModeReq();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq();
     }
 
-    public static SetModeReq getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2417,19 +1553,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<SetModeReq> getParserForType() {
       return PARSER;
     }
 
-    public SetModeReq getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetModeReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ObjectDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.ObjectData)
+      // @@protoc_insertion_point(interface_extends:ObjectData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2452,7 +1588,7 @@ public final class ServerLBSInfo {
 
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -2460,11 +1596,11 @@ public final class ServerLBSInfo {
     int getMseconds();
   }
   /**
-   * Protobuf type {@code ql_radar.ObjectData}
+   * Protobuf type {@code ObjectData}
    */
   public  static final class ObjectData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.ObjectData)
+      // @@protoc_insertion_point(message_implements:ObjectData)
       ObjectDataOrBuilder {
     // Use ObjectData.newBuilder() to construct.
     private ObjectData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -2476,7 +1612,7 @@ public final class ServerLBSInfo {
       mseconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -2529,14 +1665,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_ObjectData_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectData_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_ObjectData_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ObjectData.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.Builder.class);
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
@@ -2569,7 +1705,7 @@ public final class ServerLBSInfo {
     private int mseconds_;
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -2623,15 +1759,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ObjectData)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData)) {
         return super.equals(obj);
       }
-      ObjectData other = (ObjectData) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData) obj;
 
       boolean result = true;
       result = result && getData()
@@ -2643,7 +1779,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2661,58 +1797,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ObjectData parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ObjectData parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ObjectData parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ObjectData parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ObjectData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2724,7 +1860,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ObjectData prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -2732,38 +1868,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.ObjectData}
+     * Protobuf type {@code ObjectData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.ObjectData)
-        ObjectDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ObjectData)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectData_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectData_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ObjectData.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.ObjectData.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2785,23 +1921,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectData_descriptor;
       }
 
-      public ObjectData getDefaultInstanceForType() {
-        return ObjectData.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.getDefaultInstance();
       }
 
-      public ObjectData build() {
-        ObjectData result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public ObjectData buildPartial() {
-        ObjectData result = new ObjectData(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData(this);
         result.data_ = data_;
         result.seconds_ = seconds_;
         result.mseconds_ = mseconds_;
@@ -2836,16 +1972,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ObjectData) {
-          return mergeFrom((ObjectData)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ObjectData other) {
-        if (other == ObjectData.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData.getDefaultInstance()) return this;
         if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
           setData(other.getData());
         }
@@ -2867,11 +2003,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ObjectData parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ObjectData) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2963,7 +2099,7 @@ public final class ServerLBSInfo {
       private int mseconds_ ;
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -2973,7 +2109,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -2986,7 +2122,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -3008,16 +2144,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.ObjectData)
+      // @@protoc_insertion_point(builder_scope:ObjectData)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.ObjectData)
-    private static final ObjectData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ObjectData)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ObjectData();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData();
     }
 
-    public static ObjectData getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3035,19 +2171,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ObjectData> getParserForType() {
       return PARSER;
     }
 
-    public ObjectData getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface GetServerReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.GetServerReq)
+      // @@protoc_insertion_point(interface_extends:GetServerReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3062,7 +2198,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string uid = 2;</code>
      */
-    String getUid();
+    java.lang.String getUid();
     /**
      * <pre>
      *设备UID
@@ -3080,7 +2216,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string type = 3;</code>
      */
-    String getType();
+    java.lang.String getType();
     /**
      * <pre>
      *设备类型
@@ -3097,11 +2233,11 @@ public final class ServerLBSInfo {
    *获取服务器请求
    * </pre>
    *
-   * Protobuf type {@code ql_radar.GetServerReq}
+   * Protobuf type {@code GetServerReq}
    */
   public  static final class GetServerReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.GetServerReq)
+      // @@protoc_insertion_point(message_implements:GetServerReq)
       GetServerReqOrBuilder {
     // Use GetServerReq.newBuilder() to construct.
     private GetServerReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -3113,7 +2249,7 @@ public final class ServerLBSInfo {
       type_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -3144,13 +2280,13 @@ public final class ServerLBSInfo {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               uid_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               type_ = s;
               break;
@@ -3168,14 +2304,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_GetServerReq_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerReq_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_GetServerReq_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetServerReq.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -3188,7 +2324,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile Object uid_;
+    private volatile java.lang.Object uid_;
     /**
      * <pre>
      *设备UID
@@ -3196,14 +2332,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string uid = 2;</code>
      */
-    public String getUid() {
-      Object ref = uid_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         uid_ = s;
         return s;
       }
@@ -3217,11 +2353,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getUidBytes() {
-      Object ref = uid_;
-      if (ref instanceof String) {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         uid_ = b;
         return b;
       } else {
@@ -3230,7 +2366,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int TYPE_FIELD_NUMBER = 3;
-    private volatile Object type_;
+    private volatile java.lang.Object type_;
     /**
      * <pre>
      *设备类型
@@ -3238,14 +2374,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string type = 3;</code>
      */
-    public String getType() {
-      Object ref = type_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         type_ = s;
         return s;
       }
@@ -3259,11 +2395,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
-      Object ref = type_;
-      if (ref instanceof String) {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         type_ = b;
         return b;
       } else {
@@ -3314,15 +2450,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GetServerReq)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq)) {
         return super.equals(obj);
       }
-      GetServerReq other = (GetServerReq) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -3334,7 +2470,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3352,58 +2488,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetServerReq parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetServerReq parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetServerReq parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GetServerReq parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetServerReq parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3415,7 +2551,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GetServerReq prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -3423,9 +2559,9 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3435,31 +2571,31 @@ public final class ServerLBSInfo {
      *获取服务器请求
      * </pre>
      *
-     * Protobuf type {@code ql_radar.GetServerReq}
+     * Protobuf type {@code GetServerReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.GetServerReq)
-        GetServerReqOrBuilder {
+        // @@protoc_insertion_point(builder_implements:GetServerReq)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerReq_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerReq_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerReq_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GetServerReq.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.GetServerReq.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3481,23 +2617,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerReq_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerReq_descriptor;
       }
 
-      public GetServerReq getDefaultInstanceForType() {
-        return GetServerReq.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.getDefaultInstance();
       }
 
-      public GetServerReq build() {
-        GetServerReq result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public GetServerReq buildPartial() {
-        GetServerReq result = new GetServerReq(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq(this);
         result.seq_ = seq_;
         result.uid_ = uid_;
         result.type_ = type_;
@@ -3532,16 +2668,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GetServerReq) {
-          return mergeFrom((GetServerReq)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GetServerReq other) {
-        if (other == GetServerReq.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -3565,11 +2701,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        GetServerReq parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (GetServerReq) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3605,7 +2741,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object uid_ = "";
+      private java.lang.Object uid_ = "";
       /**
        * <pre>
        *设备UID
@@ -3613,16 +2749,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string uid = 2;</code>
        */
-      public String getUid() {
-        Object ref = uid_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           uid_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3634,11 +2770,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
-        Object ref = uid_;
+        java.lang.Object ref = uid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           uid_ = b;
           return b;
         } else {
@@ -3653,7 +2789,7 @@ public final class ServerLBSInfo {
        * <code>optional string uid = 2;</code>
        */
       public Builder setUid(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3694,7 +2830,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object type_ = "";
+      private java.lang.Object type_ = "";
       /**
        * <pre>
        *设备类型
@@ -3702,16 +2838,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string type = 3;</code>
        */
-      public String getType() {
-        Object ref = type_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           type_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3723,11 +2859,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
-        Object ref = type_;
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           type_ = b;
           return b;
         } else {
@@ -3742,7 +2878,7 @@ public final class ServerLBSInfo {
        * <code>optional string type = 3;</code>
        */
       public Builder setType(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3793,16 +2929,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.GetServerReq)
+      // @@protoc_insertion_point(builder_scope:GetServerReq)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.GetServerReq)
-    private static final GetServerReq DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:GetServerReq)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GetServerReq();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq();
     }
 
-    public static GetServerReq getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3820,19 +2956,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<GetServerReq> getParserForType() {
       return PARSER;
     }
 
-    public GetServerReq getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface GetServerResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.GetServerResponse)
+      // @@protoc_insertion_point(interface_extends:GetServerResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3856,7 +2992,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string server = 3;</code>
      */
-    String getServer();
+    java.lang.String getServer();
     /**
      * <pre>
      *服务器域名或者IP
@@ -3883,7 +3019,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string addon = 5;</code>
      */
-    String getAddon();
+    java.lang.String getAddon();
     /**
      * <pre>
      *服务器附加信息
@@ -3901,7 +3037,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string errmsg = 6;</code>
      */
-    String getErrmsg();
+    java.lang.String getErrmsg();
     /**
      * <pre>
      *错误信息
@@ -3918,11 +3054,11 @@ public final class ServerLBSInfo {
    *获取服务器响应
    * </pre>
    *
-   * Protobuf type {@code ql_radar.GetServerResponse}
+   * Protobuf type {@code GetServerResponse}
    */
   public  static final class GetServerResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.GetServerResponse)
+      // @@protoc_insertion_point(message_implements:GetServerResponse)
       GetServerResponseOrBuilder {
     // Use GetServerResponse.newBuilder() to construct.
     private GetServerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -3937,7 +3073,7 @@ public final class ServerLBSInfo {
       errmsg_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -3973,7 +3109,7 @@ public final class ServerLBSInfo {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               server_ = s;
               break;
@@ -3984,13 +3120,13 @@ public final class ServerLBSInfo {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               addon_ = s;
               break;
             }
             case 50: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               errmsg_ = s;
               break;
@@ -4008,14 +3144,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_GetServerResponse_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_GetServerResponse_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetServerResponse.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -4041,7 +3177,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int SERVER_FIELD_NUMBER = 3;
-    private volatile Object server_;
+    private volatile java.lang.Object server_;
     /**
      * <pre>
      *服务器域名或者IP
@@ -4049,14 +3185,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string server = 3;</code>
      */
-    public String getServer() {
-      Object ref = server_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getServer() {
+      java.lang.Object ref = server_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         server_ = s;
         return s;
       }
@@ -4070,11 +3206,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getServerBytes() {
-      Object ref = server_;
-      if (ref instanceof String) {
+      java.lang.Object ref = server_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         server_ = b;
         return b;
       } else {
@@ -4096,7 +3232,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int ADDON_FIELD_NUMBER = 5;
-    private volatile Object addon_;
+    private volatile java.lang.Object addon_;
     /**
      * <pre>
      *服务器附加信息
@@ -4104,14 +3240,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string addon = 5;</code>
      */
-    public String getAddon() {
-      Object ref = addon_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getAddon() {
+      java.lang.Object ref = addon_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         addon_ = s;
         return s;
       }
@@ -4125,11 +3261,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getAddonBytes() {
-      Object ref = addon_;
-      if (ref instanceof String) {
+      java.lang.Object ref = addon_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         addon_ = b;
         return b;
       } else {
@@ -4138,7 +3274,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int ERRMSG_FIELD_NUMBER = 6;
-    private volatile Object errmsg_;
+    private volatile java.lang.Object errmsg_;
     /**
      * <pre>
      *错误信息
@@ -4146,14 +3282,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string errmsg = 6;</code>
      */
-    public String getErrmsg() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         errmsg_ = s;
         return s;
       }
@@ -4167,11 +3303,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getErrmsgBytes() {
-      Object ref = errmsg_;
-      if (ref instanceof String) {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         errmsg_ = b;
         return b;
       } else {
@@ -4242,15 +3378,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GetServerResponse)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse)) {
         return super.equals(obj);
       }
-      GetServerResponse other = (GetServerResponse) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -4268,7 +3404,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4292,58 +3428,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetServerResponse parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetServerResponse parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetServerResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GetServerResponse parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetServerResponse parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4355,7 +3491,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GetServerResponse prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4363,9 +3499,9 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4375,31 +3511,31 @@ public final class ServerLBSInfo {
      *获取服务器响应
      * </pre>
      *
-     * Protobuf type {@code ql_radar.GetServerResponse}
+     * Protobuf type {@code GetServerResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.GetServerResponse)
-        GetServerResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:GetServerResponse)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerResponse_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerResponse_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerResponse_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GetServerResponse.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.GetServerResponse.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4427,23 +3563,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_GetServerResponse_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_GetServerResponse_descriptor;
       }
 
-      public GetServerResponse getDefaultInstanceForType() {
-        return GetServerResponse.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.getDefaultInstance();
       }
 
-      public GetServerResponse build() {
-        GetServerResponse result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public GetServerResponse buildPartial() {
-        GetServerResponse result = new GetServerResponse(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse(this);
         result.seq_ = seq_;
         result.result_ = result_;
         result.server_ = server_;
@@ -4481,16 +3617,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GetServerResponse) {
-          return mergeFrom((GetServerResponse)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GetServerResponse other) {
-        if (other == GetServerResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -4524,11 +3660,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        GetServerResponse parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (GetServerResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4602,7 +3738,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object server_ = "";
+      private java.lang.Object server_ = "";
       /**
        * <pre>
        *服务器域名或者IP
@@ -4610,16 +3746,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string server = 3;</code>
        */
-      public String getServer() {
-        Object ref = server_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getServer() {
+        java.lang.Object ref = server_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           server_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4631,11 +3767,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getServerBytes() {
-        Object ref = server_;
+        java.lang.Object ref = server_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           server_ = b;
           return b;
         } else {
@@ -4650,7 +3786,7 @@ public final class ServerLBSInfo {
        * <code>optional string server = 3;</code>
        */
       public Builder setServer(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4729,7 +3865,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object addon_ = "";
+      private java.lang.Object addon_ = "";
       /**
        * <pre>
        *服务器附加信息
@@ -4737,16 +3873,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string addon = 5;</code>
        */
-      public String getAddon() {
-        Object ref = addon_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getAddon() {
+        java.lang.Object ref = addon_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           addon_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4758,11 +3894,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getAddonBytes() {
-        Object ref = addon_;
+        java.lang.Object ref = addon_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           addon_ = b;
           return b;
         } else {
@@ -4777,7 +3913,7 @@ public final class ServerLBSInfo {
        * <code>optional string addon = 5;</code>
        */
       public Builder setAddon(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4818,7 +3954,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object errmsg_ = "";
+      private java.lang.Object errmsg_ = "";
       /**
        * <pre>
        *错误信息
@@ -4826,16 +3962,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string errmsg = 6;</code>
        */
-      public String getErrmsg() {
-        Object ref = errmsg_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           errmsg_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -4847,11 +3983,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getErrmsgBytes() {
-        Object ref = errmsg_;
+        java.lang.Object ref = errmsg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           errmsg_ = b;
           return b;
         } else {
@@ -4866,7 +4002,7 @@ public final class ServerLBSInfo {
        * <code>optional string errmsg = 6;</code>
        */
       public Builder setErrmsg(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4917,16 +4053,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.GetServerResponse)
+      // @@protoc_insertion_point(builder_scope:GetServerResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.GetServerResponse)
-    private static final GetServerResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:GetServerResponse)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GetServerResponse();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse();
     }
 
-    public static GetServerResponse getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4944,24 +4080,24 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<GetServerResponse> getParserForType() {
       return PARSER;
     }
 
-    public GetServerResponse getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.GetServerResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PositionStatusEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.PositionStatusEvent)
+      // @@protoc_insertion_point(interface_extends:PositionStatusEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     *8个字节,第n字节对应的相应ID的事件值
+     *8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
      * </pre>
      *
      * <code>optional bytes events = 1;</code>
@@ -4996,11 +4132,11 @@ public final class ServerLBSInfo {
     int getMseconds();
   }
   /**
-   * Protobuf type {@code ql_radar.PositionStatusEvent}
+   * Protobuf type {@code PositionStatusEvent}
    */
   public  static final class PositionStatusEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.PositionStatusEvent)
+      // @@protoc_insertion_point(message_implements:PositionStatusEvent)
       PositionStatusEventOrBuilder {
     // Use PositionStatusEvent.newBuilder() to construct.
     private PositionStatusEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -5013,7 +4149,7 @@ public final class ServerLBSInfo {
       mseconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -5071,21 +4207,21 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_PositionStatusEvent_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionStatusEvent_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_PositionStatusEvent_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionStatusEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PositionStatusEvent.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.Builder.class);
     }
 
     public static final int EVENTS_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString events_;
     /**
      * <pre>
-     *8个字节,第n字节对应的相应ID的事件值
+     *8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
      * </pre>
      *
      * <code>optional bytes events = 1;</code>
@@ -5185,15 +4321,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof PositionStatusEvent)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent)) {
         return super.equals(obj);
       }
-      PositionStatusEvent other = (PositionStatusEvent) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent) obj;
 
       boolean result = true;
       result = result && getEvents()
@@ -5207,7 +4343,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5227,58 +4363,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PositionStatusEvent parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PositionStatusEvent parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static PositionStatusEvent parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static PositionStatusEvent parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static PositionStatusEvent parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5290,7 +4426,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PositionStatusEvent prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -5298,38 +4434,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.PositionStatusEvent}
+     * Protobuf type {@code PositionStatusEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.PositionStatusEvent)
-        PositionStatusEventOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PositionStatusEvent)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionStatusEvent_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionStatusEvent_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionStatusEvent_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionStatusEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PositionStatusEvent.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.PositionStatusEvent.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5353,23 +4489,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionStatusEvent_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionStatusEvent_descriptor;
       }
 
-      public PositionStatusEvent getDefaultInstanceForType() {
-        return PositionStatusEvent.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.getDefaultInstance();
       }
 
-      public PositionStatusEvent build() {
-        PositionStatusEvent result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PositionStatusEvent buildPartial() {
-        PositionStatusEvent result = new PositionStatusEvent(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent(this);
         result.events_ = events_;
         result.areas_ = areas_;
         result.seconds_ = seconds_;
@@ -5405,16 +4541,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PositionStatusEvent) {
-          return mergeFrom((PositionStatusEvent)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PositionStatusEvent other) {
-        if (other == PositionStatusEvent.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent.getDefaultInstance()) return this;
         if (other.getEvents() != com.google.protobuf.ByteString.EMPTY) {
           setEvents(other.getEvents());
         }
@@ -5439,11 +4575,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PositionStatusEvent parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PositionStatusEvent) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5456,7 +4592,7 @@ public final class ServerLBSInfo {
       private com.google.protobuf.ByteString events_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       *8个字节,第n字节对应的相应ID的事件值
+       *8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
        * </pre>
        *
        * <code>optional bytes events = 1;</code>
@@ -5466,7 +4602,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *8个字节,第n字节对应的相应ID的事件值
+       *8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
        * </pre>
        *
        * <code>optional bytes events = 1;</code>
@@ -5482,7 +4618,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *8个字节,第n字节对应的相应ID的事件值
+       *8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
        * </pre>
        *
        * <code>optional bytes events = 1;</code>
@@ -5621,16 +4757,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.PositionStatusEvent)
+      // @@protoc_insertion_point(builder_scope:PositionStatusEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.PositionStatusEvent)
-    private static final PositionStatusEvent DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PositionStatusEvent)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PositionStatusEvent();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent();
     }
 
-    public static PositionStatusEvent getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5648,19 +4784,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PositionStatusEvent> getParserForType() {
       return PARSER;
     }
 
-    public PositionStatusEvent getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionStatusEvent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ObjectFallDownOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.ObjectFallDown)
+      // @@protoc_insertion_point(interface_extends:ObjectFallDown)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5696,11 +4832,11 @@ public final class ServerLBSInfo {
    *上报跌倒状态,不需要响应
    * </pre>
    *
-   * Protobuf type {@code ql_radar.ObjectFallDown}
+   * Protobuf type {@code ObjectFallDown}
    */
   public  static final class ObjectFallDown extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.ObjectFallDown)
+      // @@protoc_insertion_point(message_implements:ObjectFallDown)
       ObjectFallDownOrBuilder {
     // Use ObjectFallDown.newBuilder() to construct.
     private ObjectFallDown(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -5712,7 +4848,7 @@ public final class ServerLBSInfo {
       mseconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -5765,14 +4901,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_ObjectFallDown_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectFallDown_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_ObjectFallDown_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectFallDown_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ObjectFallDown.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.Builder.class);
     }
 
     public static final int FALLS_FIELD_NUMBER = 1;
@@ -5859,15 +4995,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ObjectFallDown)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown)) {
         return super.equals(obj);
       }
-      ObjectFallDown other = (ObjectFallDown) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown) obj;
 
       boolean result = true;
       result = result && getFalls()
@@ -5879,7 +5015,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5897,58 +5033,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ObjectFallDown parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ObjectFallDown parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ObjectFallDown parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ObjectFallDown parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ObjectFallDown parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5960,7 +5096,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ObjectFallDown prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -5968,9 +5104,9 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5980,31 +5116,31 @@ public final class ServerLBSInfo {
      *上报跌倒状态,不需要响应
      * </pre>
      *
-     * Protobuf type {@code ql_radar.ObjectFallDown}
+     * Protobuf type {@code ObjectFallDown}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.ObjectFallDown)
-        ObjectFallDownOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ObjectFallDown)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDownOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectFallDown_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectFallDown_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectFallDown_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectFallDown_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ObjectFallDown.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.ObjectFallDown.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6026,23 +5162,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_ObjectFallDown_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ObjectFallDown_descriptor;
       }
 
-      public ObjectFallDown getDefaultInstanceForType() {
-        return ObjectFallDown.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.getDefaultInstance();
       }
 
-      public ObjectFallDown build() {
-        ObjectFallDown result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public ObjectFallDown buildPartial() {
-        ObjectFallDown result = new ObjectFallDown(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown(this);
         result.falls_ = falls_;
         result.seconds_ = seconds_;
         result.mseconds_ = mseconds_;
@@ -6077,16 +5213,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ObjectFallDown) {
-          return mergeFrom((ObjectFallDown)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ObjectFallDown other) {
-        if (other == ObjectFallDown.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown.getDefaultInstance()) return this;
         if (other.getFalls() != com.google.protobuf.ByteString.EMPTY) {
           setFalls(other.getFalls());
         }
@@ -6108,11 +5244,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ObjectFallDown parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ObjectFallDown) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6249,16 +5385,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.ObjectFallDown)
+      // @@protoc_insertion_point(builder_scope:ObjectFallDown)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.ObjectFallDown)
-    private static final ObjectFallDown DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ObjectFallDown)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ObjectFallDown();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown();
     }
 
-    public static ObjectFallDown getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6276,19 +5412,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ObjectFallDown> getParserForType() {
       return PARSER;
     }
 
-    public ObjectFallDown getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ObjectFallDown getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface SetDevicePropertyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.SetDeviceProperty)
+      // @@protoc_insertion_point(interface_extends:SetDeviceProperty)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6303,7 +5439,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string key = 2;</code>
      */
-    String getKey();
+    java.lang.String getKey();
     /**
      * <pre>
      *属性key
@@ -6321,7 +5457,7 @@ public final class ServerLBSInfo {
      *
      * <code>optional string value = 3;</code>
      */
-    String getValue();
+    java.lang.String getValue();
     /**
      * <pre>
      *值
@@ -6339,11 +5475,11 @@ public final class ServerLBSInfo {
    *SetDeviceProperty
    * </pre>
    *
-   * Protobuf type {@code ql_radar.SetDeviceProperty}
+   * Protobuf type {@code SetDeviceProperty}
    */
   public  static final class SetDeviceProperty extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.SetDeviceProperty)
+      // @@protoc_insertion_point(message_implements:SetDeviceProperty)
       SetDevicePropertyOrBuilder {
     // Use SetDeviceProperty.newBuilder() to construct.
     private SetDeviceProperty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -6355,7 +5491,7 @@ public final class ServerLBSInfo {
       value_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -6386,13 +5522,13 @@ public final class ServerLBSInfo {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               key_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               value_ = s;
               break;
@@ -6410,14 +5546,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_SetDeviceProperty_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetDeviceProperty_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_SetDeviceProperty_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetDeviceProperty_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SetDeviceProperty.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.Builder.class);
     }
 
     public static final int SEQ_FIELD_NUMBER = 1;
@@ -6430,7 +5566,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int KEY_FIELD_NUMBER = 2;
-    private volatile Object key_;
+    private volatile java.lang.Object key_;
     /**
      * <pre>
      *属性key
@@ -6438,14 +5574,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string key = 2;</code>
      */
-    public String getKey() {
-      Object ref = key_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         key_ = s;
         return s;
       }
@@ -6459,11 +5595,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
-      Object ref = key_;
-      if (ref instanceof String) {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         key_ = b;
         return b;
       } else {
@@ -6472,7 +5608,7 @@ public final class ServerLBSInfo {
     }
 
     public static final int VALUE_FIELD_NUMBER = 3;
-    private volatile Object value_;
+    private volatile java.lang.Object value_;
     /**
      * <pre>
      *值
@@ -6480,14 +5616,14 @@ public final class ServerLBSInfo {
      *
      * <code>optional string value = 3;</code>
      */
-    public String getValue() {
-      Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         value_ = s;
         return s;
       }
@@ -6501,11 +5637,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getValueBytes() {
-      Object ref = value_;
-      if (ref instanceof String) {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
@@ -6556,15 +5692,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SetDeviceProperty)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty)) {
         return super.equals(obj);
       }
-      SetDeviceProperty other = (SetDeviceProperty) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty) obj;
 
       boolean result = true;
       result = result && (getSeq()
@@ -6576,7 +5712,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -6594,58 +5730,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SetDeviceProperty parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SetDeviceProperty parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SetDeviceProperty parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SetDeviceProperty parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SetDeviceProperty parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6657,7 +5793,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SetDeviceProperty prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -6665,9 +5801,9 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6678,31 +5814,31 @@ public final class ServerLBSInfo {
      *SetDeviceProperty
      * </pre>
      *
-     * Protobuf type {@code ql_radar.SetDeviceProperty}
+     * Protobuf type {@code SetDeviceProperty}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.SetDeviceProperty)
-        SetDevicePropertyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:SetDeviceProperty)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDevicePropertyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_SetDeviceProperty_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetDeviceProperty_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_SetDeviceProperty_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetDeviceProperty_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SetDeviceProperty.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.SetDeviceProperty.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6724,23 +5860,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_SetDeviceProperty_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetDeviceProperty_descriptor;
       }
 
-      public SetDeviceProperty getDefaultInstanceForType() {
-        return SetDeviceProperty.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.getDefaultInstance();
       }
 
-      public SetDeviceProperty build() {
-        SetDeviceProperty result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public SetDeviceProperty buildPartial() {
-        SetDeviceProperty result = new SetDeviceProperty(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty(this);
         result.seq_ = seq_;
         result.key_ = key_;
         result.value_ = value_;
@@ -6775,16 +5911,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SetDeviceProperty) {
-          return mergeFrom((SetDeviceProperty)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SetDeviceProperty other) {
-        if (other == SetDeviceProperty.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty.getDefaultInstance()) return this;
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
@@ -6808,11 +5944,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SetDeviceProperty parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SetDeviceProperty) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6848,7 +5984,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object key_ = "";
+      private java.lang.Object key_ = "";
       /**
        * <pre>
        *属性key
@@ -6856,16 +5992,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string key = 2;</code>
        */
-      public String getKey() {
-        Object ref = key_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           key_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -6877,11 +6013,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
-        Object ref = key_;
+        java.lang.Object ref = key_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           key_ = b;
           return b;
         } else {
@@ -6896,7 +6032,7 @@ public final class ServerLBSInfo {
        * <code>optional string key = 2;</code>
        */
       public Builder setKey(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6937,7 +6073,7 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object value_ = "";
+      private java.lang.Object value_ = "";
       /**
        * <pre>
        *值
@@ -6945,16 +6081,16 @@ public final class ServerLBSInfo {
        *
        * <code>optional string value = 3;</code>
        */
-      public String getValue() {
-        Object ref = value_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           value_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -6966,11 +6102,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
-        Object ref = value_;
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           value_ = b;
           return b;
         } else {
@@ -6985,7 +6121,7 @@ public final class ServerLBSInfo {
        * <code>optional string value = 3;</code>
        */
       public Builder setValue(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7036,16 +6172,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.SetDeviceProperty)
+      // @@protoc_insertion_point(builder_scope:SetDeviceProperty)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.SetDeviceProperty)
-    private static final SetDeviceProperty DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:SetDeviceProperty)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SetDeviceProperty();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty();
     }
 
-    public static SetDeviceProperty getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7063,25 +6199,664 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<SetDeviceProperty> getParserForType() {
       return PARSER;
     }
 
-    public SetDeviceProperty getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetDeviceProperty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetPropResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SetPropResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>optional int32 result = 2;</code>
+     */
+    int getResult();
+
+    /**
+     * <code>optional string errmsg = 3;</code>
+     */
+    java.lang.String getErrmsg();
+    /**
+     * <code>optional string errmsg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrmsgBytes();
+  }
+  /**
+   * <pre>
+   *type = 10
+   *设置设备属性响应
+   * </pre>
+   *
+   * Protobuf type {@code SetPropResponse}
+   */
+  public  static final class SetPropResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SetPropResponse)
+      SetPropResponseOrBuilder {
+    // Use SetPropResponse.newBuilder() to construct.
+    private SetPropResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetPropResponse() {
+      seq_ = 0;
+      result_ = 0;
+      errmsg_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private SetPropResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              result_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errmsg_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetPropResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetPropResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.Builder.class);
+    }
+
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>optional uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private int result_;
+    /**
+     * <code>optional int32 result = 2;</code>
+     */
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int ERRMSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object errmsg_;
+    /**
+     * <code>optional string errmsg = 3;</code>
+     */
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errmsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string errmsg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrmsgBytes() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errmsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (seq_ != 0) {
+        output.writeUInt32(1, seq_);
+      }
+      if (result_ != 0) {
+        output.writeInt32(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errmsg_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (result_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errmsg_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse)) {
+        return super.equals(obj);
+      }
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse) obj;
+
+      boolean result = true;
+      result = result && (getSeq()
+          == other.getSeq());
+      result = result && (getResult()
+          == other.getResult());
+      result = result && getErrmsg()
+          .equals(other.getErrmsg());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + SEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getSeq();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult();
+      hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
+      hash = (53 * hash) + getErrmsg().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *type = 10
+     *设置设备属性响应
+     * </pre>
+     *
+     * Protobuf type {@code SetPropResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SetPropResponse)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetPropResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetPropResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.Builder.class);
+      }
+
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+
+        result_ = 0;
+
+        errmsg_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_SetPropResponse_descriptor;
+      }
+
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.getDefaultInstance();
+      }
+
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse(this);
+        result.seq_ = seq_;
+        result.result_ = result_;
+        result.errmsg_ = errmsg_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse.getDefaultInstance()) return this;
+        if (other.getSeq() != 0) {
+          setSeq(other.getSeq());
+        }
+        if (other.getResult() != 0) {
+          setResult(other.getResult());
+        }
+        if (!other.getErrmsg().isEmpty()) {
+          errmsg_ = other.errmsg_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int seq_ ;
+      /**
+       * <code>optional uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>optional uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int result_ ;
+      /**
+       * <code>optional int32 result = 2;</code>
+       */
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>optional int32 result = 2;</code>
+       */
+      public Builder setResult(int value) {
+
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 result = 2;</code>
+       */
+      public Builder clearResult() {
+
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errmsg_ = "";
+      /**
+       * <code>optional string errmsg = 3;</code>
+       */
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errmsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string errmsg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrmsgBytes() {
+        java.lang.Object ref = errmsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errmsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string errmsg = 3;</code>
+       */
+      public Builder setErrmsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string errmsg = 3;</code>
+       */
+      public Builder clearErrmsg() {
+
+        errmsg_ = getDefaultInstance().getErrmsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string errmsg = 3;</code>
+       */
+      public Builder setErrmsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SetPropResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:SetPropResponse)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse();
+    }
+
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetPropResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SetPropResponse>() {
+      public SetPropResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetPropResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetPropResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetPropResponse> getParserForType() {
+      return PARSER;
+    }
+
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.SetPropResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ProPertyItemOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.ProPertyItem)
+      // @@protoc_insertion_point(interface_extends:ProPertyItem)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string key = 1;</code>
      */
-    String getKey();
+    java.lang.String getKey();
     /**
      * <code>optional string key = 1;</code>
      */
@@ -7091,7 +6866,7 @@ public final class ServerLBSInfo {
     /**
      * <code>optional string value = 2;</code>
      */
-    String getValue();
+    java.lang.String getValue();
     /**
      * <code>optional string value = 2;</code>
      */
@@ -7099,11 +6874,11 @@ public final class ServerLBSInfo {
         getValueBytes();
   }
   /**
-   * Protobuf type {@code ql_radar.ProPertyItem}
+   * Protobuf type {@code ProPertyItem}
    */
   public  static final class ProPertyItem extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.ProPertyItem)
+      // @@protoc_insertion_point(message_implements:ProPertyItem)
       ProPertyItemOrBuilder {
     // Use ProPertyItem.newBuilder() to construct.
     private ProPertyItem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -7114,7 +6889,7 @@ public final class ServerLBSInfo {
       value_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -7140,13 +6915,13 @@ public final class ServerLBSInfo {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               key_ = s;
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               value_ = s;
               break;
@@ -7164,29 +6939,29 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_ProPertyItem_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItem_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_ProPertyItem_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItem_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ProPertyItem.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder.class);
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private volatile Object key_;
+    private volatile java.lang.Object key_;
     /**
      * <code>optional string key = 1;</code>
      */
-    public String getKey() {
-      Object ref = key_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         key_ = s;
         return s;
       }
@@ -7196,11 +6971,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
-      Object ref = key_;
-      if (ref instanceof String) {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         key_ = b;
         return b;
       } else {
@@ -7209,18 +6984,18 @@ public final class ServerLBSInfo {
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
-    private volatile Object value_;
+    private volatile java.lang.Object value_;
     /**
      * <code>optional string value = 2;</code>
      */
-    public String getValue() {
-      Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         value_ = s;
         return s;
       }
@@ -7230,11 +7005,11 @@ public final class ServerLBSInfo {
      */
     public com.google.protobuf.ByteString
         getValueBytes() {
-      Object ref = value_;
-      if (ref instanceof String) {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
@@ -7278,15 +7053,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ProPertyItem)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem)) {
         return super.equals(obj);
       }
-      ProPertyItem other = (ProPertyItem) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem) obj;
 
       boolean result = true;
       result = result && getKey()
@@ -7296,7 +7071,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -7312,58 +7087,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ProPertyItem parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ProPertyItem parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ProPertyItem parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ProPertyItem parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ProPertyItem parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7375,7 +7150,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ProPertyItem prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -7383,38 +7158,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.ProPertyItem}
+     * Protobuf type {@code ProPertyItem}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.ProPertyItem)
-        ProPertyItemOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ProPertyItem)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItem_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItem_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItem_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItem_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ProPertyItem.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.ProPertyItem.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7434,23 +7209,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItem_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItem_descriptor;
       }
 
-      public ProPertyItem getDefaultInstanceForType() {
-        return ProPertyItem.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.getDefaultInstance();
       }
 
-      public ProPertyItem build() {
-        ProPertyItem result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public ProPertyItem buildPartial() {
-        ProPertyItem result = new ProPertyItem(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem(this);
         result.key_ = key_;
         result.value_ = value_;
         onBuilt();
@@ -7484,16 +7259,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ProPertyItem) {
-          return mergeFrom((ProPertyItem)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ProPertyItem other) {
-        if (other == ProPertyItem.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.getDefaultInstance()) return this;
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           onChanged();
@@ -7514,11 +7289,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ProPertyItem parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ProPertyItem) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7528,20 +7303,20 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object key_ = "";
+      private java.lang.Object key_ = "";
       /**
        * <code>optional string key = 1;</code>
        */
-      public String getKey() {
-        Object ref = key_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           key_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -7549,11 +7324,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
-        Object ref = key_;
+        java.lang.Object ref = key_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           key_ = b;
           return b;
         } else {
@@ -7564,7 +7339,7 @@ public final class ServerLBSInfo {
        * <code>optional string key = 1;</code>
        */
       public Builder setKey(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7597,20 +7372,20 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private Object value_ = "";
+      private java.lang.Object value_ = "";
       /**
        * <code>optional string value = 2;</code>
        */
-      public String getValue() {
-        Object ref = value_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           value_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -7618,11 +7393,11 @@ public final class ServerLBSInfo {
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
-        Object ref = value_;
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           value_ = b;
           return b;
         } else {
@@ -7633,7 +7408,7 @@ public final class ServerLBSInfo {
        * <code>optional string value = 2;</code>
        */
       public Builder setValue(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7676,16 +7451,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.ProPertyItem)
+      // @@protoc_insertion_point(builder_scope:ProPertyItem)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.ProPertyItem)
-    private static final ProPertyItem DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ProPertyItem)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ProPertyItem();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem();
     }
 
-    public static ProPertyItem getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7703,51 +7478,51 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ProPertyItem> getParserForType() {
       return PARSER;
     }
 
-    public ProPertyItem getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ProPertyItemsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.ProPertyItems)
+      // @@protoc_insertion_point(interface_extends:ProPertyItems)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    java.util.List<ProPertyItem>
+    java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem>
         getPropertiesList();
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    ProPertyItem getProperties(int index);
+    com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getProperties(int index);
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
     int getPropertiesCount();
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    java.util.List<? extends ProPertyItemOrBuilder>
+    java.util.List<? extends com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder>
         getPropertiesOrBuilderList();
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    ProPertyItemOrBuilder getPropertiesOrBuilder(
+    com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder getPropertiesOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code ql_radar.ProPertyItems}
+   * Protobuf type {@code ProPertyItems}
    */
   public  static final class ProPertyItems extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.ProPertyItems)
+      // @@protoc_insertion_point(message_implements:ProPertyItems)
       ProPertyItemsOrBuilder {
     // Use ProPertyItems.newBuilder() to construct.
     private ProPertyItems(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -7757,7 +7532,7 @@ public final class ServerLBSInfo {
       properties_ = java.util.Collections.emptyList();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -7784,11 +7559,11 @@ public final class ServerLBSInfo {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                properties_ = new java.util.ArrayList<ProPertyItem>();
+                properties_ = new java.util.ArrayList<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem>();
                 mutable_bitField0_ |= 0x00000001;
               }
               properties_.add(
-                  input.readMessage(ProPertyItem.parser(), extensionRegistry));
+                  input.readMessage(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.parser(), extensionRegistry));
               break;
             }
           }
@@ -7807,47 +7582,47 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_ProPertyItems_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItems_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_ProPertyItems_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItems_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ProPertyItems.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.Builder.class);
     }
 
     public static final int PROPERTIES_FIELD_NUMBER = 1;
-    private java.util.List<ProPertyItem> properties_;
+    private java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem> properties_;
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    public java.util.List<ProPertyItem> getPropertiesList() {
+    public java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem> getPropertiesList() {
       return properties_;
     }
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    public java.util.List<? extends ProPertyItemOrBuilder>
+    public java.util.List<? extends com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder>
         getPropertiesOrBuilderList() {
       return properties_;
     }
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
     public int getPropertiesCount() {
       return properties_.size();
     }
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    public ProPertyItem getProperties(int index) {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getProperties(int index) {
       return properties_.get(index);
     }
     /**
-     * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+     * <code>repeated .ProPertyItem Properties = 1;</code>
      */
-    public ProPertyItemOrBuilder getPropertiesOrBuilder(
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder getPropertiesOrBuilder(
         int index) {
       return properties_.get(index);
     }
@@ -7883,15 +7658,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ProPertyItems)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems)) {
         return super.equals(obj);
       }
-      ProPertyItems other = (ProPertyItems) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems) obj;
 
       boolean result = true;
       result = result && getPropertiesList()
@@ -7899,7 +7674,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -7915,58 +7690,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ProPertyItems parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ProPertyItems parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ProPertyItems parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ProPertyItems parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ProPertyItems parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7978,7 +7753,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ProPertyItems prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -7986,38 +7761,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code ql_radar.ProPertyItems}
+     * Protobuf type {@code ProPertyItems}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.ProPertyItems)
-        ProPertyItemsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ProPertyItems)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItems_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItems_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItems_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItems_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ProPertyItems.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.ProPertyItems.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -8040,23 +7815,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_ProPertyItems_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_ProPertyItems_descriptor;
       }
 
-      public ProPertyItems getDefaultInstanceForType() {
-        return ProPertyItems.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.getDefaultInstance();
       }
 
-      public ProPertyItems build() {
-        ProPertyItems result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public ProPertyItems buildPartial() {
-        ProPertyItems result = new ProPertyItems(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems(this);
         int from_bitField0_ = bitField0_;
         if (propertiesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8098,16 +7873,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ProPertyItems) {
-          return mergeFrom((ProPertyItems)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ProPertyItems other) {
-        if (other == ProPertyItems.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems.getDefaultInstance()) return this;
         if (propertiesBuilder_ == null) {
           if (!other.properties_.isEmpty()) {
             if (properties_.isEmpty()) {
@@ -8146,11 +7921,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ProPertyItems parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ProPertyItems) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8161,22 +7936,22 @@ public final class ServerLBSInfo {
       }
       private int bitField0_;
 
-      private java.util.List<ProPertyItem> properties_ =
+      private java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem> properties_ =
         java.util.Collections.emptyList();
       private void ensurePropertiesIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          properties_ = new java.util.ArrayList<ProPertyItem>(properties_);
+          properties_ = new java.util.ArrayList<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem>(properties_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ProPertyItem, ProPertyItem.Builder, ProPertyItemOrBuilder> propertiesBuilder_;
+          com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder> propertiesBuilder_;
 
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public java.util.List<ProPertyItem> getPropertiesList() {
+      public java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem> getPropertiesList() {
         if (propertiesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(properties_);
         } else {
@@ -8184,7 +7959,7 @@ public final class ServerLBSInfo {
         }
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public int getPropertiesCount() {
         if (propertiesBuilder_ == null) {
@@ -8194,9 +7969,9 @@ public final class ServerLBSInfo {
         }
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public ProPertyItem getProperties(int index) {
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem getProperties(int index) {
         if (propertiesBuilder_ == null) {
           return properties_.get(index);
         } else {
@@ -8204,10 +7979,10 @@ public final class ServerLBSInfo {
         }
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder setProperties(
-          int index, ProPertyItem value) {
+          int index, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem value) {
         if (propertiesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8221,10 +7996,10 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder setProperties(
-          int index, ProPertyItem.Builder builderForValue) {
+          int index, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder builderForValue) {
         if (propertiesBuilder_ == null) {
           ensurePropertiesIsMutable();
           properties_.set(index, builderForValue.build());
@@ -8235,9 +8010,9 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public Builder addProperties(ProPertyItem value) {
+      public Builder addProperties(com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem value) {
         if (propertiesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8251,10 +8026,10 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder addProperties(
-          int index, ProPertyItem value) {
+          int index, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem value) {
         if (propertiesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8268,10 +8043,10 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder addProperties(
-          ProPertyItem.Builder builderForValue) {
+          com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder builderForValue) {
         if (propertiesBuilder_ == null) {
           ensurePropertiesIsMutable();
           properties_.add(builderForValue.build());
@@ -8282,10 +8057,10 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder addProperties(
-          int index, ProPertyItem.Builder builderForValue) {
+          int index, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder builderForValue) {
         if (propertiesBuilder_ == null) {
           ensurePropertiesIsMutable();
           properties_.add(index, builderForValue.build());
@@ -8296,10 +8071,10 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder addAllProperties(
-          Iterable<? extends ProPertyItem> values) {
+          java.lang.Iterable<? extends com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem> values) {
         if (propertiesBuilder_ == null) {
           ensurePropertiesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8311,7 +8086,7 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder clearProperties() {
         if (propertiesBuilder_ == null) {
@@ -8324,7 +8099,7 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
       public Builder removeProperties(int index) {
         if (propertiesBuilder_ == null) {
@@ -8337,16 +8112,16 @@ public final class ServerLBSInfo {
         return this;
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public ProPertyItem.Builder getPropertiesBuilder(
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder getPropertiesBuilder(
           int index) {
         return getPropertiesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public ProPertyItemOrBuilder getPropertiesOrBuilder(
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder getPropertiesOrBuilder(
           int index) {
         if (propertiesBuilder_ == null) {
           return properties_.get(index);  } else {
@@ -8354,9 +8129,9 @@ public final class ServerLBSInfo {
         }
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public java.util.List<? extends ProPertyItemOrBuilder>
+      public java.util.List<? extends com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder>
            getPropertiesOrBuilderList() {
         if (propertiesBuilder_ != null) {
           return propertiesBuilder_.getMessageOrBuilderList();
@@ -8365,33 +8140,33 @@ public final class ServerLBSInfo {
         }
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public ProPertyItem.Builder addPropertiesBuilder() {
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder addPropertiesBuilder() {
         return getPropertiesFieldBuilder().addBuilder(
-            ProPertyItem.getDefaultInstance());
+            com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.getDefaultInstance());
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public ProPertyItem.Builder addPropertiesBuilder(
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder addPropertiesBuilder(
           int index) {
         return getPropertiesFieldBuilder().addBuilder(
-            index, ProPertyItem.getDefaultInstance());
+            index, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.getDefaultInstance());
       }
       /**
-       * <code>repeated .ql_radar.ProPertyItem Properties = 1;</code>
+       * <code>repeated .ProPertyItem Properties = 1;</code>
        */
-      public java.util.List<ProPertyItem.Builder>
+      public java.util.List<com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder>
            getPropertiesBuilderList() {
         return getPropertiesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ProPertyItem, ProPertyItem.Builder, ProPertyItemOrBuilder>
+          com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder>
           getPropertiesFieldBuilder() {
         if (propertiesBuilder_ == null) {
           propertiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              ProPertyItem, ProPertyItem.Builder, ProPertyItemOrBuilder>(
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItem.Builder, com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItemOrBuilder>(
                   properties_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -8411,16 +8186,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.ProPertyItems)
+      // @@protoc_insertion_point(builder_scope:ProPertyItems)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.ProPertyItems)
-    private static final ProPertyItems DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ProPertyItems)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ProPertyItems();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems();
     }
 
-    public static ProPertyItems getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8438,19 +8213,19 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<ProPertyItems> getParserForType() {
       return PARSER;
     }
 
-    public ProPertyItems getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.ProPertyItems getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PositionDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.PositionData)
+      // @@protoc_insertion_point(interface_extends:PositionData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8473,7 +8248,7 @@ public final class ServerLBSInfo {
 
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -8487,11 +8262,11 @@ public final class ServerLBSInfo {
    *ObjectData ,data填16个字节的倍数，每个对象占16个字节
    * </pre>
    *
-   * Protobuf type {@code ql_radar.PositionData}
+   * Protobuf type {@code PositionData}
    */
   public  static final class PositionData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.PositionData)
+      // @@protoc_insertion_point(message_implements:PositionData)
       PositionDataOrBuilder {
     // Use PositionData.newBuilder() to construct.
     private PositionData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -8503,7 +8278,7 @@ public final class ServerLBSInfo {
       mseconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -8556,14 +8331,14 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_PositionData_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionData_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_PositionData_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PositionData.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.Builder.class);
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
@@ -8596,7 +8371,7 @@ public final class ServerLBSInfo {
     private int mseconds_;
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -8650,15 +8425,15 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof PositionData)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData)) {
         return super.equals(obj);
       }
-      PositionData other = (PositionData) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData) obj;
 
       boolean result = true;
       result = result && getData()
@@ -8670,7 +8445,7 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -8688,58 +8463,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PositionData parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PositionData parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static PositionData parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static PositionData parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static PositionData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8751,7 +8526,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PositionData prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -8759,9 +8534,9 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8772,31 +8547,31 @@ public final class ServerLBSInfo {
      *ObjectData ,data填16个字节的倍数，每个对象占16个字节
      * </pre>
      *
-     * Protobuf type {@code ql_radar.PositionData}
+     * Protobuf type {@code PositionData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.PositionData)
-        PositionDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PositionData)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionData_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionData_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PositionData.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.PositionData.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -8818,23 +8593,23 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_PositionData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_PositionData_descriptor;
       }
 
-      public PositionData getDefaultInstanceForType() {
-        return PositionData.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.getDefaultInstance();
       }
 
-      public PositionData build() {
-        PositionData result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PositionData buildPartial() {
-        PositionData result = new PositionData(this);
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData(this);
         result.data_ = data_;
         result.seconds_ = seconds_;
         result.mseconds_ = mseconds_;
@@ -8869,16 +8644,16 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PositionData) {
-          return mergeFrom((PositionData)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PositionData other) {
-        if (other == PositionData.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData.getDefaultInstance()) return this;
         if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
           setData(other.getData());
         }
@@ -8900,11 +8675,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PositionData parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PositionData) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8996,7 +8771,7 @@ public final class ServerLBSInfo {
       private int mseconds_ ;
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9006,7 +8781,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9019,7 +8794,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9041,16 +8816,16 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.PositionData)
+      // @@protoc_insertion_point(builder_scope:PositionData)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.PositionData)
-    private static final PositionData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PositionData)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PositionData();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData();
     }
 
-    public static PositionData getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9068,42 +8843,51 @@ public final class ServerLBSInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PositionData> getParserForType() {
       return PARSER;
     }
 
-    public PositionData getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.PositionData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface NumberOfPeopleDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ql_radar.NumberOfPeopleData)
+  public interface NotifyMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:NotifyMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     *存放轨迹或者心率
+     *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
      * </pre>
      *
-     * <code>optional bytes data = 1;</code>
+     * <code>optional string message = 1;</code>
      */
-    com.google.protobuf.ByteString getData();
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
+     * </pre>
+     *
+     * <code>optional string message = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
 
     /**
      * <pre>
      *1970/1/1开始的秒数
      * </pre>
      *
-     * <code>optional int32 seconds = 2;</code>
+     * <code>optional uint32 seconds = 2;</code>
      */
     int getSeconds();
 
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -9111,34 +8895,28 @@ public final class ServerLBSInfo {
     int getMseconds();
   }
   /**
-   * <pre>
-   *type = 16
-   *上报人数统计,不需要响应
-   *ObjectData,data[0]为人数
-   * </pre>
-   *
-   * Protobuf type {@code ql_radar.NumberOfPeopleData}
+   * Protobuf type {@code NotifyMessage}
    */
-  public  static final class NumberOfPeopleData extends
+  public  static final class NotifyMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ql_radar.NumberOfPeopleData)
-      NumberOfPeopleDataOrBuilder {
-    // Use NumberOfPeopleData.newBuilder() to construct.
-    private NumberOfPeopleData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:NotifyMessage)
+      NotifyMessageOrBuilder {
+    // Use NotifyMessage.newBuilder() to construct.
+    private NotifyMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private NumberOfPeopleData() {
-      data_ = com.google.protobuf.ByteString.EMPTY;
+    private NotifyMessage() {
+      message_ = "";
       seconds_ = 0;
       mseconds_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private NumberOfPeopleData(
+    private NotifyMessage(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9159,13 +8937,14 @@ public final class ServerLBSInfo {
               break;
             }
             case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              data_ = input.readBytes();
+              message_ = s;
               break;
             }
             case 16: {
 
-              seconds_ = input.readInt32();
+              seconds_ = input.readUInt32();
               break;
             }
             case 24: {
@@ -9186,27 +8965,56 @@ public final class ServerLBSInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerLBSInfo.internal_static_ql_radar_NumberOfPeopleData_descriptor;
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_NotifyMessage_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerLBSInfo.internal_static_ql_radar_NumberOfPeopleData_fieldAccessorTable
+      return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_NotifyMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              NumberOfPeopleData.class, Builder.class);
+              com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.Builder.class);
     }
 
-    public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_;
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
     /**
      * <pre>
-     *存放轨迹或者心率
+     *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
      * </pre>
      *
-     * <code>optional bytes data = 1;</code>
+     * <code>optional string message = 1;</code>
      */
-    public com.google.protobuf.ByteString getData() {
-      return data_;
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
+     * </pre>
+     *
+     * <code>optional string message = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int SECONDS_FIELD_NUMBER = 2;
@@ -9216,7 +9024,7 @@ public final class ServerLBSInfo {
      *1970/1/1开始的秒数
      * </pre>
      *
-     * <code>optional int32 seconds = 2;</code>
+     * <code>optional uint32 seconds = 2;</code>
      */
     public int getSeconds() {
       return seconds_;
@@ -9226,7 +9034,7 @@ public final class ServerLBSInfo {
     private int mseconds_;
     /**
      * <pre>
-     *毫秒string
+     *毫秒
      * </pre>
      *
      * <code>optional int32 mseconds = 3;</code>
@@ -9247,11 +9055,11 @@ public final class ServerLBSInfo {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!data_.isEmpty()) {
-        output.writeBytes(1, data_);
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
       if (seconds_ != 0) {
-        output.writeInt32(2, seconds_);
+        output.writeUInt32(2, seconds_);
       }
       if (mseconds_ != 0) {
         output.writeInt32(3, mseconds_);
@@ -9263,13 +9071,12 @@ public final class ServerLBSInfo {
       if (size != -1) return size;
 
       size = 0;
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, data_);
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
       if (seconds_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, seconds_);
+          .computeUInt32Size(2, seconds_);
       }
       if (mseconds_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -9280,19 +9087,19 @@ public final class ServerLBSInfo {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof NumberOfPeopleData)) {
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage)) {
         return super.equals(obj);
       }
-      NumberOfPeopleData other = (NumberOfPeopleData) obj;
+      com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage other = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage) obj;
 
       boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
+      result = result && getMessage()
+          .equals(other.getMessage());
       result = result && (getSeconds()
           == other.getSeconds());
       result = result && (getMseconds()
@@ -9300,15 +9107,15 @@ public final class ServerLBSInfo {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (37 * hash) + SECONDS_FIELD_NUMBER;
       hash = (53 * hash) + getSeconds();
       hash = (37 * hash) + MSECONDS_FIELD_NUMBER;
@@ -9318,58 +9125,58 @@ public final class ServerLBSInfo {
       return hash;
     }
 
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NumberOfPeopleData parseFrom(byte[] data)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NumberOfPeopleData parseFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NumberOfPeopleData parseDelimitedFrom(java.io.InputStream input)
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static NumberOfPeopleData parseDelimitedFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NumberOfPeopleData parseFrom(
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9381,7 +9188,7 @@ public final class ServerLBSInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(NumberOfPeopleData prototype) {
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -9389,44 +9196,38 @@ public final class ServerLBSInfo {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * <pre>
-     *type = 16
-     *上报人数统计,不需要响应
-     *ObjectData,data[0]为人数
-     * </pre>
-     *
-     * Protobuf type {@code ql_radar.NumberOfPeopleData}
+     * Protobuf type {@code NotifyMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ql_radar.NumberOfPeopleData)
-        NumberOfPeopleDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:NotifyMessage)
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerLBSInfo.internal_static_ql_radar_NumberOfPeopleData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_NotifyMessage_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerLBSInfo.internal_static_ql_radar_NumberOfPeopleData_fieldAccessorTable
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_NotifyMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                NumberOfPeopleData.class, Builder.class);
+                com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.class, com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.Builder.class);
       }
 
-      // Construct using com.example.tsing.server.msg.ServerLBSInfo.NumberOfPeopleData.newBuilder()
+      // Construct using com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -9437,7 +9238,7 @@ public final class ServerLBSInfo {
       }
       public Builder clear() {
         super.clear();
-        data_ = com.google.protobuf.ByteString.EMPTY;
+        message_ = "";
 
         seconds_ = 0;
 
@@ -9448,24 +9249,24 @@ public final class ServerLBSInfo {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerLBSInfo.internal_static_ql_radar_NumberOfPeopleData_descriptor;
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.internal_static_NotifyMessage_descriptor;
       }
 
-      public NumberOfPeopleData getDefaultInstanceForType() {
-        return NumberOfPeopleData.getDefaultInstance();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.getDefaultInstance();
       }
 
-      public NumberOfPeopleData build() {
-        NumberOfPeopleData result = buildPartial();
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage build() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public NumberOfPeopleData buildPartial() {
-        NumberOfPeopleData result = new NumberOfPeopleData(this);
-        result.data_ = data_;
+      public com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage buildPartial() {
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage result = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage(this);
+        result.message_ = message_;
         result.seconds_ = seconds_;
         result.mseconds_ = mseconds_;
         onBuilt();
@@ -9499,18 +9300,19 @@ public final class ServerLBSInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof NumberOfPeopleData) {
-          return mergeFrom((NumberOfPeopleData)other);
+        if (other instanceof com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(NumberOfPeopleData other) {
-        if (other == NumberOfPeopleData.getDefaultInstance()) return this;
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage other) {
+        if (other == com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage.getDefaultInstance()) return this;
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
         }
         if (other.getSeconds() != 0) {
           setSeconds(other.getSeconds());
@@ -9530,11 +9332,11 @@ public final class ServerLBSInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        NumberOfPeopleData parsedMessage = null;
+        com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (NumberOfPeopleData) e.getUnfinishedMessage();
+          parsedMessage = (com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9544,43 +9346,91 @@ public final class ServerLBSInfo {
         return this;
       }
 
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      private java.lang.Object message_ = "";
       /**
        * <pre>
-       *存放轨迹或者心率
+       *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>optional string message = 1;</code>
        */
-      public com.google.protobuf.ByteString getData() {
-        return data_;
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       *存放轨迹或者心率
+       *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>optional string message = 1;</code>
        */
-      public Builder setData(com.google.protobuf.ByteString value) {
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
+       * </pre>
+       *
+       * <code>optional string message = 1;</code>
+       */
+      public Builder setMessage(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
 
-        data_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       *存放轨迹或者心率
+       *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>optional string message = 1;</code>
        */
-      public Builder clearData() {
+      public Builder clearMessage() {
 
-        data_ = getDefaultInstance().getData();
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
+       * </pre>
+       *
+       * <code>optional string message = 1;</code>
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+
+        message_ = value;
         onChanged();
         return this;
       }
@@ -9591,7 +9441,7 @@ public final class ServerLBSInfo {
        *1970/1/1开始的秒数
        * </pre>
        *
-       * <code>optional int32 seconds = 2;</code>
+       * <code>optional uint32 seconds = 2;</code>
        */
       public int getSeconds() {
         return seconds_;
@@ -9601,7 +9451,7 @@ public final class ServerLBSInfo {
        *1970/1/1开始的秒数
        * </pre>
        *
-       * <code>optional int32 seconds = 2;</code>
+       * <code>optional uint32 seconds = 2;</code>
        */
       public Builder setSeconds(int value) {
 
@@ -9614,7 +9464,7 @@ public final class ServerLBSInfo {
        *1970/1/1开始的秒数
        * </pre>
        *
-       * <code>optional int32 seconds = 2;</code>
+       * <code>optional uint32 seconds = 2;</code>
        */
       public Builder clearSeconds() {
 
@@ -9626,7 +9476,7 @@ public final class ServerLBSInfo {
       private int mseconds_ ;
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9636,7 +9486,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9649,7 +9499,7 @@ public final class ServerLBSInfo {
       }
       /**
        * <pre>
-       *毫秒string
+       *毫秒
        * </pre>
        *
        * <code>optional int32 mseconds = 3;</code>
@@ -9671,114 +9521,114 @@ public final class ServerLBSInfo {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ql_radar.NumberOfPeopleData)
+      // @@protoc_insertion_point(builder_scope:NotifyMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:ql_radar.NumberOfPeopleData)
-    private static final NumberOfPeopleData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:NotifyMessage)
+    private static final com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new NumberOfPeopleData();
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage();
     }
 
-    public static NumberOfPeopleData getDefaultInstance() {
+    public static com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NumberOfPeopleData>
-        PARSER = new com.google.protobuf.AbstractParser<NumberOfPeopleData>() {
-      public NumberOfPeopleData parsePartialFrom(
+    private static final com.google.protobuf.Parser<NotifyMessage>
+        PARSER = new com.google.protobuf.AbstractParser<NotifyMessage>() {
+      public NotifyMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new NumberOfPeopleData(input, extensionRegistry);
+          return new NotifyMessage(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<NumberOfPeopleData> parser() {
+    public static com.google.protobuf.Parser<NotifyMessage> parser() {
       return PARSER;
     }
 
-    @Override
-    public com.google.protobuf.Parser<NumberOfPeopleData> getParserForType() {
+    @java.lang.Override
+    public com.google.protobuf.Parser<NotifyMessage> getParserForType() {
       return PARSER;
     }
 
-    public NumberOfPeopleData getDefaultInstanceForType() {
+    public com.qinglan.example.device_point.server.msg.ServerLBSInfo.NotifyMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_CommonMessage_descriptor;
+    internal_static_CommonMessage_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_CommonMessage_fieldAccessorTable;
+      internal_static_CommonMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_CommonResponse_descriptor;
+    internal_static_CommonResponse_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_CommonResponse_fieldAccessorTable;
+      internal_static_CommonResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_SetPropResponse_descriptor;
+    internal_static_SetModeReq_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_SetPropResponse_fieldAccessorTable;
+      internal_static_SetModeReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_SetModeReq_descriptor;
+    internal_static_ObjectData_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_SetModeReq_fieldAccessorTable;
+      internal_static_ObjectData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_ObjectData_descriptor;
+    internal_static_GetServerReq_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_ObjectData_fieldAccessorTable;
+      internal_static_GetServerReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_GetServerReq_descriptor;
+    internal_static_GetServerResponse_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_GetServerReq_fieldAccessorTable;
+      internal_static_GetServerResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_GetServerResponse_descriptor;
+    internal_static_PositionStatusEvent_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_GetServerResponse_fieldAccessorTable;
+      internal_static_PositionStatusEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_PositionStatusEvent_descriptor;
+    internal_static_ObjectFallDown_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_PositionStatusEvent_fieldAccessorTable;
+      internal_static_ObjectFallDown_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_ObjectFallDown_descriptor;
+    internal_static_SetDeviceProperty_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_ObjectFallDown_fieldAccessorTable;
+      internal_static_SetDeviceProperty_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_SetDeviceProperty_descriptor;
+    internal_static_SetPropResponse_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_SetDeviceProperty_fieldAccessorTable;
+      internal_static_SetPropResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_ProPertyItem_descriptor;
+    internal_static_ProPertyItem_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_ProPertyItem_fieldAccessorTable;
+      internal_static_ProPertyItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_ProPertyItems_descriptor;
+    internal_static_ProPertyItems_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_ProPertyItems_fieldAccessorTable;
+      internal_static_ProPertyItems_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_PositionData_descriptor;
+    internal_static_PositionData_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_PositionData_fieldAccessorTable;
+      internal_static_PositionData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ql_radar_NumberOfPeopleData_descriptor;
+    internal_static_NotifyMessage_descriptor;
   private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ql_radar_NumberOfPeopleData_fieldAccessorTable;
+      internal_static_NotifyMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9787,35 +9637,31 @@ public final class ServerLBSInfo {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
-      "\n\017ServerLBS.proto\022\010ql_radar\"\034\n\rCommonMes" +
-      "sage\022\013\n\003seq\030\001 \001(\r\"=\n\016CommonResponse\022\013\n\003s" +
-      "eq\030\001 \001(\r\022\016\n\006result\030\002 \001(\005\022\016\n\006errmsg\030\003 \001(\t" +
-      "\">\n\017SetPropResponse\022\013\n\003seq\030\001 \001(\r\022\016\n\006resu" +
-      "lt\030\002 \001(\005\022\016\n\006errmsg\030\003 \001(\t\"*\n\nSetModeReq\022\013" +
-      "\n\003seq\030\001 \001(\r\022\017\n\007seconds\030\002 \001(\r\"=\n\nObjectDa" +
-      "ta\022\014\n\004data\030\001 \001(\014\022\017\n\007seconds\030\002 \001(\005\022\020\n\010mse" +
-      "conds\030\003 \001(\005\"6\n\014GetServerReq\022\013\n\003seq\030\001 \001(\r" +
-      "\022\013\n\003uid\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\"m\n\021GetServer" +
-      "Response\022\013\n\003seq\030\001 \001(\r\022\016\n\006result\030\002 \001(\005\022\016\n",
-      "\006server\030\003 \001(\t\022\014\n\004port\030\004 \001(\r\022\r\n\005addon\030\005 \001" +
-      "(\t\022\016\n\006errmsg\030\006 \001(\t\"W\n\023PositionStatusEven" +
-      "t\022\016\n\006events\030\001 \001(\014\022\r\n\005areas\030\002 \001(\014\022\017\n\007seco" +
-      "nds\030\003 \001(\r\022\020\n\010mseconds\030\004 \001(\005\"B\n\016ObjectFal" +
-      "lDown\022\r\n\005falls\030\001 \001(\014\022\017\n\007seconds\030\002 \001(\r\022\020\n" +
-      "\010mseconds\030\003 \001(\005\"<\n\021SetDeviceProperty\022\013\n\003" +
-      "seq\030\001 \001(\r\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"*\n" +
-      "\014ProPertyItem\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t\";\n\rProPertyItems\022*\n\nProperties\030\001 \003(\0132\026" +
-      ".ql_radar.ProPertyItem\"?\n\014PositionData\022\014",
-      "\n\004data\030\001 \001(\014\022\017\n\007seconds\030\002 \001(\005\022\020\n\010msecond" +
-      "s\030\003 \001(\005\"E\n\022NumberOfPeopleData\022\014\n\004data\030\001 " +
-      "\001(\014\022\017\n\007seconds\030\002 \001(\005\022\020\n\010mseconds\030\003 \001(\005*5" +
-      "\n\nFallStatus\022\n\n\006NORMAL\020\000\022\r\n\tSUSPECTED\020\001\022" +
-      "\014\n\010FALLDOWN\020\002*S\n\016PositionStatus\022\013\n\007NoEve" +
-      "nt\020\000\022\014\n\010IntoRoom\020\001\022\r\n\tLeaveRoom\020\002\022\n\n\006InA" +
-      "rea\020\003\022\013\n\007OutArea\020\004B/\n\034com.example.tsing." +
-      "server.msgB\rServerLBSInfoH\001b\006proto3"
+    java.lang.String[] descriptorData = {
+      "\n\017ServerLBS.proto\"\034\n\rCommonMessage\022\013\n\003se" +
+      "q\030\001 \001(\r\"=\n\016CommonResponse\022\013\n\003seq\030\001 \001(\r\022\016" +
+      "\n\006result\030\002 \001(\005\022\016\n\006errmsg\030\003 \001(\t\"*\n\nSetMod" +
+      "eReq\022\013\n\003seq\030\001 \001(\r\022\017\n\007seconds\030\002 \001(\r\"=\n\nOb" +
+      "jectData\022\014\n\004data\030\001 \001(\014\022\017\n\007seconds\030\002 \001(\005\022" +
+      "\020\n\010mseconds\030\003 \001(\005\"6\n\014GetServerReq\022\013\n\003seq" +
+      "\030\001 \001(\r\022\013\n\003uid\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\"m\n\021Get" +
+      "ServerResponse\022\013\n\003seq\030\001 \001(\r\022\016\n\006result\030\002 " +
+      "\001(\005\022\016\n\006server\030\003 \001(\t\022\014\n\004port\030\004 \001(\r\022\r\n\005add" +
+      "on\030\005 \001(\t\022\016\n\006errmsg\030\006 \001(\t\"W\n\023PositionStat",
+      "usEvent\022\016\n\006events\030\001 \001(\014\022\r\n\005areas\030\002 \001(\014\022\017" +
+      "\n\007seconds\030\003 \001(\r\022\020\n\010mseconds\030\004 \001(\005\"B\n\016Obj" +
+      "ectFallDown\022\r\n\005falls\030\001 \001(\014\022\017\n\007seconds\030\002 " +
+      "\001(\r\022\020\n\010mseconds\030\003 \001(\005\"<\n\021SetDeviceProper" +
+      "ty\022\013\n\003seq\030\001 \001(\r\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 " +
+      "\001(\t\">\n\017SetPropResponse\022\013\n\003seq\030\001 \001(\r\022\016\n\006r" +
+      "esult\030\002 \001(\005\022\016\n\006errmsg\030\003 \001(\t\"*\n\014ProPertyI" +
+      "tem\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"2\n\rProPe" +
+      "rtyItems\022!\n\nProperties\030\001 \003(\0132\r.ProPertyI" +
+      "tem\"?\n\014PositionData\022\014\n\004data\030\001 \001(\014\022\017\n\007sec",
+      "onds\030\002 \001(\005\022\020\n\010mseconds\030\003 \001(\005\"C\n\rNotifyMe" +
+      "ssage\022\017\n\007message\030\001 \001(\t\022\017\n\007seconds\030\002 \001(\r\022" +
+      "\020\n\010mseconds\030\003 \001(\005B-\n\034com.example.tsing.s" +
+      "erver.msgB\rServerLBSInfob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9829,90 +9675,90 @@ public final class ServerLBSInfo {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_ql_radar_CommonMessage_descriptor =
+    internal_static_CommonMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_ql_radar_CommonMessage_fieldAccessorTable = new
+    internal_static_CommonMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_CommonMessage_descriptor,
-        new String[] { "Seq", });
-    internal_static_ql_radar_CommonResponse_descriptor =
+        internal_static_CommonMessage_descriptor,
+        new java.lang.String[] { "Seq", });
+    internal_static_CommonResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ql_radar_CommonResponse_fieldAccessorTable = new
+    internal_static_CommonResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_CommonResponse_descriptor,
-        new String[] { "Seq", "Result", "Errmsg", });
-    internal_static_ql_radar_SetPropResponse_descriptor =
+        internal_static_CommonResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Errmsg", });
+    internal_static_SetModeReq_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_ql_radar_SetPropResponse_fieldAccessorTable = new
+    internal_static_SetModeReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_SetPropResponse_descriptor,
-        new String[] { "Seq", "Result", "Errmsg", });
-    internal_static_ql_radar_SetModeReq_descriptor =
+        internal_static_SetModeReq_descriptor,
+        new java.lang.String[] { "Seq", "Seconds", });
+    internal_static_ObjectData_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_ql_radar_SetModeReq_fieldAccessorTable = new
+    internal_static_ObjectData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_SetModeReq_descriptor,
-        new String[] { "Seq", "Seconds", });
-    internal_static_ql_radar_ObjectData_descriptor =
+        internal_static_ObjectData_descriptor,
+        new java.lang.String[] { "Data", "Seconds", "Mseconds", });
+    internal_static_GetServerReq_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_ql_radar_ObjectData_fieldAccessorTable = new
+    internal_static_GetServerReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_ObjectData_descriptor,
-        new String[] { "Data", "Seconds", "Mseconds", });
-    internal_static_ql_radar_GetServerReq_descriptor =
+        internal_static_GetServerReq_descriptor,
+        new java.lang.String[] { "Seq", "Uid", "Type", });
+    internal_static_GetServerResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_ql_radar_GetServerReq_fieldAccessorTable = new
+    internal_static_GetServerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_GetServerReq_descriptor,
-        new String[] { "Seq", "Uid", "Type", });
-    internal_static_ql_radar_GetServerResponse_descriptor =
+        internal_static_GetServerResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Server", "Port", "Addon", "Errmsg", });
+    internal_static_PositionStatusEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_ql_radar_GetServerResponse_fieldAccessorTable = new
+    internal_static_PositionStatusEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_GetServerResponse_descriptor,
-        new String[] { "Seq", "Result", "Server", "Port", "Addon", "Errmsg", });
-    internal_static_ql_radar_PositionStatusEvent_descriptor =
+        internal_static_PositionStatusEvent_descriptor,
+        new java.lang.String[] { "Events", "Areas", "Seconds", "Mseconds", });
+    internal_static_ObjectFallDown_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_ql_radar_PositionStatusEvent_fieldAccessorTable = new
+    internal_static_ObjectFallDown_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_PositionStatusEvent_descriptor,
-        new String[] { "Events", "Areas", "Seconds", "Mseconds", });
-    internal_static_ql_radar_ObjectFallDown_descriptor =
+        internal_static_ObjectFallDown_descriptor,
+        new java.lang.String[] { "Falls", "Seconds", "Mseconds", });
+    internal_static_SetDeviceProperty_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_ql_radar_ObjectFallDown_fieldAccessorTable = new
+    internal_static_SetDeviceProperty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_ObjectFallDown_descriptor,
-        new String[] { "Falls", "Seconds", "Mseconds", });
-    internal_static_ql_radar_SetDeviceProperty_descriptor =
+        internal_static_SetDeviceProperty_descriptor,
+        new java.lang.String[] { "Seq", "Key", "Value", });
+    internal_static_SetPropResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_ql_radar_SetDeviceProperty_fieldAccessorTable = new
+    internal_static_SetPropResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_SetDeviceProperty_descriptor,
-        new String[] { "Seq", "Key", "Value", });
-    internal_static_ql_radar_ProPertyItem_descriptor =
+        internal_static_SetPropResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Errmsg", });
+    internal_static_ProPertyItem_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_ql_radar_ProPertyItem_fieldAccessorTable = new
+    internal_static_ProPertyItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_ProPertyItem_descriptor,
-        new String[] { "Key", "Value", });
-    internal_static_ql_radar_ProPertyItems_descriptor =
+        internal_static_ProPertyItem_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_ProPertyItems_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_ql_radar_ProPertyItems_fieldAccessorTable = new
+    internal_static_ProPertyItems_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_ProPertyItems_descriptor,
-        new String[] { "Properties", });
-    internal_static_ql_radar_PositionData_descriptor =
+        internal_static_ProPertyItems_descriptor,
+        new java.lang.String[] { "Properties", });
+    internal_static_PositionData_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_ql_radar_PositionData_fieldAccessorTable = new
+    internal_static_PositionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_PositionData_descriptor,
-        new String[] { "Data", "Seconds", "Mseconds", });
-    internal_static_ql_radar_NumberOfPeopleData_descriptor =
+        internal_static_PositionData_descriptor,
+        new java.lang.String[] { "Data", "Seconds", "Mseconds", });
+    internal_static_NotifyMessage_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_ql_radar_NumberOfPeopleData_fieldAccessorTable = new
+    internal_static_NotifyMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ql_radar_NumberOfPeopleData_descriptor,
-        new String[] { "Data", "Seconds", "Mseconds", });
+        internal_static_NotifyMessage_descriptor,
+        new java.lang.String[] { "Message", "Seconds", "Mseconds", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
