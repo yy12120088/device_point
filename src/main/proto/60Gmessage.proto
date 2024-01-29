@@ -1,0 +1,102 @@
+syntax = "proto3";
+//import "ServerLBS.proto";
+// 指定模板类的包路径
+option java_package = "com.qinglan.example.device_point.server.msg";
+// 指定模板类的名称，名称必须是有实际业务意义的
+option java_outer_classname = "DeviceInfo";
+
+
+
+//type = 3
+//注册请求
+message RegisterReq {
+	uint32 seq = 1;
+	string hwver = 2;		//硬件版本号
+	string sfver = 3;		//软件版本号
+	string addon = 4;		//附加信息
+	string uid = 5;		//设备UID
+	string type = 6;		//设备型号
+	string name = 7;		//设备名称
+	string location = 8;	//设备位置信息
+}
+
+
+//type = 4
+//注册请求响应
+message RegisterResponse {
+	uint32 seq = 1;
+	int32  result = 2;		//结果，0:成功，其它值，失败
+	string addon = 3;		//返回的附加信息
+	string errmsg = 4;		//错误信息
+}
+
+
+//type = 16
+//在线升级推送请求
+message OTAReq {
+	uint32 seq = 1;
+
+	string espsfver = 2;
+	string ESPFileUrl = 3;		//文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
+	uint32 ESPFileSize = 4;	//文件大小，单位字节，最大不超过2M
+	string ESPFileSHA256 = 5;	//文件sha256值
+
+	string radarsfver = 6;
+	string RadarFileUrl = 7;			//文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
+	uint32 RadarFileSize = 8;		//文件大小，单位字节，最大不超过500K
+	string RadarFileSHA256 = 9;	//文件sha256值
+}
+
+//type = 17
+//在线升级推送请求响应包
+//CommonResponse
+
+
+//type = 18
+//上报升级进度和结果
+message OTAProgress {
+	int32 progress = 1;		//-1:错误,其它值：进度
+	string errMsg =2;
+}
+
+
+//type = 20
+//恢复出厂设置请求
+//CommonMessage
+
+//type = 21
+//恢复出厂设置响应
+//CommonResponse
+
+
+//type = 50
+//启动通话
+//StartVoiceReq
+message StartVoiceReq {
+	uint32 seq = 1;
+	string appid = 2;		//agora app_id
+	 //CHANNEL_NAME 频道名为设备UID
+	string license = 3;		//license
+	string token = 4;			//token
+}
+
+//type = 51
+//启动通话响应
+//CommonResponse
+
+//type = 52
+//停止通话
+//无
+
+//type = 53
+//停止通话响应
+//CommonResponse
+
+
+//type = 54
+//语音指令,设备上报，不需要响应
+//CommonMessage
+
+
+
+

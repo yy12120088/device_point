@@ -19,7 +19,7 @@ public final class DeviceInfo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     int getSeq();
 
@@ -28,7 +28,7 @@ public final class DeviceInfo {
      *硬件版本号
      * </pre>
      *
-     * <code>optional string hwver = 2;</code>
+     * <code>string hwver = 2;</code>
      */
     java.lang.String getHwver();
     /**
@@ -36,7 +36,7 @@ public final class DeviceInfo {
      *硬件版本号
      * </pre>
      *
-     * <code>optional string hwver = 2;</code>
+     * <code>string hwver = 2;</code>
      */
     com.google.protobuf.ByteString
         getHwverBytes();
@@ -46,7 +46,7 @@ public final class DeviceInfo {
      *软件版本号
      * </pre>
      *
-     * <code>optional string sfver = 3;</code>
+     * <code>string sfver = 3;</code>
      */
     java.lang.String getSfver();
     /**
@@ -54,7 +54,7 @@ public final class DeviceInfo {
      *软件版本号
      * </pre>
      *
-     * <code>optional string sfver = 3;</code>
+     * <code>string sfver = 3;</code>
      */
     com.google.protobuf.ByteString
         getSfverBytes();
@@ -64,7 +64,7 @@ public final class DeviceInfo {
      *附加信息
      * </pre>
      *
-     * <code>optional string addon = 4;</code>
+     * <code>string addon = 4;</code>
      */
     java.lang.String getAddon();
     /**
@@ -72,7 +72,7 @@ public final class DeviceInfo {
      *附加信息
      * </pre>
      *
-     * <code>optional string addon = 4;</code>
+     * <code>string addon = 4;</code>
      */
     com.google.protobuf.ByteString
         getAddonBytes();
@@ -82,7 +82,7 @@ public final class DeviceInfo {
      *设备UID
      * </pre>
      *
-     * <code>optional string uid = 5;</code>
+     * <code>string uid = 5;</code>
      */
     java.lang.String getUid();
     /**
@@ -90,7 +90,7 @@ public final class DeviceInfo {
      *设备UID
      * </pre>
      *
-     * <code>optional string uid = 5;</code>
+     * <code>string uid = 5;</code>
      */
     com.google.protobuf.ByteString
         getUidBytes();
@@ -100,7 +100,7 @@ public final class DeviceInfo {
      *设备型号
      * </pre>
      *
-     * <code>optional string type = 6;</code>
+     * <code>string type = 6;</code>
      */
     java.lang.String getType();
     /**
@@ -108,7 +108,7 @@ public final class DeviceInfo {
      *设备型号
      * </pre>
      *
-     * <code>optional string type = 6;</code>
+     * <code>string type = 6;</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -118,7 +118,7 @@ public final class DeviceInfo {
      *设备名称
      * </pre>
      *
-     * <code>optional string name = 7;</code>
+     * <code>string name = 7;</code>
      */
     java.lang.String getName();
     /**
@@ -126,7 +126,7 @@ public final class DeviceInfo {
      *设备名称
      * </pre>
      *
-     * <code>optional string name = 7;</code>
+     * <code>string name = 7;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -136,7 +136,7 @@ public final class DeviceInfo {
      *设备位置信息
      * </pre>
      *
-     * <code>optional string location = 8;</code>
+     * <code>string location = 8;</code>
      */
     java.lang.String getLocation();
     /**
@@ -144,7 +144,7 @@ public final class DeviceInfo {
      *设备位置信息
      * </pre>
      *
-     * <code>optional string location = 8;</code>
+     * <code>string location = 8;</code>
      */
     com.google.protobuf.ByteString
         getLocationBytes();
@@ -161,6 +161,7 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RegisterReq)
       RegisterReqOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use RegisterReq.newBuilder() to construct.
     private RegisterReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -179,14 +180,19 @@ public final class DeviceInfo {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private RegisterReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -195,12 +201,6 @@ public final class DeviceInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               seq_ = input.readUInt32();
@@ -248,6 +248,13 @@ public final class DeviceInfo {
               location_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -256,6 +263,7 @@ public final class DeviceInfo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -264,6 +272,7 @@ public final class DeviceInfo {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterReq_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterReq_fieldAccessorTable
@@ -274,7 +283,7 @@ public final class DeviceInfo {
     public static final int SEQ_FIELD_NUMBER = 1;
     private int seq_;
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     public int getSeq() {
       return seq_;
@@ -287,14 +296,14 @@ public final class DeviceInfo {
      *硬件版本号
      * </pre>
      *
-     * <code>optional string hwver = 2;</code>
+     * <code>string hwver = 2;</code>
      */
     public java.lang.String getHwver() {
       java.lang.Object ref = hwver_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         hwver_ = s;
@@ -306,13 +315,13 @@ public final class DeviceInfo {
      *硬件版本号
      * </pre>
      *
-     * <code>optional string hwver = 2;</code>
+     * <code>string hwver = 2;</code>
      */
     public com.google.protobuf.ByteString
         getHwverBytes() {
       java.lang.Object ref = hwver_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         hwver_ = b;
@@ -329,14 +338,14 @@ public final class DeviceInfo {
      *软件版本号
      * </pre>
      *
-     * <code>optional string sfver = 3;</code>
+     * <code>string sfver = 3;</code>
      */
     public java.lang.String getSfver() {
       java.lang.Object ref = sfver_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         sfver_ = s;
@@ -348,13 +357,13 @@ public final class DeviceInfo {
      *软件版本号
      * </pre>
      *
-     * <code>optional string sfver = 3;</code>
+     * <code>string sfver = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSfverBytes() {
       java.lang.Object ref = sfver_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         sfver_ = b;
@@ -371,14 +380,14 @@ public final class DeviceInfo {
      *附加信息
      * </pre>
      *
-     * <code>optional string addon = 4;</code>
+     * <code>string addon = 4;</code>
      */
     public java.lang.String getAddon() {
       java.lang.Object ref = addon_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         addon_ = s;
@@ -390,13 +399,13 @@ public final class DeviceInfo {
      *附加信息
      * </pre>
      *
-     * <code>optional string addon = 4;</code>
+     * <code>string addon = 4;</code>
      */
     public com.google.protobuf.ByteString
         getAddonBytes() {
       java.lang.Object ref = addon_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         addon_ = b;
@@ -413,14 +422,14 @@ public final class DeviceInfo {
      *设备UID
      * </pre>
      *
-     * <code>optional string uid = 5;</code>
+     * <code>string uid = 5;</code>
      */
     public java.lang.String getUid() {
       java.lang.Object ref = uid_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         uid_ = s;
@@ -432,13 +441,13 @@ public final class DeviceInfo {
      *设备UID
      * </pre>
      *
-     * <code>optional string uid = 5;</code>
+     * <code>string uid = 5;</code>
      */
     public com.google.protobuf.ByteString
         getUidBytes() {
       java.lang.Object ref = uid_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         uid_ = b;
@@ -455,14 +464,14 @@ public final class DeviceInfo {
      *设备型号
      * </pre>
      *
-     * <code>optional string type = 6;</code>
+     * <code>string type = 6;</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -474,13 +483,13 @@ public final class DeviceInfo {
      *设备型号
      * </pre>
      *
-     * <code>optional string type = 6;</code>
+     * <code>string type = 6;</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -497,14 +506,14 @@ public final class DeviceInfo {
      *设备名称
      * </pre>
      *
-     * <code>optional string name = 7;</code>
+     * <code>string name = 7;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -516,13 +525,13 @@ public final class DeviceInfo {
      *设备名称
      * </pre>
      *
-     * <code>optional string name = 7;</code>
+     * <code>string name = 7;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -539,14 +548,14 @@ public final class DeviceInfo {
      *设备位置信息
      * </pre>
      *
-     * <code>optional string location = 8;</code>
+     * <code>string location = 8;</code>
      */
     public java.lang.String getLocation() {
       java.lang.Object ref = location_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         location_ = s;
@@ -558,13 +567,13 @@ public final class DeviceInfo {
      *设备位置信息
      * </pre>
      *
-     * <code>optional string location = 8;</code>
+     * <code>string location = 8;</code>
      */
     public com.google.protobuf.ByteString
         getLocationBytes() {
       java.lang.Object ref = location_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         location_ = b;
@@ -575,6 +584,7 @@ public final class DeviceInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -584,6 +594,7 @@ public final class DeviceInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (seq_ != 0) {
@@ -610,8 +621,10 @@ public final class DeviceInfo {
       if (!getLocationBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, location_);
       }
+      unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -642,11 +655,11 @@ public final class DeviceInfo {
       if (!getLocationBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, location_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -674,6 +687,7 @@ public final class DeviceInfo {
           .equals(other.getName());
       result = result && getLocation()
           .equals(other.getLocation());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -683,7 +697,7 @@ public final class DeviceInfo {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SEQ_FIELD_NUMBER;
       hash = (53 * hash) + getSeq();
       hash = (37 * hash) + HWVER_FIELD_NUMBER;
@@ -705,6 +719,17 @@ public final class DeviceInfo {
       return hash;
     }
 
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -764,6 +789,7 @@ public final class DeviceInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -771,6 +797,7 @@ public final class DeviceInfo {
     public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -799,6 +826,7 @@ public final class DeviceInfo {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterReq_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterReq_fieldAccessorTable
@@ -821,6 +849,7 @@ public final class DeviceInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         seq_ = 0;
@@ -842,15 +871,18 @@ public final class DeviceInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterReq_descriptor;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq getDefaultInstanceForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq build() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq result = buildPartial();
         if (!result.isInitialized()) {
@@ -859,6 +891,7 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq buildPartial() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq result = new com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq(this);
         result.seq_ = seq_;
@@ -873,32 +906,39 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq) {
           return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq)other);
@@ -941,14 +981,17 @@ public final class DeviceInfo {
           location_ = other.location_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -969,25 +1012,25 @@ public final class DeviceInfo {
 
       private int seq_ ;
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public int getSeq() {
         return seq_;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder setSeq(int value) {
-
+        
         seq_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder clearSeq() {
-
+        
         seq_ = 0;
         onChanged();
         return this;
@@ -999,7 +1042,7 @@ public final class DeviceInfo {
        *硬件版本号
        * </pre>
        *
-       * <code>optional string hwver = 2;</code>
+       * <code>string hwver = 2;</code>
        */
       public java.lang.String getHwver() {
         java.lang.Object ref = hwver_;
@@ -1018,13 +1061,13 @@ public final class DeviceInfo {
        *硬件版本号
        * </pre>
        *
-       * <code>optional string hwver = 2;</code>
+       * <code>string hwver = 2;</code>
        */
       public com.google.protobuf.ByteString
           getHwverBytes() {
         java.lang.Object ref = hwver_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           hwver_ = b;
@@ -1038,14 +1081,14 @@ public final class DeviceInfo {
        *硬件版本号
        * </pre>
        *
-       * <code>optional string hwver = 2;</code>
+       * <code>string hwver = 2;</code>
        */
       public Builder setHwver(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         hwver_ = value;
         onChanged();
         return this;
@@ -1055,10 +1098,10 @@ public final class DeviceInfo {
        *硬件版本号
        * </pre>
        *
-       * <code>optional string hwver = 2;</code>
+       * <code>string hwver = 2;</code>
        */
       public Builder clearHwver() {
-
+        
         hwver_ = getDefaultInstance().getHwver();
         onChanged();
         return this;
@@ -1068,7 +1111,7 @@ public final class DeviceInfo {
        *硬件版本号
        * </pre>
        *
-       * <code>optional string hwver = 2;</code>
+       * <code>string hwver = 2;</code>
        */
       public Builder setHwverBytes(
           com.google.protobuf.ByteString value) {
@@ -1076,7 +1119,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         hwver_ = value;
         onChanged();
         return this;
@@ -1088,7 +1131,7 @@ public final class DeviceInfo {
        *软件版本号
        * </pre>
        *
-       * <code>optional string sfver = 3;</code>
+       * <code>string sfver = 3;</code>
        */
       public java.lang.String getSfver() {
         java.lang.Object ref = sfver_;
@@ -1107,13 +1150,13 @@ public final class DeviceInfo {
        *软件版本号
        * </pre>
        *
-       * <code>optional string sfver = 3;</code>
+       * <code>string sfver = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSfverBytes() {
         java.lang.Object ref = sfver_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           sfver_ = b;
@@ -1127,14 +1170,14 @@ public final class DeviceInfo {
        *软件版本号
        * </pre>
        *
-       * <code>optional string sfver = 3;</code>
+       * <code>string sfver = 3;</code>
        */
       public Builder setSfver(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         sfver_ = value;
         onChanged();
         return this;
@@ -1144,10 +1187,10 @@ public final class DeviceInfo {
        *软件版本号
        * </pre>
        *
-       * <code>optional string sfver = 3;</code>
+       * <code>string sfver = 3;</code>
        */
       public Builder clearSfver() {
-
+        
         sfver_ = getDefaultInstance().getSfver();
         onChanged();
         return this;
@@ -1157,7 +1200,7 @@ public final class DeviceInfo {
        *软件版本号
        * </pre>
        *
-       * <code>optional string sfver = 3;</code>
+       * <code>string sfver = 3;</code>
        */
       public Builder setSfverBytes(
           com.google.protobuf.ByteString value) {
@@ -1165,7 +1208,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         sfver_ = value;
         onChanged();
         return this;
@@ -1177,7 +1220,7 @@ public final class DeviceInfo {
        *附加信息
        * </pre>
        *
-       * <code>optional string addon = 4;</code>
+       * <code>string addon = 4;</code>
        */
       public java.lang.String getAddon() {
         java.lang.Object ref = addon_;
@@ -1196,13 +1239,13 @@ public final class DeviceInfo {
        *附加信息
        * </pre>
        *
-       * <code>optional string addon = 4;</code>
+       * <code>string addon = 4;</code>
        */
       public com.google.protobuf.ByteString
           getAddonBytes() {
         java.lang.Object ref = addon_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           addon_ = b;
@@ -1216,14 +1259,14 @@ public final class DeviceInfo {
        *附加信息
        * </pre>
        *
-       * <code>optional string addon = 4;</code>
+       * <code>string addon = 4;</code>
        */
       public Builder setAddon(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         addon_ = value;
         onChanged();
         return this;
@@ -1233,10 +1276,10 @@ public final class DeviceInfo {
        *附加信息
        * </pre>
        *
-       * <code>optional string addon = 4;</code>
+       * <code>string addon = 4;</code>
        */
       public Builder clearAddon() {
-
+        
         addon_ = getDefaultInstance().getAddon();
         onChanged();
         return this;
@@ -1246,7 +1289,7 @@ public final class DeviceInfo {
        *附加信息
        * </pre>
        *
-       * <code>optional string addon = 4;</code>
+       * <code>string addon = 4;</code>
        */
       public Builder setAddonBytes(
           com.google.protobuf.ByteString value) {
@@ -1254,7 +1297,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         addon_ = value;
         onChanged();
         return this;
@@ -1266,7 +1309,7 @@ public final class DeviceInfo {
        *设备UID
        * </pre>
        *
-       * <code>optional string uid = 5;</code>
+       * <code>string uid = 5;</code>
        */
       public java.lang.String getUid() {
         java.lang.Object ref = uid_;
@@ -1285,13 +1328,13 @@ public final class DeviceInfo {
        *设备UID
        * </pre>
        *
-       * <code>optional string uid = 5;</code>
+       * <code>string uid = 5;</code>
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
         java.lang.Object ref = uid_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           uid_ = b;
@@ -1305,14 +1348,14 @@ public final class DeviceInfo {
        *设备UID
        * </pre>
        *
-       * <code>optional string uid = 5;</code>
+       * <code>string uid = 5;</code>
        */
       public Builder setUid(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         uid_ = value;
         onChanged();
         return this;
@@ -1322,10 +1365,10 @@ public final class DeviceInfo {
        *设备UID
        * </pre>
        *
-       * <code>optional string uid = 5;</code>
+       * <code>string uid = 5;</code>
        */
       public Builder clearUid() {
-
+        
         uid_ = getDefaultInstance().getUid();
         onChanged();
         return this;
@@ -1335,7 +1378,7 @@ public final class DeviceInfo {
        *设备UID
        * </pre>
        *
-       * <code>optional string uid = 5;</code>
+       * <code>string uid = 5;</code>
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
@@ -1343,7 +1386,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         uid_ = value;
         onChanged();
         return this;
@@ -1355,7 +1398,7 @@ public final class DeviceInfo {
        *设备型号
        * </pre>
        *
-       * <code>optional string type = 6;</code>
+       * <code>string type = 6;</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -1374,13 +1417,13 @@ public final class DeviceInfo {
        *设备型号
        * </pre>
        *
-       * <code>optional string type = 6;</code>
+       * <code>string type = 6;</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -1394,14 +1437,14 @@ public final class DeviceInfo {
        *设备型号
        * </pre>
        *
-       * <code>optional string type = 6;</code>
+       * <code>string type = 6;</code>
        */
       public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         type_ = value;
         onChanged();
         return this;
@@ -1411,10 +1454,10 @@ public final class DeviceInfo {
        *设备型号
        * </pre>
        *
-       * <code>optional string type = 6;</code>
+       * <code>string type = 6;</code>
        */
       public Builder clearType() {
-
+        
         type_ = getDefaultInstance().getType();
         onChanged();
         return this;
@@ -1424,7 +1467,7 @@ public final class DeviceInfo {
        *设备型号
        * </pre>
        *
-       * <code>optional string type = 6;</code>
+       * <code>string type = 6;</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1432,7 +1475,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         type_ = value;
         onChanged();
         return this;
@@ -1444,7 +1487,7 @@ public final class DeviceInfo {
        *设备名称
        * </pre>
        *
-       * <code>optional string name = 7;</code>
+       * <code>string name = 7;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1463,13 +1506,13 @@ public final class DeviceInfo {
        *设备名称
        * </pre>
        *
-       * <code>optional string name = 7;</code>
+       * <code>string name = 7;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -1483,14 +1526,14 @@ public final class DeviceInfo {
        *设备名称
        * </pre>
        *
-       * <code>optional string name = 7;</code>
+       * <code>string name = 7;</code>
        */
       public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         name_ = value;
         onChanged();
         return this;
@@ -1500,10 +1543,10 @@ public final class DeviceInfo {
        *设备名称
        * </pre>
        *
-       * <code>optional string name = 7;</code>
+       * <code>string name = 7;</code>
        */
       public Builder clearName() {
-
+        
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
@@ -1513,7 +1556,7 @@ public final class DeviceInfo {
        *设备名称
        * </pre>
        *
-       * <code>optional string name = 7;</code>
+       * <code>string name = 7;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1521,7 +1564,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         name_ = value;
         onChanged();
         return this;
@@ -1533,7 +1576,7 @@ public final class DeviceInfo {
        *设备位置信息
        * </pre>
        *
-       * <code>optional string location = 8;</code>
+       * <code>string location = 8;</code>
        */
       public java.lang.String getLocation() {
         java.lang.Object ref = location_;
@@ -1552,13 +1595,13 @@ public final class DeviceInfo {
        *设备位置信息
        * </pre>
        *
-       * <code>optional string location = 8;</code>
+       * <code>string location = 8;</code>
        */
       public com.google.protobuf.ByteString
           getLocationBytes() {
         java.lang.Object ref = location_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           location_ = b;
@@ -1572,14 +1615,14 @@ public final class DeviceInfo {
        *设备位置信息
        * </pre>
        *
-       * <code>optional string location = 8;</code>
+       * <code>string location = 8;</code>
        */
       public Builder setLocation(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         location_ = value;
         onChanged();
         return this;
@@ -1589,10 +1632,10 @@ public final class DeviceInfo {
        *设备位置信息
        * </pre>
        *
-       * <code>optional string location = 8;</code>
+       * <code>string location = 8;</code>
        */
       public Builder clearLocation() {
-
+        
         location_ = getDefaultInstance().getLocation();
         onChanged();
         return this;
@@ -1602,7 +1645,7 @@ public final class DeviceInfo {
        *设备位置信息
        * </pre>
        *
-       * <code>optional string location = 8;</code>
+       * <code>string location = 8;</code>
        */
       public Builder setLocationBytes(
           com.google.protobuf.ByteString value) {
@@ -1610,19 +1653,21 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         location_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1641,11 +1686,12 @@ public final class DeviceInfo {
 
     private static final com.google.protobuf.Parser<RegisterReq>
         PARSER = new com.google.protobuf.AbstractParser<RegisterReq>() {
+      @java.lang.Override
       public RegisterReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RegisterReq(input, extensionRegistry);
+        return new RegisterReq(input, extensionRegistry);
       }
     };
 
@@ -1658,6 +1704,7 @@ public final class DeviceInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1669,7 +1716,7 @@ public final class DeviceInfo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     int getSeq();
 
@@ -1678,7 +1725,7 @@ public final class DeviceInfo {
      *结果，0:成功，其它值，失败
      * </pre>
      *
-     * <code>optional int32 result = 2;</code>
+     * <code>int32 result = 2;</code>
      */
     int getResult();
 
@@ -1687,7 +1734,7 @@ public final class DeviceInfo {
      *返回的附加信息
      * </pre>
      *
-     * <code>optional string addon = 3;</code>
+     * <code>string addon = 3;</code>
      */
     java.lang.String getAddon();
     /**
@@ -1695,7 +1742,7 @@ public final class DeviceInfo {
      *返回的附加信息
      * </pre>
      *
-     * <code>optional string addon = 3;</code>
+     * <code>string addon = 3;</code>
      */
     com.google.protobuf.ByteString
         getAddonBytes();
@@ -1705,7 +1752,7 @@ public final class DeviceInfo {
      *错误信息
      * </pre>
      *
-     * <code>optional string errmsg = 4;</code>
+     * <code>string errmsg = 4;</code>
      */
     java.lang.String getErrmsg();
     /**
@@ -1713,7 +1760,7 @@ public final class DeviceInfo {
      *错误信息
      * </pre>
      *
-     * <code>optional string errmsg = 4;</code>
+     * <code>string errmsg = 4;</code>
      */
     com.google.protobuf.ByteString
         getErrmsgBytes();
@@ -1730,6 +1777,7 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RegisterResponse)
       RegisterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use RegisterResponse.newBuilder() to construct.
     private RegisterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1744,14 +1792,19 @@ public final class DeviceInfo {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private RegisterResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1760,12 +1813,6 @@ public final class DeviceInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               seq_ = input.readUInt32();
@@ -1788,6 +1835,13 @@ public final class DeviceInfo {
               errmsg_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1796,6 +1850,7 @@ public final class DeviceInfo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1804,6 +1859,7 @@ public final class DeviceInfo {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterResponse_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterResponse_fieldAccessorTable
@@ -1814,7 +1870,7 @@ public final class DeviceInfo {
     public static final int SEQ_FIELD_NUMBER = 1;
     private int seq_;
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     public int getSeq() {
       return seq_;
@@ -1827,7 +1883,7 @@ public final class DeviceInfo {
      *结果，0:成功，其它值，失败
      * </pre>
      *
-     * <code>optional int32 result = 2;</code>
+     * <code>int32 result = 2;</code>
      */
     public int getResult() {
       return result_;
@@ -1840,14 +1896,14 @@ public final class DeviceInfo {
      *返回的附加信息
      * </pre>
      *
-     * <code>optional string addon = 3;</code>
+     * <code>string addon = 3;</code>
      */
     public java.lang.String getAddon() {
       java.lang.Object ref = addon_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         addon_ = s;
@@ -1859,13 +1915,13 @@ public final class DeviceInfo {
      *返回的附加信息
      * </pre>
      *
-     * <code>optional string addon = 3;</code>
+     * <code>string addon = 3;</code>
      */
     public com.google.protobuf.ByteString
         getAddonBytes() {
       java.lang.Object ref = addon_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         addon_ = b;
@@ -1882,14 +1938,14 @@ public final class DeviceInfo {
      *错误信息
      * </pre>
      *
-     * <code>optional string errmsg = 4;</code>
+     * <code>string errmsg = 4;</code>
      */
     public java.lang.String getErrmsg() {
       java.lang.Object ref = errmsg_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         errmsg_ = s;
@@ -1901,13 +1957,13 @@ public final class DeviceInfo {
      *错误信息
      * </pre>
      *
-     * <code>optional string errmsg = 4;</code>
+     * <code>string errmsg = 4;</code>
      */
     public com.google.protobuf.ByteString
         getErrmsgBytes() {
       java.lang.Object ref = errmsg_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         errmsg_ = b;
@@ -1918,6 +1974,7 @@ public final class DeviceInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1927,6 +1984,7 @@ public final class DeviceInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (seq_ != 0) {
@@ -1941,8 +1999,10 @@ public final class DeviceInfo {
       if (!getErrmsgBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errmsg_);
       }
+      unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1962,11 +2022,11 @@ public final class DeviceInfo {
       if (!getErrmsgBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errmsg_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1986,6 +2046,7 @@ public final class DeviceInfo {
           .equals(other.getAddon());
       result = result && getErrmsg()
           .equals(other.getErrmsg());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1995,7 +2056,7 @@ public final class DeviceInfo {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SEQ_FIELD_NUMBER;
       hash = (53 * hash) + getSeq();
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
@@ -2009,6 +2070,17 @@ public final class DeviceInfo {
       return hash;
     }
 
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2068,6 +2140,7 @@ public final class DeviceInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2075,6 +2148,7 @@ public final class DeviceInfo {
     public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2103,6 +2177,7 @@ public final class DeviceInfo {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterResponse_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterResponse_fieldAccessorTable
@@ -2125,6 +2200,7 @@ public final class DeviceInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         seq_ = 0;
@@ -2138,15 +2214,18 @@ public final class DeviceInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_RegisterResponse_descriptor;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse getDefaultInstanceForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse build() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse result = buildPartial();
         if (!result.isInitialized()) {
@@ -2155,6 +2234,7 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse buildPartial() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse result = new com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse(this);
         result.seq_ = seq_;
@@ -2165,32 +2245,39 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse) {
           return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse)other);
@@ -2216,14 +2303,17 @@ public final class DeviceInfo {
           errmsg_ = other.errmsg_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2244,25 +2334,25 @@ public final class DeviceInfo {
 
       private int seq_ ;
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public int getSeq() {
         return seq_;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder setSeq(int value) {
-
+        
         seq_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder clearSeq() {
-
+        
         seq_ = 0;
         onChanged();
         return this;
@@ -2274,7 +2364,7 @@ public final class DeviceInfo {
        *结果，0:成功，其它值，失败
        * </pre>
        *
-       * <code>optional int32 result = 2;</code>
+       * <code>int32 result = 2;</code>
        */
       public int getResult() {
         return result_;
@@ -2284,10 +2374,10 @@ public final class DeviceInfo {
        *结果，0:成功，其它值，失败
        * </pre>
        *
-       * <code>optional int32 result = 2;</code>
+       * <code>int32 result = 2;</code>
        */
       public Builder setResult(int value) {
-
+        
         result_ = value;
         onChanged();
         return this;
@@ -2297,10 +2387,10 @@ public final class DeviceInfo {
        *结果，0:成功，其它值，失败
        * </pre>
        *
-       * <code>optional int32 result = 2;</code>
+       * <code>int32 result = 2;</code>
        */
       public Builder clearResult() {
-
+        
         result_ = 0;
         onChanged();
         return this;
@@ -2312,7 +2402,7 @@ public final class DeviceInfo {
        *返回的附加信息
        * </pre>
        *
-       * <code>optional string addon = 3;</code>
+       * <code>string addon = 3;</code>
        */
       public java.lang.String getAddon() {
         java.lang.Object ref = addon_;
@@ -2331,13 +2421,13 @@ public final class DeviceInfo {
        *返回的附加信息
        * </pre>
        *
-       * <code>optional string addon = 3;</code>
+       * <code>string addon = 3;</code>
        */
       public com.google.protobuf.ByteString
           getAddonBytes() {
         java.lang.Object ref = addon_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           addon_ = b;
@@ -2351,14 +2441,14 @@ public final class DeviceInfo {
        *返回的附加信息
        * </pre>
        *
-       * <code>optional string addon = 3;</code>
+       * <code>string addon = 3;</code>
        */
       public Builder setAddon(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         addon_ = value;
         onChanged();
         return this;
@@ -2368,10 +2458,10 @@ public final class DeviceInfo {
        *返回的附加信息
        * </pre>
        *
-       * <code>optional string addon = 3;</code>
+       * <code>string addon = 3;</code>
        */
       public Builder clearAddon() {
-
+        
         addon_ = getDefaultInstance().getAddon();
         onChanged();
         return this;
@@ -2381,7 +2471,7 @@ public final class DeviceInfo {
        *返回的附加信息
        * </pre>
        *
-       * <code>optional string addon = 3;</code>
+       * <code>string addon = 3;</code>
        */
       public Builder setAddonBytes(
           com.google.protobuf.ByteString value) {
@@ -2389,7 +2479,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         addon_ = value;
         onChanged();
         return this;
@@ -2401,7 +2491,7 @@ public final class DeviceInfo {
        *错误信息
        * </pre>
        *
-       * <code>optional string errmsg = 4;</code>
+       * <code>string errmsg = 4;</code>
        */
       public java.lang.String getErrmsg() {
         java.lang.Object ref = errmsg_;
@@ -2420,13 +2510,13 @@ public final class DeviceInfo {
        *错误信息
        * </pre>
        *
-       * <code>optional string errmsg = 4;</code>
+       * <code>string errmsg = 4;</code>
        */
       public com.google.protobuf.ByteString
           getErrmsgBytes() {
         java.lang.Object ref = errmsg_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           errmsg_ = b;
@@ -2440,14 +2530,14 @@ public final class DeviceInfo {
        *错误信息
        * </pre>
        *
-       * <code>optional string errmsg = 4;</code>
+       * <code>string errmsg = 4;</code>
        */
       public Builder setErrmsg(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         errmsg_ = value;
         onChanged();
         return this;
@@ -2457,10 +2547,10 @@ public final class DeviceInfo {
        *错误信息
        * </pre>
        *
-       * <code>optional string errmsg = 4;</code>
+       * <code>string errmsg = 4;</code>
        */
       public Builder clearErrmsg() {
-
+        
         errmsg_ = getDefaultInstance().getErrmsg();
         onChanged();
         return this;
@@ -2470,7 +2560,7 @@ public final class DeviceInfo {
        *错误信息
        * </pre>
        *
-       * <code>optional string errmsg = 4;</code>
+       * <code>string errmsg = 4;</code>
        */
       public Builder setErrmsgBytes(
           com.google.protobuf.ByteString value) {
@@ -2478,19 +2568,21 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         errmsg_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2509,11 +2601,12 @@ public final class DeviceInfo {
 
     private static final com.google.protobuf.Parser<RegisterResponse>
         PARSER = new com.google.protobuf.AbstractParser<RegisterResponse>() {
+      @java.lang.Override
       public RegisterResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RegisterResponse(input, extensionRegistry);
+        return new RegisterResponse(input, extensionRegistry);
       }
     };
 
@@ -2526,6 +2619,7 @@ public final class DeviceInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.RegisterResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2537,16 +2631,16 @@ public final class DeviceInfo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     int getSeq();
 
     /**
-     * <code>optional string espsfver = 2;</code>
+     * <code>string espsfver = 2;</code>
      */
     java.lang.String getEspsfver();
     /**
-     * <code>optional string espsfver = 2;</code>
+     * <code>string espsfver = 2;</code>
      */
     com.google.protobuf.ByteString
         getEspsfverBytes();
@@ -2556,7 +2650,7 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string ESPFileUrl = 3;</code>
+     * <code>string ESPFileUrl = 3;</code>
      */
     java.lang.String getESPFileUrl();
     /**
@@ -2564,7 +2658,7 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string ESPFileUrl = 3;</code>
+     * <code>string ESPFileUrl = 3;</code>
      */
     com.google.protobuf.ByteString
         getESPFileUrlBytes();
@@ -2574,7 +2668,7 @@ public final class DeviceInfo {
      *文件大小，单位字节，最大不超过2M
      * </pre>
      *
-     * <code>optional uint32 ESPFileSize = 4;</code>
+     * <code>uint32 ESPFileSize = 4;</code>
      */
     int getESPFileSize();
 
@@ -2583,7 +2677,7 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string ESPFileSHA256 = 5;</code>
+     * <code>string ESPFileSHA256 = 5;</code>
      */
     java.lang.String getESPFileSHA256();
     /**
@@ -2591,17 +2685,17 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string ESPFileSHA256 = 5;</code>
+     * <code>string ESPFileSHA256 = 5;</code>
      */
     com.google.protobuf.ByteString
         getESPFileSHA256Bytes();
 
     /**
-     * <code>optional string radarsfver = 6;</code>
+     * <code>string radarsfver = 6;</code>
      */
     java.lang.String getRadarsfver();
     /**
-     * <code>optional string radarsfver = 6;</code>
+     * <code>string radarsfver = 6;</code>
      */
     com.google.protobuf.ByteString
         getRadarsfverBytes();
@@ -2611,7 +2705,7 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string RadarFileUrl = 7;</code>
+     * <code>string RadarFileUrl = 7;</code>
      */
     java.lang.String getRadarFileUrl();
     /**
@@ -2619,7 +2713,7 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string RadarFileUrl = 7;</code>
+     * <code>string RadarFileUrl = 7;</code>
      */
     com.google.protobuf.ByteString
         getRadarFileUrlBytes();
@@ -2629,7 +2723,7 @@ public final class DeviceInfo {
      *文件大小，单位字节，最大不超过500K
      * </pre>
      *
-     * <code>optional uint32 RadarFileSize = 8;</code>
+     * <code>uint32 RadarFileSize = 8;</code>
      */
     int getRadarFileSize();
 
@@ -2638,7 +2732,7 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string RadarFileSHA256 = 9;</code>
+     * <code>string RadarFileSHA256 = 9;</code>
      */
     java.lang.String getRadarFileSHA256();
     /**
@@ -2646,7 +2740,7 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string RadarFileSHA256 = 9;</code>
+     * <code>string RadarFileSHA256 = 9;</code>
      */
     com.google.protobuf.ByteString
         getRadarFileSHA256Bytes();
@@ -2663,6 +2757,7 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:OTAReq)
       OTAReqOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use OTAReq.newBuilder() to construct.
     private OTAReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -2682,14 +2777,19 @@ public final class DeviceInfo {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private OTAReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2698,12 +2798,6 @@ public final class DeviceInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               seq_ = input.readUInt32();
@@ -2755,6 +2849,13 @@ public final class DeviceInfo {
               radarFileSHA256_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2763,6 +2864,7 @@ public final class DeviceInfo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -2771,6 +2873,7 @@ public final class DeviceInfo {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAReq_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAReq_fieldAccessorTable
@@ -2781,7 +2884,7 @@ public final class DeviceInfo {
     public static final int SEQ_FIELD_NUMBER = 1;
     private int seq_;
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     public int getSeq() {
       return seq_;
@@ -2790,14 +2893,14 @@ public final class DeviceInfo {
     public static final int ESPSFVER_FIELD_NUMBER = 2;
     private volatile java.lang.Object espsfver_;
     /**
-     * <code>optional string espsfver = 2;</code>
+     * <code>string espsfver = 2;</code>
      */
     public java.lang.String getEspsfver() {
       java.lang.Object ref = espsfver_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         espsfver_ = s;
@@ -2805,13 +2908,13 @@ public final class DeviceInfo {
       }
     }
     /**
-     * <code>optional string espsfver = 2;</code>
+     * <code>string espsfver = 2;</code>
      */
     public com.google.protobuf.ByteString
         getEspsfverBytes() {
       java.lang.Object ref = espsfver_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         espsfver_ = b;
@@ -2828,14 +2931,14 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string ESPFileUrl = 3;</code>
+     * <code>string ESPFileUrl = 3;</code>
      */
     public java.lang.String getESPFileUrl() {
       java.lang.Object ref = eSPFileUrl_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         eSPFileUrl_ = s;
@@ -2847,13 +2950,13 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string ESPFileUrl = 3;</code>
+     * <code>string ESPFileUrl = 3;</code>
      */
     public com.google.protobuf.ByteString
         getESPFileUrlBytes() {
       java.lang.Object ref = eSPFileUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         eSPFileUrl_ = b;
@@ -2870,7 +2973,7 @@ public final class DeviceInfo {
      *文件大小，单位字节，最大不超过2M
      * </pre>
      *
-     * <code>optional uint32 ESPFileSize = 4;</code>
+     * <code>uint32 ESPFileSize = 4;</code>
      */
     public int getESPFileSize() {
       return eSPFileSize_;
@@ -2883,14 +2986,14 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string ESPFileSHA256 = 5;</code>
+     * <code>string ESPFileSHA256 = 5;</code>
      */
     public java.lang.String getESPFileSHA256() {
       java.lang.Object ref = eSPFileSHA256_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         eSPFileSHA256_ = s;
@@ -2902,13 +3005,13 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string ESPFileSHA256 = 5;</code>
+     * <code>string ESPFileSHA256 = 5;</code>
      */
     public com.google.protobuf.ByteString
         getESPFileSHA256Bytes() {
       java.lang.Object ref = eSPFileSHA256_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         eSPFileSHA256_ = b;
@@ -2921,14 +3024,14 @@ public final class DeviceInfo {
     public static final int RADARSFVER_FIELD_NUMBER = 6;
     private volatile java.lang.Object radarsfver_;
     /**
-     * <code>optional string radarsfver = 6;</code>
+     * <code>string radarsfver = 6;</code>
      */
     public java.lang.String getRadarsfver() {
       java.lang.Object ref = radarsfver_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         radarsfver_ = s;
@@ -2936,13 +3039,13 @@ public final class DeviceInfo {
       }
     }
     /**
-     * <code>optional string radarsfver = 6;</code>
+     * <code>string radarsfver = 6;</code>
      */
     public com.google.protobuf.ByteString
         getRadarsfverBytes() {
       java.lang.Object ref = radarsfver_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radarsfver_ = b;
@@ -2959,14 +3062,14 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string RadarFileUrl = 7;</code>
+     * <code>string RadarFileUrl = 7;</code>
      */
     public java.lang.String getRadarFileUrl() {
       java.lang.Object ref = radarFileUrl_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         radarFileUrl_ = s;
@@ -2978,13 +3081,13 @@ public final class DeviceInfo {
      *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
      * </pre>
      *
-     * <code>optional string RadarFileUrl = 7;</code>
+     * <code>string RadarFileUrl = 7;</code>
      */
     public com.google.protobuf.ByteString
         getRadarFileUrlBytes() {
       java.lang.Object ref = radarFileUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radarFileUrl_ = b;
@@ -3001,7 +3104,7 @@ public final class DeviceInfo {
      *文件大小，单位字节，最大不超过500K
      * </pre>
      *
-     * <code>optional uint32 RadarFileSize = 8;</code>
+     * <code>uint32 RadarFileSize = 8;</code>
      */
     public int getRadarFileSize() {
       return radarFileSize_;
@@ -3014,14 +3117,14 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string RadarFileSHA256 = 9;</code>
+     * <code>string RadarFileSHA256 = 9;</code>
      */
     public java.lang.String getRadarFileSHA256() {
       java.lang.Object ref = radarFileSHA256_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         radarFileSHA256_ = s;
@@ -3033,13 +3136,13 @@ public final class DeviceInfo {
      *文件sha256值
      * </pre>
      *
-     * <code>optional string RadarFileSHA256 = 9;</code>
+     * <code>string RadarFileSHA256 = 9;</code>
      */
     public com.google.protobuf.ByteString
         getRadarFileSHA256Bytes() {
       java.lang.Object ref = radarFileSHA256_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radarFileSHA256_ = b;
@@ -3050,6 +3153,7 @@ public final class DeviceInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3059,6 +3163,7 @@ public final class DeviceInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (seq_ != 0) {
@@ -3088,8 +3193,10 @@ public final class DeviceInfo {
       if (!getRadarFileSHA256Bytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, radarFileSHA256_);
       }
+      unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3125,11 +3232,11 @@ public final class DeviceInfo {
       if (!getRadarFileSHA256Bytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, radarFileSHA256_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3159,6 +3266,7 @@ public final class DeviceInfo {
           == other.getRadarFileSize());
       result = result && getRadarFileSHA256()
           .equals(other.getRadarFileSHA256());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -3168,7 +3276,7 @@ public final class DeviceInfo {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SEQ_FIELD_NUMBER;
       hash = (53 * hash) + getSeq();
       hash = (37 * hash) + ESPSFVER_FIELD_NUMBER;
@@ -3192,6 +3300,17 @@ public final class DeviceInfo {
       return hash;
     }
 
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3251,6 +3370,7 @@ public final class DeviceInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3258,6 +3378,7 @@ public final class DeviceInfo {
     public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3286,6 +3407,7 @@ public final class DeviceInfo {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAReq_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAReq_fieldAccessorTable
@@ -3308,6 +3430,7 @@ public final class DeviceInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         seq_ = 0;
@@ -3331,15 +3454,18 @@ public final class DeviceInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAReq_descriptor;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq getDefaultInstanceForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq build() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq result = buildPartial();
         if (!result.isInitialized()) {
@@ -3348,6 +3474,7 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq buildPartial() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq result = new com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq(this);
         result.seq_ = seq_;
@@ -3363,32 +3490,39 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq) {
           return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq)other);
@@ -3433,14 +3567,17 @@ public final class DeviceInfo {
           radarFileSHA256_ = other.radarFileSHA256_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3461,25 +3598,25 @@ public final class DeviceInfo {
 
       private int seq_ ;
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public int getSeq() {
         return seq_;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder setSeq(int value) {
-
+        
         seq_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder clearSeq() {
-
+        
         seq_ = 0;
         onChanged();
         return this;
@@ -3487,7 +3624,7 @@ public final class DeviceInfo {
 
       private java.lang.Object espsfver_ = "";
       /**
-       * <code>optional string espsfver = 2;</code>
+       * <code>string espsfver = 2;</code>
        */
       public java.lang.String getEspsfver() {
         java.lang.Object ref = espsfver_;
@@ -3502,13 +3639,13 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string espsfver = 2;</code>
+       * <code>string espsfver = 2;</code>
        */
       public com.google.protobuf.ByteString
           getEspsfverBytes() {
         java.lang.Object ref = espsfver_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           espsfver_ = b;
@@ -3518,29 +3655,29 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string espsfver = 2;</code>
+       * <code>string espsfver = 2;</code>
        */
       public Builder setEspsfver(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         espsfver_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string espsfver = 2;</code>
+       * <code>string espsfver = 2;</code>
        */
       public Builder clearEspsfver() {
-
+        
         espsfver_ = getDefaultInstance().getEspsfver();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string espsfver = 2;</code>
+       * <code>string espsfver = 2;</code>
        */
       public Builder setEspsfverBytes(
           com.google.protobuf.ByteString value) {
@@ -3548,7 +3685,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         espsfver_ = value;
         onChanged();
         return this;
@@ -3560,7 +3697,7 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string ESPFileUrl = 3;</code>
+       * <code>string ESPFileUrl = 3;</code>
        */
       public java.lang.String getESPFileUrl() {
         java.lang.Object ref = eSPFileUrl_;
@@ -3579,13 +3716,13 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string ESPFileUrl = 3;</code>
+       * <code>string ESPFileUrl = 3;</code>
        */
       public com.google.protobuf.ByteString
           getESPFileUrlBytes() {
         java.lang.Object ref = eSPFileUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           eSPFileUrl_ = b;
@@ -3599,14 +3736,14 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string ESPFileUrl = 3;</code>
+       * <code>string ESPFileUrl = 3;</code>
        */
       public Builder setESPFileUrl(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         eSPFileUrl_ = value;
         onChanged();
         return this;
@@ -3616,10 +3753,10 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string ESPFileUrl = 3;</code>
+       * <code>string ESPFileUrl = 3;</code>
        */
       public Builder clearESPFileUrl() {
-
+        
         eSPFileUrl_ = getDefaultInstance().getESPFileUrl();
         onChanged();
         return this;
@@ -3629,7 +3766,7 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string ESPFileUrl = 3;</code>
+       * <code>string ESPFileUrl = 3;</code>
        */
       public Builder setESPFileUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -3637,7 +3774,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         eSPFileUrl_ = value;
         onChanged();
         return this;
@@ -3649,7 +3786,7 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过2M
        * </pre>
        *
-       * <code>optional uint32 ESPFileSize = 4;</code>
+       * <code>uint32 ESPFileSize = 4;</code>
        */
       public int getESPFileSize() {
         return eSPFileSize_;
@@ -3659,10 +3796,10 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过2M
        * </pre>
        *
-       * <code>optional uint32 ESPFileSize = 4;</code>
+       * <code>uint32 ESPFileSize = 4;</code>
        */
       public Builder setESPFileSize(int value) {
-
+        
         eSPFileSize_ = value;
         onChanged();
         return this;
@@ -3672,10 +3809,10 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过2M
        * </pre>
        *
-       * <code>optional uint32 ESPFileSize = 4;</code>
+       * <code>uint32 ESPFileSize = 4;</code>
        */
       public Builder clearESPFileSize() {
-
+        
         eSPFileSize_ = 0;
         onChanged();
         return this;
@@ -3687,7 +3824,7 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string ESPFileSHA256 = 5;</code>
+       * <code>string ESPFileSHA256 = 5;</code>
        */
       public java.lang.String getESPFileSHA256() {
         java.lang.Object ref = eSPFileSHA256_;
@@ -3706,13 +3843,13 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string ESPFileSHA256 = 5;</code>
+       * <code>string ESPFileSHA256 = 5;</code>
        */
       public com.google.protobuf.ByteString
           getESPFileSHA256Bytes() {
         java.lang.Object ref = eSPFileSHA256_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           eSPFileSHA256_ = b;
@@ -3726,14 +3863,14 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string ESPFileSHA256 = 5;</code>
+       * <code>string ESPFileSHA256 = 5;</code>
        */
       public Builder setESPFileSHA256(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         eSPFileSHA256_ = value;
         onChanged();
         return this;
@@ -3743,10 +3880,10 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string ESPFileSHA256 = 5;</code>
+       * <code>string ESPFileSHA256 = 5;</code>
        */
       public Builder clearESPFileSHA256() {
-
+        
         eSPFileSHA256_ = getDefaultInstance().getESPFileSHA256();
         onChanged();
         return this;
@@ -3756,7 +3893,7 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string ESPFileSHA256 = 5;</code>
+       * <code>string ESPFileSHA256 = 5;</code>
        */
       public Builder setESPFileSHA256Bytes(
           com.google.protobuf.ByteString value) {
@@ -3764,7 +3901,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         eSPFileSHA256_ = value;
         onChanged();
         return this;
@@ -3772,7 +3909,7 @@ public final class DeviceInfo {
 
       private java.lang.Object radarsfver_ = "";
       /**
-       * <code>optional string radarsfver = 6;</code>
+       * <code>string radarsfver = 6;</code>
        */
       public java.lang.String getRadarsfver() {
         java.lang.Object ref = radarsfver_;
@@ -3787,13 +3924,13 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string radarsfver = 6;</code>
+       * <code>string radarsfver = 6;</code>
        */
       public com.google.protobuf.ByteString
           getRadarsfverBytes() {
         java.lang.Object ref = radarsfver_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radarsfver_ = b;
@@ -3803,29 +3940,29 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string radarsfver = 6;</code>
+       * <code>string radarsfver = 6;</code>
        */
       public Builder setRadarsfver(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         radarsfver_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string radarsfver = 6;</code>
+       * <code>string radarsfver = 6;</code>
        */
       public Builder clearRadarsfver() {
-
+        
         radarsfver_ = getDefaultInstance().getRadarsfver();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string radarsfver = 6;</code>
+       * <code>string radarsfver = 6;</code>
        */
       public Builder setRadarsfverBytes(
           com.google.protobuf.ByteString value) {
@@ -3833,7 +3970,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         radarsfver_ = value;
         onChanged();
         return this;
@@ -3845,7 +3982,7 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string RadarFileUrl = 7;</code>
+       * <code>string RadarFileUrl = 7;</code>
        */
       public java.lang.String getRadarFileUrl() {
         java.lang.Object ref = radarFileUrl_;
@@ -3864,13 +4001,13 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string RadarFileUrl = 7;</code>
+       * <code>string RadarFileUrl = 7;</code>
        */
       public com.google.protobuf.ByteString
           getRadarFileUrlBytes() {
         java.lang.Object ref = radarFileUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radarFileUrl_ = b;
@@ -3884,14 +4021,14 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string RadarFileUrl = 7;</code>
+       * <code>string RadarFileUrl = 7;</code>
        */
       public Builder setRadarFileUrl(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         radarFileUrl_ = value;
         onChanged();
         return this;
@@ -3901,10 +4038,10 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string RadarFileUrl = 7;</code>
+       * <code>string RadarFileUrl = 7;</code>
        */
       public Builder clearRadarFileUrl() {
-
+        
         radarFileUrl_ = getDefaultInstance().getRadarFileUrl();
         onChanged();
         return this;
@@ -3914,7 +4051,7 @@ public final class DeviceInfo {
        *文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
        * </pre>
        *
-       * <code>optional string RadarFileUrl = 7;</code>
+       * <code>string RadarFileUrl = 7;</code>
        */
       public Builder setRadarFileUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -3922,7 +4059,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         radarFileUrl_ = value;
         onChanged();
         return this;
@@ -3934,7 +4071,7 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过500K
        * </pre>
        *
-       * <code>optional uint32 RadarFileSize = 8;</code>
+       * <code>uint32 RadarFileSize = 8;</code>
        */
       public int getRadarFileSize() {
         return radarFileSize_;
@@ -3944,10 +4081,10 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过500K
        * </pre>
        *
-       * <code>optional uint32 RadarFileSize = 8;</code>
+       * <code>uint32 RadarFileSize = 8;</code>
        */
       public Builder setRadarFileSize(int value) {
-
+        
         radarFileSize_ = value;
         onChanged();
         return this;
@@ -3957,10 +4094,10 @@ public final class DeviceInfo {
        *文件大小，单位字节，最大不超过500K
        * </pre>
        *
-       * <code>optional uint32 RadarFileSize = 8;</code>
+       * <code>uint32 RadarFileSize = 8;</code>
        */
       public Builder clearRadarFileSize() {
-
+        
         radarFileSize_ = 0;
         onChanged();
         return this;
@@ -3972,7 +4109,7 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string RadarFileSHA256 = 9;</code>
+       * <code>string RadarFileSHA256 = 9;</code>
        */
       public java.lang.String getRadarFileSHA256() {
         java.lang.Object ref = radarFileSHA256_;
@@ -3991,13 +4128,13 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string RadarFileSHA256 = 9;</code>
+       * <code>string RadarFileSHA256 = 9;</code>
        */
       public com.google.protobuf.ByteString
           getRadarFileSHA256Bytes() {
         java.lang.Object ref = radarFileSHA256_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radarFileSHA256_ = b;
@@ -4011,14 +4148,14 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string RadarFileSHA256 = 9;</code>
+       * <code>string RadarFileSHA256 = 9;</code>
        */
       public Builder setRadarFileSHA256(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         radarFileSHA256_ = value;
         onChanged();
         return this;
@@ -4028,10 +4165,10 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string RadarFileSHA256 = 9;</code>
+       * <code>string RadarFileSHA256 = 9;</code>
        */
       public Builder clearRadarFileSHA256() {
-
+        
         radarFileSHA256_ = getDefaultInstance().getRadarFileSHA256();
         onChanged();
         return this;
@@ -4041,7 +4178,7 @@ public final class DeviceInfo {
        *文件sha256值
        * </pre>
        *
-       * <code>optional string RadarFileSHA256 = 9;</code>
+       * <code>string RadarFileSHA256 = 9;</code>
        */
       public Builder setRadarFileSHA256Bytes(
           com.google.protobuf.ByteString value) {
@@ -4049,19 +4186,21 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         radarFileSHA256_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4080,11 +4219,12 @@ public final class DeviceInfo {
 
     private static final com.google.protobuf.Parser<OTAReq>
         PARSER = new com.google.protobuf.AbstractParser<OTAReq>() {
+      @java.lang.Override
       public OTAReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OTAReq(input, extensionRegistry);
+        return new OTAReq(input, extensionRegistry);
       }
     };
 
@@ -4097,6 +4237,7 @@ public final class DeviceInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4112,16 +4253,16 @@ public final class DeviceInfo {
      *-1:错误,其它值：进度
      * </pre>
      *
-     * <code>optional int32 progress = 1;</code>
+     * <code>int32 progress = 1;</code>
      */
     int getProgress();
 
     /**
-     * <code>optional string errMsg = 2;</code>
+     * <code>string errMsg = 2;</code>
      */
     java.lang.String getErrMsg();
     /**
-     * <code>optional string errMsg = 2;</code>
+     * <code>string errMsg = 2;</code>
      */
     com.google.protobuf.ByteString
         getErrMsgBytes();
@@ -4138,6 +4279,7 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:OTAProgress)
       OTAProgressOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use OTAProgress.newBuilder() to construct.
     private OTAProgress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4150,14 +4292,19 @@ public final class DeviceInfo {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private OTAProgress(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4166,12 +4313,6 @@ public final class DeviceInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               progress_ = input.readInt32();
@@ -4183,6 +4324,13 @@ public final class DeviceInfo {
               errMsg_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4191,6 +4339,7 @@ public final class DeviceInfo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -4199,6 +4348,7 @@ public final class DeviceInfo {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAProgress_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAProgress_fieldAccessorTable
@@ -4213,7 +4363,7 @@ public final class DeviceInfo {
      *-1:错误,其它值：进度
      * </pre>
      *
-     * <code>optional int32 progress = 1;</code>
+     * <code>int32 progress = 1;</code>
      */
     public int getProgress() {
       return progress_;
@@ -4222,14 +4372,14 @@ public final class DeviceInfo {
     public static final int ERRMSG_FIELD_NUMBER = 2;
     private volatile java.lang.Object errMsg_;
     /**
-     * <code>optional string errMsg = 2;</code>
+     * <code>string errMsg = 2;</code>
      */
     public java.lang.String getErrMsg() {
       java.lang.Object ref = errMsg_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         errMsg_ = s;
@@ -4237,13 +4387,13 @@ public final class DeviceInfo {
       }
     }
     /**
-     * <code>optional string errMsg = 2;</code>
+     * <code>string errMsg = 2;</code>
      */
     public com.google.protobuf.ByteString
         getErrMsgBytes() {
       java.lang.Object ref = errMsg_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         errMsg_ = b;
@@ -4254,6 +4404,7 @@ public final class DeviceInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4263,6 +4414,7 @@ public final class DeviceInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (progress_ != 0) {
@@ -4271,8 +4423,10 @@ public final class DeviceInfo {
       if (!getErrMsgBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, errMsg_);
       }
+      unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4285,11 +4439,11 @@ public final class DeviceInfo {
       if (!getErrMsgBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, errMsg_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4305,6 +4459,7 @@ public final class DeviceInfo {
           == other.getProgress());
       result = result && getErrMsg()
           .equals(other.getErrMsg());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -4314,7 +4469,7 @@ public final class DeviceInfo {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
       hash = (53 * hash) + getProgress();
       hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
@@ -4324,6 +4479,17 @@ public final class DeviceInfo {
       return hash;
     }
 
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4383,6 +4549,7 @@ public final class DeviceInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4390,6 +4557,7 @@ public final class DeviceInfo {
     public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4418,6 +4586,7 @@ public final class DeviceInfo {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAProgress_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAProgress_fieldAccessorTable
@@ -4440,6 +4609,7 @@ public final class DeviceInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         progress_ = 0;
@@ -4449,15 +4619,18 @@ public final class DeviceInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OTAProgress_descriptor;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress getDefaultInstanceForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress build() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress result = buildPartial();
         if (!result.isInitialized()) {
@@ -4466,6 +4639,7 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress buildPartial() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress result = new com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress(this);
         result.progress_ = progress_;
@@ -4474,32 +4648,39 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress) {
           return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress)other);
@@ -4518,14 +4699,17 @@ public final class DeviceInfo {
           errMsg_ = other.errMsg_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4550,7 +4734,7 @@ public final class DeviceInfo {
        *-1:错误,其它值：进度
        * </pre>
        *
-       * <code>optional int32 progress = 1;</code>
+       * <code>int32 progress = 1;</code>
        */
       public int getProgress() {
         return progress_;
@@ -4560,10 +4744,10 @@ public final class DeviceInfo {
        *-1:错误,其它值：进度
        * </pre>
        *
-       * <code>optional int32 progress = 1;</code>
+       * <code>int32 progress = 1;</code>
        */
       public Builder setProgress(int value) {
-
+        
         progress_ = value;
         onChanged();
         return this;
@@ -4573,10 +4757,10 @@ public final class DeviceInfo {
        *-1:错误,其它值：进度
        * </pre>
        *
-       * <code>optional int32 progress = 1;</code>
+       * <code>int32 progress = 1;</code>
        */
       public Builder clearProgress() {
-
+        
         progress_ = 0;
         onChanged();
         return this;
@@ -4584,7 +4768,7 @@ public final class DeviceInfo {
 
       private java.lang.Object errMsg_ = "";
       /**
-       * <code>optional string errMsg = 2;</code>
+       * <code>string errMsg = 2;</code>
        */
       public java.lang.String getErrMsg() {
         java.lang.Object ref = errMsg_;
@@ -4599,13 +4783,13 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string errMsg = 2;</code>
+       * <code>string errMsg = 2;</code>
        */
       public com.google.protobuf.ByteString
           getErrMsgBytes() {
         java.lang.Object ref = errMsg_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           errMsg_ = b;
@@ -4615,29 +4799,29 @@ public final class DeviceInfo {
         }
       }
       /**
-       * <code>optional string errMsg = 2;</code>
+       * <code>string errMsg = 2;</code>
        */
       public Builder setErrMsg(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         errMsg_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string errMsg = 2;</code>
+       * <code>string errMsg = 2;</code>
        */
       public Builder clearErrMsg() {
-
+        
         errMsg_ = getDefaultInstance().getErrMsg();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string errMsg = 2;</code>
+       * <code>string errMsg = 2;</code>
        */
       public Builder setErrMsgBytes(
           com.google.protobuf.ByteString value) {
@@ -4645,19 +4829,21 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         errMsg_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4676,11 +4862,12 @@ public final class DeviceInfo {
 
     private static final com.google.protobuf.Parser<OTAProgress>
         PARSER = new com.google.protobuf.AbstractParser<OTAProgress>() {
+      @java.lang.Override
       public OTAProgress parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OTAProgress(input, extensionRegistry);
+        return new OTAProgress(input, extensionRegistry);
       }
     };
 
@@ -4693,6 +4880,7 @@ public final class DeviceInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAProgress getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4704,7 +4892,7 @@ public final class DeviceInfo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     int getSeq();
 
@@ -4713,7 +4901,7 @@ public final class DeviceInfo {
      *agora app_id
      * </pre>
      *
-     * <code>optional string appid = 2;</code>
+     * <code>string appid = 2;</code>
      */
     java.lang.String getAppid();
     /**
@@ -4721,7 +4909,7 @@ public final class DeviceInfo {
      *agora app_id
      * </pre>
      *
-     * <code>optional string appid = 2;</code>
+     * <code>string appid = 2;</code>
      */
     com.google.protobuf.ByteString
         getAppidBytes();
@@ -4731,7 +4919,7 @@ public final class DeviceInfo {
      *CHANNEL_NAME 频道名为设备UID
      * </pre>
      *
-     * <code>optional string license = 3;</code>
+     * <code>string license = 3;</code>
      */
     java.lang.String getLicense();
     /**
@@ -4739,7 +4927,7 @@ public final class DeviceInfo {
      *CHANNEL_NAME 频道名为设备UID
      * </pre>
      *
-     * <code>optional string license = 3;</code>
+     * <code>string license = 3;</code>
      */
     com.google.protobuf.ByteString
         getLicenseBytes();
@@ -4749,7 +4937,7 @@ public final class DeviceInfo {
      *token
      * </pre>
      *
-     * <code>optional string token = 4;</code>
+     * <code>string token = 4;</code>
      */
     java.lang.String getToken();
     /**
@@ -4757,7 +4945,7 @@ public final class DeviceInfo {
      *token
      * </pre>
      *
-     * <code>optional string token = 4;</code>
+     * <code>string token = 4;</code>
      */
     com.google.protobuf.ByteString
         getTokenBytes();
@@ -4775,6 +4963,7 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:StartVoiceReq)
       StartVoiceReqOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use StartVoiceReq.newBuilder() to construct.
     private StartVoiceReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4789,14 +4978,19 @@ public final class DeviceInfo {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private StartVoiceReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4805,12 +4999,6 @@ public final class DeviceInfo {
             case 0:
               done = true;
               break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               seq_ = input.readUInt32();
@@ -4834,6 +5022,13 @@ public final class DeviceInfo {
               token_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4842,6 +5037,7 @@ public final class DeviceInfo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -4850,6 +5046,7 @@ public final class DeviceInfo {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoiceReq_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoiceReq_fieldAccessorTable
@@ -4860,7 +5057,7 @@ public final class DeviceInfo {
     public static final int SEQ_FIELD_NUMBER = 1;
     private int seq_;
     /**
-     * <code>optional uint32 seq = 1;</code>
+     * <code>uint32 seq = 1;</code>
      */
     public int getSeq() {
       return seq_;
@@ -4873,14 +5070,14 @@ public final class DeviceInfo {
      *agora app_id
      * </pre>
      *
-     * <code>optional string appid = 2;</code>
+     * <code>string appid = 2;</code>
      */
     public java.lang.String getAppid() {
       java.lang.Object ref = appid_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         appid_ = s;
@@ -4892,13 +5089,13 @@ public final class DeviceInfo {
      *agora app_id
      * </pre>
      *
-     * <code>optional string appid = 2;</code>
+     * <code>string appid = 2;</code>
      */
     public com.google.protobuf.ByteString
         getAppidBytes() {
       java.lang.Object ref = appid_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         appid_ = b;
@@ -4915,14 +5112,14 @@ public final class DeviceInfo {
      *CHANNEL_NAME 频道名为设备UID
      * </pre>
      *
-     * <code>optional string license = 3;</code>
+     * <code>string license = 3;</code>
      */
     public java.lang.String getLicense() {
       java.lang.Object ref = license_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         license_ = s;
@@ -4934,13 +5131,13 @@ public final class DeviceInfo {
      *CHANNEL_NAME 频道名为设备UID
      * </pre>
      *
-     * <code>optional string license = 3;</code>
+     * <code>string license = 3;</code>
      */
     public com.google.protobuf.ByteString
         getLicenseBytes() {
       java.lang.Object ref = license_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         license_ = b;
@@ -4957,14 +5154,14 @@ public final class DeviceInfo {
      *token
      * </pre>
      *
-     * <code>optional string token = 4;</code>
+     * <code>string token = 4;</code>
      */
     public java.lang.String getToken() {
       java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         token_ = s;
@@ -4976,13 +5173,13 @@ public final class DeviceInfo {
      *token
      * </pre>
      *
-     * <code>optional string token = 4;</code>
+     * <code>string token = 4;</code>
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
       java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         token_ = b;
@@ -4993,6 +5190,7 @@ public final class DeviceInfo {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5002,6 +5200,7 @@ public final class DeviceInfo {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (seq_ != 0) {
@@ -5016,8 +5215,10 @@ public final class DeviceInfo {
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, token_);
       }
+      unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5036,11 +5237,11 @@ public final class DeviceInfo {
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, token_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -5060,6 +5261,7 @@ public final class DeviceInfo {
           .equals(other.getLicense());
       result = result && getToken()
           .equals(other.getToken());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -5069,7 +5271,7 @@ public final class DeviceInfo {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SEQ_FIELD_NUMBER;
       hash = (53 * hash) + getSeq();
       hash = (37 * hash) + APPID_FIELD_NUMBER;
@@ -5083,6 +5285,17 @@ public final class DeviceInfo {
       return hash;
     }
 
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5142,6 +5355,7 @@ public final class DeviceInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5149,6 +5363,7 @@ public final class DeviceInfo {
     public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5178,6 +5393,7 @@ public final class DeviceInfo {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoiceReq_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoiceReq_fieldAccessorTable
@@ -5200,6 +5416,7 @@ public final class DeviceInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         seq_ = 0;
@@ -5213,15 +5430,18 @@ public final class DeviceInfo {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoiceReq_descriptor;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq getDefaultInstanceForType() {
         return com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq build() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq result = buildPartial();
         if (!result.isInitialized()) {
@@ -5230,6 +5450,7 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq buildPartial() {
         com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq result = new com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq(this);
         result.seq_ = seq_;
@@ -5240,32 +5461,39 @@ public final class DeviceInfo {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq) {
           return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq)other);
@@ -5292,14 +5520,17 @@ public final class DeviceInfo {
           token_ = other.token_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5320,25 +5551,25 @@ public final class DeviceInfo {
 
       private int seq_ ;
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public int getSeq() {
         return seq_;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder setSeq(int value) {
-
+        
         seq_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 seq = 1;</code>
+       * <code>uint32 seq = 1;</code>
        */
       public Builder clearSeq() {
-
+        
         seq_ = 0;
         onChanged();
         return this;
@@ -5350,7 +5581,7 @@ public final class DeviceInfo {
        *agora app_id
        * </pre>
        *
-       * <code>optional string appid = 2;</code>
+       * <code>string appid = 2;</code>
        */
       public java.lang.String getAppid() {
         java.lang.Object ref = appid_;
@@ -5369,13 +5600,13 @@ public final class DeviceInfo {
        *agora app_id
        * </pre>
        *
-       * <code>optional string appid = 2;</code>
+       * <code>string appid = 2;</code>
        */
       public com.google.protobuf.ByteString
           getAppidBytes() {
         java.lang.Object ref = appid_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           appid_ = b;
@@ -5389,14 +5620,14 @@ public final class DeviceInfo {
        *agora app_id
        * </pre>
        *
-       * <code>optional string appid = 2;</code>
+       * <code>string appid = 2;</code>
        */
       public Builder setAppid(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         appid_ = value;
         onChanged();
         return this;
@@ -5406,10 +5637,10 @@ public final class DeviceInfo {
        *agora app_id
        * </pre>
        *
-       * <code>optional string appid = 2;</code>
+       * <code>string appid = 2;</code>
        */
       public Builder clearAppid() {
-
+        
         appid_ = getDefaultInstance().getAppid();
         onChanged();
         return this;
@@ -5419,7 +5650,7 @@ public final class DeviceInfo {
        *agora app_id
        * </pre>
        *
-       * <code>optional string appid = 2;</code>
+       * <code>string appid = 2;</code>
        */
       public Builder setAppidBytes(
           com.google.protobuf.ByteString value) {
@@ -5427,7 +5658,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         appid_ = value;
         onChanged();
         return this;
@@ -5439,7 +5670,7 @@ public final class DeviceInfo {
        *CHANNEL_NAME 频道名为设备UID
        * </pre>
        *
-       * <code>optional string license = 3;</code>
+       * <code>string license = 3;</code>
        */
       public java.lang.String getLicense() {
         java.lang.Object ref = license_;
@@ -5458,13 +5689,13 @@ public final class DeviceInfo {
        *CHANNEL_NAME 频道名为设备UID
        * </pre>
        *
-       * <code>optional string license = 3;</code>
+       * <code>string license = 3;</code>
        */
       public com.google.protobuf.ByteString
           getLicenseBytes() {
         java.lang.Object ref = license_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           license_ = b;
@@ -5478,14 +5709,14 @@ public final class DeviceInfo {
        *CHANNEL_NAME 频道名为设备UID
        * </pre>
        *
-       * <code>optional string license = 3;</code>
+       * <code>string license = 3;</code>
        */
       public Builder setLicense(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         license_ = value;
         onChanged();
         return this;
@@ -5495,10 +5726,10 @@ public final class DeviceInfo {
        *CHANNEL_NAME 频道名为设备UID
        * </pre>
        *
-       * <code>optional string license = 3;</code>
+       * <code>string license = 3;</code>
        */
       public Builder clearLicense() {
-
+        
         license_ = getDefaultInstance().getLicense();
         onChanged();
         return this;
@@ -5508,7 +5739,7 @@ public final class DeviceInfo {
        *CHANNEL_NAME 频道名为设备UID
        * </pre>
        *
-       * <code>optional string license = 3;</code>
+       * <code>string license = 3;</code>
        */
       public Builder setLicenseBytes(
           com.google.protobuf.ByteString value) {
@@ -5516,7 +5747,7 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         license_ = value;
         onChanged();
         return this;
@@ -5528,7 +5759,7 @@ public final class DeviceInfo {
        *token
        * </pre>
        *
-       * <code>optional string token = 4;</code>
+       * <code>string token = 4;</code>
        */
       public java.lang.String getToken() {
         java.lang.Object ref = token_;
@@ -5547,13 +5778,13 @@ public final class DeviceInfo {
        *token
        * </pre>
        *
-       * <code>optional string token = 4;</code>
+       * <code>string token = 4;</code>
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
         java.lang.Object ref = token_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           token_ = b;
@@ -5567,14 +5798,14 @@ public final class DeviceInfo {
        *token
        * </pre>
        *
-       * <code>optional string token = 4;</code>
+       * <code>string token = 4;</code>
        */
       public Builder setToken(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         token_ = value;
         onChanged();
         return this;
@@ -5584,10 +5815,10 @@ public final class DeviceInfo {
        *token
        * </pre>
        *
-       * <code>optional string token = 4;</code>
+       * <code>string token = 4;</code>
        */
       public Builder clearToken() {
-
+        
         token_ = getDefaultInstance().getToken();
         onChanged();
         return this;
@@ -5597,7 +5828,7 @@ public final class DeviceInfo {
        *token
        * </pre>
        *
-       * <code>optional string token = 4;</code>
+       * <code>string token = 4;</code>
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -5605,19 +5836,21 @@ public final class DeviceInfo {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         token_ = value;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -5636,11 +5869,12 @@ public final class DeviceInfo {
 
     private static final com.google.protobuf.Parser<StartVoiceReq>
         PARSER = new com.google.protobuf.AbstractParser<StartVoiceReq>() {
+      @java.lang.Override
       public StartVoiceReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StartVoiceReq(input, extensionRegistry);
+        return new StartVoiceReq(input, extensionRegistry);
       }
     };
 
@@ -5653,6 +5887,7 @@ public final class DeviceInfo {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoiceReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5661,27 +5896,27 @@ public final class DeviceInfo {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RegisterReq_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RegisterReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RegisterResponse_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RegisterResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_OTAReq_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_OTAReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_OTAProgress_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_OTAProgress_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_StartVoiceReq_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_StartVoiceReq_fieldAccessorTable;
 
@@ -5702,13 +5937,13 @@ public final class DeviceInfo {
       "eq\022\013\n\003seq\030\001 \001(\r\022\020\n\010espsfver\030\002 \001(\t\022\022\n\nESP" +
       "FileUrl\030\003 \001(\t\022\023\n\013ESPFileSize\030\004 \001(\r\022\025\n\rES" +
       "PFileSHA256\030\005 \001(\t\022\022\n\nradarsfver\030\006 \001(\t\022\024\n" +
-      "\014RadarFileUrl\030\007 \001(\t\022\025\n\rRadarFileSize\030\010 \001",
+      "\014RadarFileUrl\030\007 \001(\t\022\025\n\rRadarFileSize\030\010 \001" +
       "(\r\022\027\n\017RadarFileSHA256\030\t \001(\t\"/\n\013OTAProgre" +
       "ss\022\020\n\010progress\030\001 \001(\005\022\016\n\006errMsg\030\002 \001(\t\"K\n\r" +
       "StartVoiceReq\022\013\n\003seq\030\001 \001(\r\022\r\n\005appid\030\002 \001(" +
-      "\t\022\017\n\007license\030\003 \001(\t\022\r\n\005token\030\004 \001(\tB*\n\034com" +
-      ".example.tsing.server.msgB\nDeviceInfob\006p" +
-      "roto3"
+      "\t\022\017\n\007license\030\003 \001(\t\022\r\n\005token\030\004 \001(\tB9\n+com" +
+      ".qinglan.example.device_point.server.msg" +
+      "B\nDeviceInfob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

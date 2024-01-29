@@ -1,0 +1,175 @@
+syntax = "proto3";
+//获取服务器和其它公共定义
+// 指定模板类的包路径
+option java_package = "com.qinglan.example.device_point.server.msg";
+// 指定模板类的名称，名称必须是有实际业务意义的
+option java_outer_classname = "ServerLBSInfo";
+
+message CommonMessage {
+	uint32 seq = 1;
+}
+
+message CommonResponse {
+	uint32 seq = 1;
+	int32 result = 2;
+	string errmsg = 3;
+}
+
+message SetModeReq {
+	uint32 seq = 1;
+	uint32 seconds = 2;
+}
+
+message ObjectData {
+	bytes  data = 1;  //存放轨迹或者心率
+	int32  seconds = 2;	//1970/1/1开始的秒数
+	int32  mseconds = 3;	//毫秒
+}
+
+//type = 1
+//获取服务器请求
+message GetServerReq {
+	uint32 seq = 1;
+	string uid = 2;		//设备UID
+	string type = 3;	//设备类型
+}
+
+//type = 2
+//获取服务器响应
+message GetServerResponse {
+	uint32 seq = 1;
+	int32  result = 2;		//查询结果，0:成功，其它值，失败
+	string server = 3;		//服务器域名或者IP
+	uint32 port = 4;		//服务器端口
+	string addon = 5;		//服务器附加信息
+	string errmsg = 6;		//错误信息
+}
+
+
+message PositionStatusEvent
+{
+	bytes events = 1;		//8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
+	bytes areas = 2;		//前8个字节,进入该区域事件,对应areaid,后8个字节，对应区域类型
+	uint32  seconds = 3;	//1970/1/1开始的秒数
+	int32   mseconds = 4;	//毫秒
+}
+
+//type = 5
+//上报跌倒状态,不需要响应
+message ObjectFallDown {
+	bytes 	falls = 1;			//两个字节表示一项，字节0为id,字节1为status
+	uint32  seconds = 2;	//1970/1/1开始的秒数
+	int32   mseconds = 3;	//毫秒
+}
+
+//type = 7
+//心跳请求包
+// CommonMessage
+
+//type = 8
+//心跳响应包
+//CommonMessage
+
+//type = 9
+//设置设备属性
+//SetDeviceProperty
+message SetDeviceProperty {
+	uint32  seq = 1;
+	string  key = 2;  //属性key
+	string  value = 3;	//值
+}
+
+//type = 10
+//设置设备属性响应
+message SetPropResponse {
+	uint32 seq = 1;
+	int32 result = 2;
+	string errmsg = 3;
+}
+
+message ProPertyItem
+{
+	string key = 1;
+	string value = 2;
+}
+
+message ProPertyItems
+{
+	repeated  ProPertyItem Properties = 1;
+}
+
+//type = 11
+//获取设备属性
+//空
+
+//type = 12
+//获取设备属性响应
+//ProPertyItems
+
+//type = 13
+//轨迹数据上行
+//ObjectData ,data填16个字节的倍数，每个对象占16个字节
+message PositionData {
+	bytes  data = 1;  //存放轨迹或者心率
+	int32  seconds = 2;	//1970/1/1开始的秒数
+	int32  mseconds = 3;	//毫秒
+}
+
+//type = 14
+//上报目标呼吸心率值,不需要响应
+//ObjectData, data 字节0:breath_rate, 字节1:heart_rate ,16个字节填满
+
+//type = 15
+//上报轨迹事件,不需要响应
+//PositionStatusEvent
+
+//type = 16
+//上报人数统计,不需要响应
+//ObjectData,data[0]为人数
+
+//type = 19
+//上报轨迹统计报告,不需要响应
+//ObjectData ,16个字节填满
+
+//type = 24
+//重启设备
+//CommonMessage
+
+//type = 25
+//重启设备响应
+//空
+
+//type = 26
+//服务器传输模式请求,要求传输轨迹，呼吸和心率,传输时间在SetModeReq的seconds中,时间<=3600秒
+//SetModeReq
+
+//type = 27
+//服务器传输模式请求响应
+//CommonResponse
+
+//type = 28
+//服务器心跳请求
+//无
+
+//type = 29
+//服务器心跳请求响应
+//无
+
+
+//type = 30
+//轨迹累积包上报，不需要响应
+//miniz压缩数据
+
+//type = 31
+//心率累积包上报，不需要响应
+//miniz压缩数据
+
+message NotifyMessage
+{
+	string message = 1;		//NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
+	uint32  seconds = 2;	//1970/1/1开始的秒数
+	int32   mseconds = 3;	//毫秒
+}
+//type = 35
+//雷达通知信息上报
+//NotifyMessage
