@@ -32,6 +32,13 @@ public class DeviceRegSession {
     }
 
     public static void connect(Channel channel, String uid){
+        //重复链接清除旧链接
+        if(regSession.containsKey(uid)){
+            Channel oldChannel = regSession.get(uid);
+            channelInfo.remove(oldChannel.id());
+            oldChannel.close();
+            log.info("----------------offline uid------{}--------", uid);
+        }
         log.info("---------------------uid:{}--------------online----", uid);
         regSession.put(uid, channel);
         channelInfo.put(channel.id(), uid);
