@@ -45,6 +45,7 @@ message GetServerResponse {
 	string errmsg = 6;		//错误信息
 }
 
+enum FallStatus {NORMAL = 0;SUSPECTED = 1; FALLDOWN= 2;}
 
 message PositionStatusEvent
 {
@@ -57,7 +58,7 @@ message PositionStatusEvent
 //type = 5
 //上报跌倒状态,不需要响应
 message ObjectFallDown {
-	bytes 	falls = 1;			//两个字节表示一项，字节0为id,字节1为status
+	bytes 	falls = 1;			//长度为两个字节，字节0为id,字节1为FallStatus,定义如下:0:正常，1:疑似跌倒,2:已经跌倒,3:疑似坐姿过低，4：坐姿过低
 	uint32  seconds = 2;	//1970/1/1开始的秒数
 	int32   mseconds = 3;	//毫秒
 }
@@ -154,15 +155,6 @@ message PositionData {
 //type = 29
 //服务器心跳请求响应
 //无
-
-
-//type = 30
-//轨迹累积包上报，不需要响应
-//miniz压缩数据
-
-//type = 31
-//心率累积包上报，不需要响应
-//miniz压缩数据
 
 message NotifyMessage
 {

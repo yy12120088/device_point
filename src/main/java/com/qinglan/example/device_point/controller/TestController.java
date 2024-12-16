@@ -70,6 +70,7 @@ public class TestController {
         deviceRegSession.initReceiveMsg(key);
         ChannelFuture channelFuture = channel.writeAndFlush(buffer);
         channelFuture.addListener(new ChannelFutureListener() {
+            @Override
             public void operationComplete(ChannelFuture future) {
                 // 发送数据成功以后，再看看引用计数
                 System.out.println("after write and flush completed, buf.refCnt(): " + buffer.refCnt());

@@ -36,12 +36,12 @@ message RegisterResponse {
 message OTAReq {
 	uint32 seq = 1;
 
-	string espsfver = 2;
+	string espsfver = 2;		//HC2：2.0,TK2:2.6
 	string ESPFileUrl = 3;		//文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
 	uint32 ESPFileSize = 4;	//文件大小，单位字节，最大不超过2M
 	string ESPFileSHA256 = 5;	//文件sha256值
 
-	string radarsfver = 6;
+	string radarsfver = 6;			//非加密版本:1.0 ,加密版本:2.3
 	string RadarFileUrl = 7;			//文件名或者标识符，用于后续文件传输请求,文件名长度最大为50字节
 	uint32 RadarFileSize = 8;		//文件大小，单位字节，最大不超过500K
 	string RadarFileSHA256 = 9;	//文件sha256值
@@ -75,9 +75,9 @@ message OTAProgress {
 message StartVoiceReq {
 	uint32 seq = 1;
 	string appid = 2;		//agora app_id
-	 //CHANNEL_NAME 频道名为设备UID
 	string license = 3;		//license
 	string token = 4;			//token
+	string channel = 5;		//channel name
 }
 
 //type = 51
