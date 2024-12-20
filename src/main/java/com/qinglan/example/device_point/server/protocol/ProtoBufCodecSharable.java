@@ -3,8 +3,8 @@ package com.qinglan.example.device_point.server.protocol;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
-import com.qinglan.example.device_point.server.msg.ServerLBSInfo;
 import com.qinglan.example.device_point.server.msg.DeviceInfo;
+import com.qinglan.example.device_point.server.msg.ServerLBSInfo;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;
 import io.netty.channel.ChannelHandler;
@@ -12,7 +12,10 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageCodec;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 
 @ChannelHandler.Sharable
 @Slf4j
@@ -35,26 +38,7 @@ public class ProtoBufCodecSharable extends MessageToMessageCodec<ByteBuf, ByteBu
         outList.add(out);
     }
 
-    private final MessageLite getSerPrototype = ServerLBSInfo.GetServerReq.getDefaultInstance();
-
-    private final MessageLite registerReqPrototype = DeviceInfo.RegisterReq.getDefaultInstance();
-
-    private final MessageLite fallDownPrototype = ServerLBSInfo.ObjectFallDown.getDefaultInstance();
-
-    private final MessageLite objectDataPrototype = ServerLBSInfo.ObjectData.getDefaultInstance();
-
-    private final MessageLite positionDataPrototype = ServerLBSInfo.PositionData.getDefaultInstance();
-
-    private final MessageLite heartDataPrototype = ServerLBSInfo.CommonMessage.getDefaultInstance();
-
-    private final MessageLite commonResponsePrototype = ServerLBSInfo.CommonResponse.getDefaultInstance();
-
-    private final MessageLite setPropResponsePrototype = ServerLBSInfo.SetPropResponse.getDefaultInstance();
-
-    private final MessageLite positionStatusPrototype = ServerLBSInfo.PositionStatusEvent.getDefaultInstance();
-
-    private final MessageLite proPertyItemsPrototype = ServerLBSInfo.ProPertyItems.getDefaultInstance();
-
+    private final PrototypeHandle prototypeHandle = new PrototypeHandle();
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf msg, List<Object> out) {
@@ -72,27 +56,10 @@ public class ProtoBufCodecSharable extends MessageToMessageCodec<ByteBuf, ByteBu
             array = ByteBufUtil.getBytes(msg, msg.readerIndex(), length, false);
             offset = 0;
         }
-
-        if (messageType == 1) { //获取服务器
-            prototype = getSerPrototype;
-        } else if (messageType == 3) {  //注册
-            prototype = registerReqPrototype;
-        } else if (messageType == 5) {  //跌倒数据
-            prototype = fallDownPrototype;
-        } else if (messageType == 13) { //轨迹
-            prototype = positionDataPrototype;
-        } else if (messageType == 14) { //呼吸 心率
-            prototype = objectDataPrototype;
-        } else if (messageType == 7) { //事件
-            prototype = heartDataPrototype;
-        } else if (messageType == 15) {
-            prototype = positionStatusPrototype;
-        } else if (messageType == 27) {
-            prototype = commonResponsePrototype;
-        } else if (messageType == 12) {
-            prototype = proPertyItemsPrototype;
-        }
-        else {
+        MessageLite handle = prototypeHandle.handle(messageType);
+        if (handle != null) {
+            prototype = handle;
+        } else {
             log.error("-------------------------Unknown data---------messageType---{}---------------", messageType);
             return;
         }
@@ -128,4 +95,113 @@ public class ProtoBufCodecSharable extends MessageToMessageCodec<ByteBuf, ByteBu
         HAS_PARSER = hasParser;
     }
 
+}
+class PrototypeHandle{
+    private Map<String, Function<String, MessageLite>> prototypeMap = new HashMap<>();
+
+    public PrototypeHandle(Map<String, Function<String, MessageLite>> prototypeMap) {
+        this.prototypeMap = prototypeMap;
+    }
+
+    public PrototypeHandle() {
+        this.dispatcherInit();
+    }
+
+    public MessageLite handle(byte type) {
+        //根据类型operateType去查询执行方法
+        String sType = String.valueOf(type);
+        Function<String, MessageLite> handle = prototypeMap.get(sType);
+        if (handle != null) {
+            return handle.apply(sType);
+        }
+        return null;
+    }
+
+    public void dispatcherInit() {
+        prototypeMap.put("1", this::handleGetServer);
+        prototypeMap.put("3", this::handleRegister);
+        prototypeMap.put("5", this::handleFallDown);
+        prototypeMap.put("7", this::handleHeartData);
+        prototypeMap.put("12", this::handleProPertyItems);
+        prototypeMap.put("10", this::handleSetProp);
+        prototypeMap.put("13", this::handlePositionData);
+        prototypeMap.put("14", this::handleObjectData);
+        prototypeMap.put("15", this::handlePositionStatus);
+        prototypeMap.put("16", this::handleNumberOfPeople);
+        prototypeMap.put("17", this::handleOtaResponse);
+        prototypeMap.put("18", this::handleOtaProgress);
+        prototypeMap.put("19", this::handlePositionStatistic);
+        prototypeMap.put("27", this::handleCommonResponse);
+        prototypeMap.put("35", this::handleNotifyMessage);
+        prototypeMap.put("51", this::handleStartVoipResponse);
+        prototypeMap.put("53", this::handleStopVoipResponse);
+    }
+
+    private MessageLite handleStartVoipResponse(String type) {
+        return DeviceInfo.StartVoipResponse.getDefaultInstance();
+    }
+
+    private MessageLite handleStopVoipResponse(String type) {
+        return DeviceInfo.StopVoipResponse.getDefaultInstance();
+    }
+
+    private MessageLite handleOtaProgress(String type) {
+        return DeviceInfo.OTAProgress.getDefaultInstance();
+    }
+
+    private MessageLite handleOtaResponse(String type) {
+        return DeviceInfo.OtaResponse.getDefaultInstance();
+    }
+
+    private MessageLite handleSetProp(String type) {
+        return ServerLBSInfo.SetPropResponse.getDefaultInstance();
+    }
+
+    private MessageLite handleNotifyMessage(String type) {
+        return ServerLBSInfo.NotifyMessage.getDefaultInstance();
+    }
+
+    private MessageLite handleNumberOfPeople(String s) {
+        return ServerLBSInfo.NumberOfPeopleData.getDefaultInstance();
+    }
+
+    private MessageLite handlePositionStatistic(String type) {
+        return ServerLBSInfo.PositionStatisticReport.getDefaultInstance();
+    }
+
+    private MessageLite handleCommonResponse(String type) {
+        return ServerLBSInfo.CommonResponse.getDefaultInstance();
+    }
+
+    private MessageLite handlePositionStatus(String type) {
+        return ServerLBSInfo.PositionStatusEvent.getDefaultInstance();
+    }
+
+    private MessageLite handleObjectData(String type) {
+        return ServerLBSInfo.ObjectData.getDefaultInstance();
+    }
+
+    private MessageLite handlePositionData(String type) {
+        return ServerLBSInfo.PositionData.getDefaultInstance();
+    }
+
+    private MessageLite handleProPertyItems(String type) {
+        return ServerLBSInfo.ProPertyItems.getDefaultInstance();
+    }
+
+    private MessageLite handleHeartData(String type) {
+        return ServerLBSInfo.CommonMessage.getDefaultInstance();
+    }
+
+    private MessageLite handleFallDown(String type) {
+        return ServerLBSInfo.ObjectFallDown.getDefaultInstance();
+    }
+
+    private MessageLite handleGetServer(String type) {
+        return ServerLBSInfo.GetServerReq.getDefaultInstance();
+    }
+
+    private MessageLite handleRegister(String type) {
+        return DeviceInfo.RegisterReq.getDefaultInstance();
+    }
 }

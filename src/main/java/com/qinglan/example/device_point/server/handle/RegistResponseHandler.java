@@ -15,11 +15,11 @@ import java.util.List;
 
 @Slf4j
 @ChannelHandler.Sharable
-public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo.RegisterReq> {
+public class RegistResponseHandler extends SimpleChannelInboundHandler<DeviceInfo.RegisterReq> {
 
     private static List<String> uids = new ArrayList<>();
 
-//    public static RegistRequestHandler regRequestHandler;
+//    public static RegistResponseHandler regRequestHandler;
 
     static {
         uids.add("F59D3E873F5B");

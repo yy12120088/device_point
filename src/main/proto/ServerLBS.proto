@@ -47,14 +47,6 @@ message GetServerResponse {
 
 enum FallStatus {NORMAL = 0;SUSPECTED = 1; FALLDOWN= 2;}
 
-message PositionStatusEvent
-{
-	bytes events = 1;		//8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
-	bytes areas = 2;		//前8个字节,进入该区域事件,对应areaid,后8个字节，对应区域类型
-	uint32  seconds = 3;	//1970/1/1开始的秒数
-	int32   mseconds = 4;	//毫秒
-}
-
 //type = 5
 //上报跌倒状态,不需要响应
 message ObjectFallDown {
@@ -123,14 +115,31 @@ message PositionData {
 //type = 15
 //上报轨迹事件,不需要响应
 //PositionStatusEvent
+message PositionStatusEvent
+{
+	bytes events = 1;		//8个字节,第n字节对应的相应ID的事件值,0：无事件 1：进入房间 2：离开房间 3：进入区域 4：离开区域 5:  进入监护 6:  退出监护
+	bytes areas = 2;		//前8个字节,进入该区域事件,对应areaid,后8个字节，对应区域类型
+	uint32  seconds = 3;	//1970/1/1开始的秒数
+	int32   mseconds = 4;	//毫秒
+}
 
 //type = 16
 //上报人数统计,不需要响应
 //ObjectData,data[0]为人数
+message NumberOfPeopleData {
+	bytes  data = 1;  //data[0]为人数
+	int32  seconds = 2;	//1970/1/1开始的秒数
+	int32  mseconds = 3;	//毫秒
+}
 
 //type = 19
 //上报轨迹统计报告,不需要响应
 //ObjectData ,16个字节填满
+message PositionStatisticReport {
+	bytes  data = 1;  //存放轨迹或者心率
+	int32  seconds = 2;	//1970/1/1开始的秒数
+	int32  mseconds = 3;	//毫秒
+}
 
 //type = 24
 //重启设备
@@ -156,12 +165,12 @@ message PositionData {
 //服务器心跳请求响应
 //无
 
+//type = 35
+//雷达通知信息上报
+//NotifyMessage
 message NotifyMessage
 {
 	string message = 1;		//NotContinuouSeq:expect:xx,recieved:xx   雷达包不连续,resetRadar   雷达重启,accelaError  读取加速度异常,radarDate:xxx,radarVer:xx,appDate:xxx,appVer:xx   雷达板和通讯板日期和版本上报
 	uint32  seconds = 2;	//1970/1/1开始的秒数
 	int32   mseconds = 3;	//毫秒
 }
-//type = 35
-//雷达通知信息上报
-//NotifyMessage

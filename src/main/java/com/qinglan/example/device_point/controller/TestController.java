@@ -1,5 +1,6 @@
 package com.qinglan.example.device_point.controller;
 
+import com.qinglan.example.device_point.server.msg.DeviceInfo;
 import com.qinglan.example.device_point.server.msg.ServerLBSInfo;
 import com.qinglan.example.device_point.server.session.DeviceRegSession;
 import io.netty.buffer.ByteBuf;
@@ -7,10 +8,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -55,7 +53,7 @@ public class TestController {
      * @return Device prop
      * @throws InterruptedException
      */
-    @GetMapping("/prop")
+    @GetMapping("/get/prop")
     public String getProp(@RequestParam("uid") String uid) throws InterruptedException {
         Channel channel = deviceRegSession.isReg(uid);
         if (channel == null){
@@ -77,6 +75,80 @@ public class TestController {
             }
         });
         String s = deviceRegSession.waitReceiveMsg(key);
+        return s;
+    }
+
+    /**
+     * 设置设备属性
+     * @param uid
+     * @return Device prop
+     * @throws InterruptedException
+     */
+    @GetMapping("/set/prop")
+    public String getProp(@RequestParam("uid") String uid, @RequestParam("key") String key, @RequestParam("value") String value) throws InterruptedException {
+        Channel channel = deviceRegSession.isReg(uid);
+        if (channel == null){
+            return null;
+        }
+        String channelId = channel.id().asLongText();
+        ServerLBSInfo.SetDeviceProperty.Builder builder = ServerLBSInfo.SetDeviceProperty
+                .newBuilder();
+        builder.setSeq(1);
+        builder.setKey(key);
+        builder.setValue(value);
+        int type = 9;
+        String channelKey = type + channelId;
+        ByteBuf buffer = channel.alloc().buffer();
+        System.out.println("before write and flush, buf.refCnt(): " + buffer.refCnt());
+        buffer.writeByte(type);
+        buffer.writeBytes(builder.build().toByteArray());
+        deviceRegSession.initReceiveMsg(channelKey);
+        ChannelFuture channelFuture = channel.writeAndFlush(buffer);
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) {
+                // 发送数据成功以后，再看看引用计数
+                System.out.println("after write and flush completed, buf.refCnt(): " + buffer.refCnt());
+            }
+        });
+        String s = deviceRegSession.waitReceiveMsg(channelKey);
+        return s;
+    }
+
+    /**
+     * 开启通话
+     * @param uid
+     * @return Device prop
+     * @throws InterruptedException
+     */
+    @PostMapping("/startVoice")
+    public String startHdVoice(@RequestParam("uid") String uid) {
+        Channel channel = deviceRegSession.isReg(uid);
+        if (channel == null){
+            return null;
+        }
+        //todo 远程调用清澜服务器获取license token appid
+
+
+        String channelId = channel.id().asLongText();
+        DeviceInfo.StartVoiceReq.Builder builder = DeviceInfo.StartVoiceReq
+                .newBuilder().setSeq(1).setAppid("appid").setLicense("license").setToken("token").setChannel("name");
+        int type = 50;
+        String channelKey = type + channelId;
+        ByteBuf buffer = channel.alloc().buffer();
+        System.out.println("before write and flush, buf.refCnt(): " + buffer.refCnt());
+        buffer.writeByte(type);
+        buffer.writeBytes(builder.build().toByteArray());
+        deviceRegSession.initReceiveMsg(channelKey);
+        ChannelFuture channelFuture = channel.writeAndFlush(buffer);
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) {
+                // 发送数据成功以后，再看看引用计数
+                System.out.println("after write and flush completed, buf.refCnt(): " + buffer.refCnt());
+            }
+        });
+        String s = deviceRegSession.waitReceiveMsg(channelKey);
         return s;
     }
 }

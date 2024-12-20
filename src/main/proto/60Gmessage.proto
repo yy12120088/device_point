@@ -50,7 +50,11 @@ message OTAReq {
 //type = 17
 //在线升级推送请求响应包
 //CommonResponse
-
+message OtaResponse {
+	uint32 seq = 1;
+	int32 result = 2;
+	string errmsg = 3;
+}
 
 //type = 18
 //上报升级进度和结果
@@ -83,6 +87,11 @@ message StartVoiceReq {
 //type = 51
 //启动通话响应
 //CommonResponse
+message StartVoipResponse {
+	uint32 seq = 1;
+	int32 result = 2;
+	string errmsg = 3;
+}
 
 //type = 52
 //停止通话
@@ -91,7 +100,11 @@ message StartVoiceReq {
 //type = 53
 //停止通话响应
 //CommonResponse
-
+message StopVoipResponse {
+	uint32 seq = 1;
+	int32 result = 2;
+	string errmsg = 3;
+}
 
 //type = 54
 //语音指令,设备上报，不需要响应

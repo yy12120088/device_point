@@ -2636,10 +2636,18 @@ public final class DeviceInfo {
     int getSeq();
 
     /**
+     * <pre>
+     *HC2：2.0,TK2:2.6
+     * </pre>
+     *
      * <code>string espsfver = 2;</code>
      */
     java.lang.String getEspsfver();
     /**
+     * <pre>
+     *HC2：2.0,TK2:2.6
+     * </pre>
+     *
      * <code>string espsfver = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -2691,10 +2699,18 @@ public final class DeviceInfo {
         getESPFileSHA256Bytes();
 
     /**
+     * <pre>
+     *非加密版本:1.0 ,加密版本:2.3
+     * </pre>
+     *
      * <code>string radarsfver = 6;</code>
      */
     java.lang.String getRadarsfver();
     /**
+     * <pre>
+     *非加密版本:1.0 ,加密版本:2.3
+     * </pre>
+     *
      * <code>string radarsfver = 6;</code>
      */
     com.google.protobuf.ByteString
@@ -2893,6 +2909,10 @@ public final class DeviceInfo {
     public static final int ESPSFVER_FIELD_NUMBER = 2;
     private volatile java.lang.Object espsfver_;
     /**
+     * <pre>
+     *HC2：2.0,TK2:2.6
+     * </pre>
+     *
      * <code>string espsfver = 2;</code>
      */
     public java.lang.String getEspsfver() {
@@ -2908,6 +2928,10 @@ public final class DeviceInfo {
       }
     }
     /**
+     * <pre>
+     *HC2：2.0,TK2:2.6
+     * </pre>
+     *
      * <code>string espsfver = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -3024,6 +3048,10 @@ public final class DeviceInfo {
     public static final int RADARSFVER_FIELD_NUMBER = 6;
     private volatile java.lang.Object radarsfver_;
     /**
+     * <pre>
+     *非加密版本:1.0 ,加密版本:2.3
+     * </pre>
+     *
      * <code>string radarsfver = 6;</code>
      */
     public java.lang.String getRadarsfver() {
@@ -3039,6 +3067,10 @@ public final class DeviceInfo {
       }
     }
     /**
+     * <pre>
+     *非加密版本:1.0 ,加密版本:2.3
+     * </pre>
+     *
      * <code>string radarsfver = 6;</code>
      */
     public com.google.protobuf.ByteString
@@ -3624,6 +3656,10 @@ public final class DeviceInfo {
 
       private java.lang.Object espsfver_ = "";
       /**
+       * <pre>
+       *HC2：2.0,TK2:2.6
+       * </pre>
+       *
        * <code>string espsfver = 2;</code>
        */
       public java.lang.String getEspsfver() {
@@ -3639,6 +3675,10 @@ public final class DeviceInfo {
         }
       }
       /**
+       * <pre>
+       *HC2：2.0,TK2:2.6
+       * </pre>
+       *
        * <code>string espsfver = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3655,6 +3695,10 @@ public final class DeviceInfo {
         }
       }
       /**
+       * <pre>
+       *HC2：2.0,TK2:2.6
+       * </pre>
+       *
        * <code>string espsfver = 2;</code>
        */
       public Builder setEspsfver(
@@ -3668,6 +3712,10 @@ public final class DeviceInfo {
         return this;
       }
       /**
+       * <pre>
+       *HC2：2.0,TK2:2.6
+       * </pre>
+       *
        * <code>string espsfver = 2;</code>
        */
       public Builder clearEspsfver() {
@@ -3677,6 +3725,10 @@ public final class DeviceInfo {
         return this;
       }
       /**
+       * <pre>
+       *HC2：2.0,TK2:2.6
+       * </pre>
+       *
        * <code>string espsfver = 2;</code>
        */
       public Builder setEspsfverBytes(
@@ -3909,6 +3961,10 @@ public final class DeviceInfo {
 
       private java.lang.Object radarsfver_ = "";
       /**
+       * <pre>
+       *非加密版本:1.0 ,加密版本:2.3
+       * </pre>
+       *
        * <code>string radarsfver = 6;</code>
        */
       public java.lang.String getRadarsfver() {
@@ -3924,6 +3980,10 @@ public final class DeviceInfo {
         }
       }
       /**
+       * <pre>
+       *非加密版本:1.0 ,加密版本:2.3
+       * </pre>
+       *
        * <code>string radarsfver = 6;</code>
        */
       public com.google.protobuf.ByteString
@@ -3940,6 +4000,10 @@ public final class DeviceInfo {
         }
       }
       /**
+       * <pre>
+       *非加密版本:1.0 ,加密版本:2.3
+       * </pre>
+       *
        * <code>string radarsfver = 6;</code>
        */
       public Builder setRadarsfver(
@@ -3953,6 +4017,10 @@ public final class DeviceInfo {
         return this;
       }
       /**
+       * <pre>
+       *非加密版本:1.0 ,加密版本:2.3
+       * </pre>
+       *
        * <code>string radarsfver = 6;</code>
        */
       public Builder clearRadarsfver() {
@@ -3962,6 +4030,10 @@ public final class DeviceInfo {
         return this;
       }
       /**
+       * <pre>
+       *非加密版本:1.0 ,加密版本:2.3
+       * </pre>
+       *
        * <code>string radarsfver = 6;</code>
        */
       public Builder setRadarsfverBytes(
@@ -4239,6 +4311,694 @@ public final class DeviceInfo {
 
     @java.lang.Override
     public com.qinglan.example.device_point.server.msg.DeviceInfo.OTAReq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OtaResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:OtaResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    int getResult();
+
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    java.lang.String getErrmsg();
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrmsgBytes();
+  }
+  /**
+   * <pre>
+   *type = 17
+   *在线升级推送请求响应包
+   *CommonResponse
+   * </pre>
+   *
+   * Protobuf type {@code OtaResponse}
+   */
+  public  static final class OtaResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:OtaResponse)
+      OtaResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OtaResponse.newBuilder() to construct.
+    private OtaResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OtaResponse() {
+      seq_ = 0;
+      result_ = 0;
+      errmsg_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OtaResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              result_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errmsg_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OtaResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OtaResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.Builder.class);
+    }
+
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private int result_;
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int ERRMSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object errmsg_;
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errmsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrmsgBytes() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errmsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (seq_ != 0) {
+        output.writeUInt32(1, seq_);
+      }
+      if (result_ != 0) {
+        output.writeInt32(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errmsg_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (result_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errmsg_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse)) {
+        return super.equals(obj);
+      }
+      com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse other = (com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse) obj;
+
+      boolean result = true;
+      result = result && (getSeq()
+          == other.getSeq());
+      result = result && (getResult()
+          == other.getResult());
+      result = result && getErrmsg()
+          .equals(other.getErrmsg());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getSeq();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult();
+      hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
+      hash = (53 * hash) + getErrmsg().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *type = 17
+     *在线升级推送请求响应包
+     *CommonResponse
+     * </pre>
+     *
+     * Protobuf type {@code OtaResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:OtaResponse)
+        com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OtaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OtaResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.Builder.class);
+      }
+
+      // Construct using com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+
+        result_ = 0;
+
+        errmsg_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_OtaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse build() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse result = new com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse(this);
+        result.seq_ = seq_;
+        result.result_ = result_;
+        result.errmsg_ = errmsg_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse.getDefaultInstance()) return this;
+        if (other.getSeq() != 0) {
+          setSeq(other.getSeq());
+        }
+        if (other.getResult() != 0) {
+          setResult(other.getResult());
+        }
+        if (!other.getErrmsg().isEmpty()) {
+          errmsg_ = other.errmsg_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int seq_ ;
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+        
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+        
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int result_ ;
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder setResult(int value) {
+        
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder clearResult() {
+        
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errmsg_ = "";
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errmsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrmsgBytes() {
+        java.lang.Object ref = errmsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errmsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder clearErrmsg() {
+        
+        errmsg_ = getDefaultInstance().getErrmsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:OtaResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:OtaResponse)
+    private static final com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse();
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OtaResponse>
+        PARSER = new com.google.protobuf.AbstractParser<OtaResponse>() {
+      @java.lang.Override
+      public OtaResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OtaResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OtaResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OtaResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.qinglan.example.device_point.server.msg.DeviceInfo.OtaResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4916,7 +5676,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *CHANNEL_NAME 频道名为设备UID
+     *license
      * </pre>
      *
      * <code>string license = 3;</code>
@@ -4924,7 +5684,7 @@ public final class DeviceInfo {
     java.lang.String getLicense();
     /**
      * <pre>
-     *CHANNEL_NAME 频道名为设备UID
+     *license
      * </pre>
      *
      * <code>string license = 3;</code>
@@ -4949,6 +5709,24 @@ public final class DeviceInfo {
      */
     com.google.protobuf.ByteString
         getTokenBytes();
+
+    /**
+     * <pre>
+     *channel name
+     * </pre>
+     *
+     * <code>string channel = 5;</code>
+     */
+    java.lang.String getChannel();
+    /**
+     * <pre>
+     *channel name
+     * </pre>
+     *
+     * <code>string channel = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getChannelBytes();
   }
   /**
    * <pre>
@@ -4973,6 +5751,7 @@ public final class DeviceInfo {
       appid_ = "";
       license_ = "";
       token_ = "";
+      channel_ = "";
     }
 
     @java.lang.Override
@@ -5020,6 +5799,12 @@ public final class DeviceInfo {
               java.lang.String s = input.readStringRequireUtf8();
 
               token_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channel_ = s;
               break;
             }
             default: {
@@ -5109,7 +5894,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object license_;
     /**
      * <pre>
-     *CHANNEL_NAME 频道名为设备UID
+     *license
      * </pre>
      *
      * <code>string license = 3;</code>
@@ -5128,7 +5913,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *CHANNEL_NAME 频道名为设备UID
+     *license
      * </pre>
      *
      * <code>string license = 3;</code>
@@ -5189,6 +5974,48 @@ public final class DeviceInfo {
       }
     }
 
+    public static final int CHANNEL_FIELD_NUMBER = 5;
+    private volatile java.lang.Object channel_;
+    /**
+     * <pre>
+     *channel name
+     * </pre>
+     *
+     * <code>string channel = 5;</code>
+     */
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *channel name
+     * </pre>
+     *
+     * <code>string channel = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5215,6 +6042,9 @@ public final class DeviceInfo {
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, token_);
       }
+      if (!getChannelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, channel_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5236,6 +6066,9 @@ public final class DeviceInfo {
       }
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, token_);
+      }
+      if (!getChannelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, channel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5261,6 +6094,8 @@ public final class DeviceInfo {
           .equals(other.getLicense());
       result = result && getToken()
           .equals(other.getToken());
+      result = result && getChannel()
+          .equals(other.getChannel());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5280,6 +6115,8 @@ public final class DeviceInfo {
       hash = (53 * hash) + getLicense().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
+      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getChannel().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5427,6 +6264,8 @@ public final class DeviceInfo {
 
         token_ = "";
 
+        channel_ = "";
+
         return this;
       }
 
@@ -5457,6 +6296,7 @@ public final class DeviceInfo {
         result.appid_ = appid_;
         result.license_ = license_;
         result.token_ = token_;
+        result.channel_ = channel_;
         onBuilt();
         return result;
       }
@@ -5518,6 +6358,10 @@ public final class DeviceInfo {
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          onChanged();
+        }
+        if (!other.getChannel().isEmpty()) {
+          channel_ = other.channel_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5667,7 +6511,7 @@ public final class DeviceInfo {
       private java.lang.Object license_ = "";
       /**
        * <pre>
-       *CHANNEL_NAME 频道名为设备UID
+       *license
        * </pre>
        *
        * <code>string license = 3;</code>
@@ -5686,7 +6530,7 @@ public final class DeviceInfo {
       }
       /**
        * <pre>
-       *CHANNEL_NAME 频道名为设备UID
+       *license
        * </pre>
        *
        * <code>string license = 3;</code>
@@ -5706,7 +6550,7 @@ public final class DeviceInfo {
       }
       /**
        * <pre>
-       *CHANNEL_NAME 频道名为设备UID
+       *license
        * </pre>
        *
        * <code>string license = 3;</code>
@@ -5723,7 +6567,7 @@ public final class DeviceInfo {
       }
       /**
        * <pre>
-       *CHANNEL_NAME 频道名为设备UID
+       *license
        * </pre>
        *
        * <code>string license = 3;</code>
@@ -5736,7 +6580,7 @@ public final class DeviceInfo {
       }
       /**
        * <pre>
-       *CHANNEL_NAME 频道名为设备UID
+       *license
        * </pre>
        *
        * <code>string license = 3;</code>
@@ -5841,6 +6685,95 @@ public final class DeviceInfo {
         onChanged();
         return this;
       }
+
+      private java.lang.Object channel_ = "";
+      /**
+       * <pre>
+       *channel name
+       * </pre>
+       *
+       * <code>string channel = 5;</code>
+       */
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *channel name
+       * </pre>
+       *
+       * <code>string channel = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *channel name
+       * </pre>
+       *
+       * <code>string channel = 5;</code>
+       */
+      public Builder setChannel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *channel name
+       * </pre>
+       *
+       * <code>string channel = 5;</code>
+       */
+      public Builder clearChannel() {
+        
+        channel_ = getDefaultInstance().getChannel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *channel name
+       * </pre>
+       *
+       * <code>string channel = 5;</code>
+       */
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channel_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5894,6 +6827,1382 @@ public final class DeviceInfo {
 
   }
 
+  public interface StartVoipResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StartVoipResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    int getResult();
+
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    java.lang.String getErrmsg();
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrmsgBytes();
+  }
+  /**
+   * <pre>
+   *type = 51
+   *启动通话响应
+   *CommonResponse
+   * </pre>
+   *
+   * Protobuf type {@code StartVoipResponse}
+   */
+  public  static final class StartVoipResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StartVoipResponse)
+      StartVoipResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartVoipResponse.newBuilder() to construct.
+    private StartVoipResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartVoipResponse() {
+      seq_ = 0;
+      result_ = 0;
+      errmsg_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartVoipResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              result_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errmsg_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoipResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoipResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.Builder.class);
+    }
+
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private int result_;
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int ERRMSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object errmsg_;
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errmsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrmsgBytes() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errmsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (seq_ != 0) {
+        output.writeUInt32(1, seq_);
+      }
+      if (result_ != 0) {
+        output.writeInt32(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errmsg_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (result_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errmsg_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse)) {
+        return super.equals(obj);
+      }
+      com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse other = (com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse) obj;
+
+      boolean result = true;
+      result = result && (getSeq()
+          == other.getSeq());
+      result = result && (getResult()
+          == other.getResult());
+      result = result && getErrmsg()
+          .equals(other.getErrmsg());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getSeq();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult();
+      hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
+      hash = (53 * hash) + getErrmsg().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *type = 51
+     *启动通话响应
+     *CommonResponse
+     * </pre>
+     *
+     * Protobuf type {@code StartVoipResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StartVoipResponse)
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoipResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.Builder.class);
+      }
+
+      // Construct using com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+
+        result_ = 0;
+
+        errmsg_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StartVoipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse build() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse result = new com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse(this);
+        result.seq_ = seq_;
+        result.result_ = result_;
+        result.errmsg_ = errmsg_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse.getDefaultInstance()) return this;
+        if (other.getSeq() != 0) {
+          setSeq(other.getSeq());
+        }
+        if (other.getResult() != 0) {
+          setResult(other.getResult());
+        }
+        if (!other.getErrmsg().isEmpty()) {
+          errmsg_ = other.errmsg_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int seq_ ;
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+        
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+        
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int result_ ;
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder setResult(int value) {
+        
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder clearResult() {
+        
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errmsg_ = "";
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errmsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrmsgBytes() {
+        java.lang.Object ref = errmsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errmsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder clearErrmsg() {
+        
+        errmsg_ = getDefaultInstance().getErrmsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StartVoipResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:StartVoipResponse)
+    private static final com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse();
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartVoipResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StartVoipResponse>() {
+      @java.lang.Override
+      public StartVoipResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartVoipResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartVoipResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartVoipResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.qinglan.example.device_point.server.msg.DeviceInfo.StartVoipResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StopVoipResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StopVoipResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    int getSeq();
+
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    int getResult();
+
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    java.lang.String getErrmsg();
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrmsgBytes();
+  }
+  /**
+   * <pre>
+   *type = 53
+   *停止通话响应
+   *CommonResponse
+   * </pre>
+   *
+   * Protobuf type {@code StopVoipResponse}
+   */
+  public  static final class StopVoipResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StopVoipResponse)
+      StopVoipResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StopVoipResponse.newBuilder() to construct.
+    private StopVoipResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StopVoipResponse() {
+      seq_ = 0;
+      result_ = 0;
+      errmsg_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StopVoipResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              seq_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              result_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errmsg_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StopVoipResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StopVoipResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.Builder.class);
+    }
+
+    public static final int SEQ_FIELD_NUMBER = 1;
+    private int seq_;
+    /**
+     * <code>uint32 seq = 1;</code>
+     */
+    public int getSeq() {
+      return seq_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private int result_;
+    /**
+     * <code>int32 result = 2;</code>
+     */
+    public int getResult() {
+      return result_;
+    }
+
+    public static final int ERRMSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object errmsg_;
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public java.lang.String getErrmsg() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errmsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string errmsg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrmsgBytes() {
+      java.lang.Object ref = errmsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errmsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (seq_ != 0) {
+        output.writeUInt32(1, seq_);
+      }
+      if (result_ != 0) {
+        output.writeInt32(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errmsg_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, seq_);
+      }
+      if (result_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, result_);
+      }
+      if (!getErrmsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errmsg_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse)) {
+        return super.equals(obj);
+      }
+      com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse other = (com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse) obj;
+
+      boolean result = true;
+      result = result && (getSeq()
+          == other.getSeq());
+      result = result && (getResult()
+          == other.getResult());
+      result = result && getErrmsg()
+          .equals(other.getErrmsg());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getSeq();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult();
+      hash = (37 * hash) + ERRMSG_FIELD_NUMBER;
+      hash = (53 * hash) + getErrmsg().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *type = 53
+     *停止通话响应
+     *CommonResponse
+     * </pre>
+     *
+     * Protobuf type {@code StopVoipResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StopVoipResponse)
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StopVoipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StopVoipResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.class, com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.Builder.class);
+      }
+
+      // Construct using com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        seq_ = 0;
+
+        result_ = 0;
+
+        errmsg_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.internal_static_StopVoipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse getDefaultInstanceForType() {
+        return com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse build() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse buildPartial() {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse result = new com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse(this);
+        result.seq_ = seq_;
+        result.result_ = result_;
+        result.errmsg_ = errmsg_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse) {
+          return mergeFrom((com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse other) {
+        if (other == com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse.getDefaultInstance()) return this;
+        if (other.getSeq() != 0) {
+          setSeq(other.getSeq());
+        }
+        if (other.getResult() != 0) {
+          setResult(other.getResult());
+        }
+        if (!other.getErrmsg().isEmpty()) {
+          errmsg_ = other.errmsg_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int seq_ ;
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public int getSeq() {
+        return seq_;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder setSeq(int value) {
+        
+        seq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 seq = 1;</code>
+       */
+      public Builder clearSeq() {
+        
+        seq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int result_ ;
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public int getResult() {
+        return result_;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder setResult(int value) {
+        
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 result = 2;</code>
+       */
+      public Builder clearResult() {
+        
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errmsg_ = "";
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public java.lang.String getErrmsg() {
+        java.lang.Object ref = errmsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errmsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrmsgBytes() {
+        java.lang.Object ref = errmsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errmsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder clearErrmsg() {
+        
+        errmsg_ = getDefaultInstance().getErrmsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string errmsg = 3;</code>
+       */
+      public Builder setErrmsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errmsg_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StopVoipResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:StopVoipResponse)
+    private static final com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse();
+    }
+
+    public static com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StopVoipResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StopVoipResponse>() {
+      @java.lang.Override
+      public StopVoipResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StopVoipResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StopVoipResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StopVoipResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.qinglan.example.device_point.server.msg.DeviceInfo.StopVoipResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RegisterReq_descriptor;
   private static final 
@@ -5910,6 +8219,11 @@ public final class DeviceInfo {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_OTAReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_OtaResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_OtaResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_OTAProgress_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5919,6 +8233,16 @@ public final class DeviceInfo {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_StartVoiceReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StartVoipResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StartVoipResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StopVoipResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StopVoipResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5938,12 +8262,17 @@ public final class DeviceInfo {
       "FileUrl\030\003 \001(\t\022\023\n\013ESPFileSize\030\004 \001(\r\022\025\n\rES" +
       "PFileSHA256\030\005 \001(\t\022\022\n\nradarsfver\030\006 \001(\t\022\024\n" +
       "\014RadarFileUrl\030\007 \001(\t\022\025\n\rRadarFileSize\030\010 \001" +
-      "(\r\022\027\n\017RadarFileSHA256\030\t \001(\t\"/\n\013OTAProgre" +
-      "ss\022\020\n\010progress\030\001 \001(\005\022\016\n\006errMsg\030\002 \001(\t\"K\n\r" +
-      "StartVoiceReq\022\013\n\003seq\030\001 \001(\r\022\r\n\005appid\030\002 \001(" +
-      "\t\022\017\n\007license\030\003 \001(\t\022\r\n\005token\030\004 \001(\tB9\n+com" +
-      ".qinglan.example.device_point.server.msg" +
-      "B\nDeviceInfob\006proto3"
+      "(\r\022\027\n\017RadarFileSHA256\030\t \001(\t\":\n\013OtaRespon" +
+      "se\022\013\n\003seq\030\001 \001(\r\022\016\n\006result\030\002 \001(\005\022\016\n\006errms" +
+      "g\030\003 \001(\t\"/\n\013OTAProgress\022\020\n\010progress\030\001 \001(\005" +
+      "\022\016\n\006errMsg\030\002 \001(\t\"\\\n\rStartVoiceReq\022\013\n\003seq" +
+      "\030\001 \001(\r\022\r\n\005appid\030\002 \001(\t\022\017\n\007license\030\003 \001(\t\022\r" +
+      "\n\005token\030\004 \001(\t\022\017\n\007channel\030\005 \001(\t\"@\n\021StartV" +
+      "oipResponse\022\013\n\003seq\030\001 \001(\r\022\016\n\006result\030\002 \001(\005" +
+      "\022\016\n\006errmsg\030\003 \001(\t\"?\n\020StopVoipResponse\022\013\n\003" +
+      "seq\030\001 \001(\r\022\016\n\006result\030\002 \001(\005\022\016\n\006errmsg\030\003 \001(" +
+      "\tB9\n+com.qinglan.example.device_point.se" +
+      "rver.msgB\nDeviceInfob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5975,18 +8304,36 @@ public final class DeviceInfo {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_OTAReq_descriptor,
         new java.lang.String[] { "Seq", "Espsfver", "ESPFileUrl", "ESPFileSize", "ESPFileSHA256", "Radarsfver", "RadarFileUrl", "RadarFileSize", "RadarFileSHA256", });
-    internal_static_OTAProgress_descriptor =
+    internal_static_OtaResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_OtaResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_OtaResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Errmsg", });
+    internal_static_OTAProgress_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_OTAProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_OTAProgress_descriptor,
         new java.lang.String[] { "Progress", "ErrMsg", });
     internal_static_StartVoiceReq_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_StartVoiceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StartVoiceReq_descriptor,
-        new java.lang.String[] { "Seq", "Appid", "License", "Token", });
+        new java.lang.String[] { "Seq", "Appid", "License", "Token", "Channel", });
+    internal_static_StartVoipResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_StartVoipResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StartVoipResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Errmsg", });
+    internal_static_StopVoipResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_StopVoipResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StopVoipResponse_descriptor,
+        new java.lang.String[] { "Seq", "Result", "Errmsg", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

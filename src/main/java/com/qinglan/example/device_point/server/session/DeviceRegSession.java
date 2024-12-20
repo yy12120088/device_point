@@ -56,6 +56,11 @@ public class DeviceRegSession {
         return null;
     }
 
+
+    public static String getUidByChannelId(ChannelId channelId){
+        return channelInfo.get(channelId);
+    }
+
     /**
      * 响应消息缓存
      */

@@ -24,14 +24,25 @@ public class QlIotServer {
         NioEventLoopGroup boss = new NioEventLoopGroup();
         NioEventLoopGroup worker = new NioEventLoopGroup();
         ProtoBufCodecSharable MESSAGE_CODEC = new ProtoBufCodecSharable();
+
         GetServerHandler GET_SERVER_REC = new GetServerHandler();
-        RegistRequestHandler REGIST_REC = new RegistRequestHandler();
-        SetPropHandle SET_PROP_REC = new SetPropHandle();
+        RegistResponseHandler REGIST_REC = new RegistResponseHandler();
+        SetPropHandler SET_PROP_REC = new SetPropHandler();
         ProItemsHandler GET_PROP_REC = new ProItemsHandler();
         CommonResHandle COMMON_REC = new CommonResHandle();
         BreathDateHandler BREATH_MESSAGE_REC = new BreathDateHandler();
         PositionDateHandler POSITION_MESSAGE_REC = new PositionDateHandler();
+        PositionEventHandler POSITION_EVENT_REC = new PositionEventHandler();
+        PositionStatisticHandler POSITION_STATISTIC_REC = new PositionStatisticHandler();
+        FallDownHandler FALL_DOWN_REC = new FallDownHandler();
+        NumberOfPeopleHandler NUMBER_PEOPLE_REC = new NumberOfPeopleHandler();
+        OtaResponseHandler OTA_RESPONSE_REC = new OtaResponseHandler();
+        OtaProgressHandler OTA_PROGRESS_REC = new OtaProgressHandler();
+        StartVoipHandler VOIP_START_REC = new StartVoipHandler();
+        StopVoipHandler VOIP_STOP_REC = new StopVoipHandler();
+        NotifyMessageHandler NOTIFY_MSG_REC = new NotifyMessageHandler();
         HeartMsgHandler HEART_REC = new HeartMsgHandler();
+
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.INFO);
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
@@ -64,8 +75,17 @@ public class QlIotServer {
                     ch.pipeline().addLast(HEART_REC);
                     ch.pipeline().addLast(BREATH_MESSAGE_REC);
                     ch.pipeline().addLast(POSITION_MESSAGE_REC);
+                    ch.pipeline().addLast(POSITION_EVENT_REC);
+                    ch.pipeline().addLast(POSITION_STATISTIC_REC);
+                    ch.pipeline().addLast(FALL_DOWN_REC);
                     ch.pipeline().addLast(SET_PROP_REC);
                     ch.pipeline().addLast(GET_PROP_REC);
+                    ch.pipeline().addLast(NUMBER_PEOPLE_REC);
+                    ch.pipeline().addLast(NOTIFY_MSG_REC);
+                    ch.pipeline().addLast(OTA_RESPONSE_REC);
+                    ch.pipeline().addLast(OTA_PROGRESS_REC);
+                    ch.pipeline().addLast(VOIP_START_REC);
+                    ch.pipeline().addLast(VOIP_STOP_REC);
                     ch.pipeline().addLast(COMMON_REC);
                 }
             });

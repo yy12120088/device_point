@@ -1,32 +1,30 @@
 package com.qinglan.example.device_point.server.handle;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.qinglan.example.device_point.server.msg.ServerLBSInfo;
+import com.qinglan.example.device_point.server.msg.DeviceInfo;
 import com.qinglan.example.device_point.server.session.DeviceRegSession;
 import com.qinglan.example.device_point.server.util.SpringUtils;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.ReferenceCountUtil;
-import lombok.extern.slf4j.Slf4j;
 
 @ChannelHandler.Sharable
-@Slf4j
-public class SetPropHandle extends SimpleChannelInboundHandler<ServerLBSInfo.SetPropResponse> {
+public class StopVoipHandler extends SimpleChannelInboundHandler<DeviceInfo.StopVoipResponse> {
 
     DeviceRegSession deviceRegSession = SpringUtils.getBean(DeviceRegSession.class);
 
     /**
-     * 设置属性返回
+     * 停止通话结果响应
      * Set Property Return
      * @param ctx
      * @param msg
      * @throws Exception
      */
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, ServerLBSInfo.SetPropResponse msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, DeviceInfo.StopVoipResponse msg) throws Exception {
         try {
-            int type = 9;
+            int type = 52;
             String channelId = ctx.channel().id().asLongText();
             String key = type + String.valueOf(channelId);
             JSONObject res = new JSONObject();
