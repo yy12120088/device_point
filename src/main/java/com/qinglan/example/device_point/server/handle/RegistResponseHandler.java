@@ -31,7 +31,7 @@ public class RegistResponseHandler extends SimpleChannelInboundHandler<DeviceInf
         uids.add("F59D3E873F56");
         uids.add("F59D3E873F57");
         uids.add("F59D3E873F58");
-        uids.add("F59D3E873F59");
+        uids.add("9D8A32047483");
         uids.add("CBAA7C29E9A4A0D");
     }
 

@@ -151,4 +151,42 @@ public class TestController {
         String s = deviceRegSession.waitReceiveMsg(channelKey);
         return s;
     }
+
+    /**
+     * ota
+     * @param uid
+     * @return Device prop
+     * @throws InterruptedException
+     */
+    @PostMapping("/ota")
+    public String startOta(@RequestParam("uid") String uid) {
+        Channel channel = deviceRegSession.isReg(uid);
+        if (channel == null){
+            return null;
+        }
+        //todo 文件下载地址 需要有文件下载的接口能力 http/https
+
+
+        String channelId = channel.id().asLongText();
+        DeviceInfo.OTAReq.Builder builder = DeviceInfo.OTAReq
+                .newBuilder().setSeq(1).setESPFileSHA256("***").setESPFileSize(1231).setESPFileUrl("http://**").setEspsfver("2.0")
+                .setRadarFileSHA256("***").setRadarFileSize(1231).setRadarFileUrl("http://**").setRadarsfver("2.0");
+        int type = 16;
+        String channelKey = type + channelId;
+        ByteBuf buffer = channel.alloc().buffer();
+        System.out.println("before write and flush, buf.refCnt(): " + buffer.refCnt());
+        buffer.writeByte(type);
+        buffer.writeBytes(builder.build().toByteArray());
+        deviceRegSession.initReceiveMsg(channelKey);
+        ChannelFuture channelFuture = channel.writeAndFlush(buffer);
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) {
+                // 发送数据成功以后，再看看引用计数
+                System.out.println("after write and flush completed, buf.refCnt(): " + buffer.refCnt());
+            }
+        });
+        String s = deviceRegSession.waitReceiveMsg(channelKey);
+        return s;
+    }
 }

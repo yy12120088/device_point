@@ -21,10 +21,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class QlIotServer {
     public void startQLServer(int inetPort){
-        NioEventLoopGroup boss = new NioEventLoopGroup();
-        NioEventLoopGroup worker = new NioEventLoopGroup();
+        NioEventLoopGroup boss = new NioEventLoopGroup(2);
+        NioEventLoopGroup worker = new NioEventLoopGroup(16);
         ProtoBufCodecSharable MESSAGE_CODEC = new ProtoBufCodecSharable();
-
+        //报文解析器
         GetServerHandler GET_SERVER_REC = new GetServerHandler();
         RegistResponseHandler REGIST_REC = new RegistResponseHandler();
         SetPropHandler SET_PROP_REC = new SetPropHandler();
@@ -42,7 +42,7 @@ public class QlIotServer {
         StopVoipHandler VOIP_STOP_REC = new StopVoipHandler();
         NotifyMessageHandler NOTIFY_MSG_REC = new NotifyMessageHandler();
         HeartMsgHandler HEART_REC = new HeartMsgHandler();
-
+        //日志
         LoggingHandler LOGGING_HANDLER = new LoggingHandler(LogLevel.INFO);
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
